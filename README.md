@@ -1,2 +1,2 @@
-# zhiyuanryanchen.github-io
-This is my personal website
+# tyleransom.github.io
+Repository for Tyler Ransom's academic research website.
