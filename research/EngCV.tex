@@ -1,0 +1,292 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+\usepackage{CJKutf8}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[super]{nth}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+
+% Set your name here
+\def\name{Zhiyuan Chen}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+% \def\footerlink{http://jblevins.org/projects/cv-template/}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor  = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.25in,
+  right=1.25in,
+  top=1.2in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+ % \begin{list}{}{
+ %   \setlength{\leftmargin}{1.5em}
+ % }
+%}{
+%  \end{list}
+%}
+
+\begin{document}
+
+% Place name at left
+%{\huge \name}
+
+% Alternatively, print name centered and bold:
+\centerline{\huge \bf \name}
+
+\vspace{1ex}
+
+\normalsize
+
+
+\begin{center}
+{\scriptsize Last updated: 11/13/2019}
+\end{center}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.5\linewidth}
+  \href{http://www.econ.psu.edu/}{Pennsylvania State University} \\
+  Department of Economics \\
+  303 Kern Building \\
+  State College, PA 16803
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \begin{tabular}{ll}
+    Phone: & +1 (814) 883-0365 \\
+    Nationality: &  China \\
+    Email: & \href{mailto:chenzhiyuan1224@gmail.com}{\tt chenzhiyuan1224@gmail.com} \\
+    Website: & \href{https://zhiyuanchen.weebly.com/}{\tt https://zhiyuanchen.weebly.com/} \\
+  \end{tabular}
+\end{minipage}
+
+
+%\section*{\textsc{Personal}}
+
+%\begin{itemize}
+%\item Born on February 8, 1991
+%\item Married.
+%\end{itemize}
+
+\section*{\textsc{Education}}
+\begin{minipage}{0.7\textwidth}
+ Ph.D. Economics, \textbf{Pennsylvania State University}\\
+  M.A.  Economics, \textbf{Renmin University of China}  \\
+ B.S.  Economics (with distinction), \textbf{Renmin University of China}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+   2015-2020 (expected)  \\
+   2013-2017   \\
+    2009-2013
+\end{minipage}
+
+\section*{\textsc{References}}
+\begin{minipage}{0.5\linewidth}
+    \begin{tabular}{l}
+        \textbf{Jonathan Eaton (co-advisor)}  \\
+         Distinguished Professor of Economics \\
+         Phone: +1 (814) 867-3297 \\
+         Email: \href{mailto:jxe22@psu.edu}{\tt jxe22@psu.edu}\\
+           \\
+         \textbf{Jingting Fan}\\
+         Assistant Professor of Economics  \\
+         Phone:+1 (814) 865-4592 \\
+         Email: \href{mailto:jxf524@psu.edu}{\tt jxf524@psu.edu} 
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+    \begin{tabular}{l}
+   \textbf{Mark Roberts (co-advisor)} \\
+     Liberal Arts Professor of Economics\\
+ Phone:+1 (814) 863-1535 \\
+ Email: \href{mailto:mroberts@psu.edu}{\tt mroberts@psu.edu}  \\
+\\
+   \textbf{James Tybout}  \\
+Professor of Economics     \\
+Phone: +1 (814) 865-4259  \\
+Email: \href{mailto:jxt32@psu.edu}{\tt jxt32@psu.edu}
+    \end{tabular}
+\end{minipage}
+
+
+%\section*{Employment}
+
+%\begin{itemize}
+%\item Stanford University 1927--1931.
+%\item Columbia University 1931--1946.
+%\item University of North Carolina, 1946--1973.
+%\end{itemize}
+
+\section*{\textsc{Research}}
+\subsection*{\textit{Research Fields}}
+ Industrial Organization; Development; International Trade
+
+\subsection*{\textit{Publications}}
+"Types of Patents and Driving Forces behind the Patent Growth in China," with Jie Zhang, \textit{Economic Modelling}, 2019(80), 294-302.
+\vspace{0.5em}
+
+"Import and Innovation: Evidence from Chinese Firms," with Jie Zhang and Wenping Zheng, {\textbf{\textit{European Economic Review}}}, 2017(94), 205-220.
+\vspace{0.5em}
+
+"The Bank–firm Relationship: Helping or Grabbing?" with Yong Li and Jie Zhang, {\textit{International Review of Economics \& Finance}}, 2016(42), 385-403.
+\vspace{0.5em}
+
+\subsection*{\textit{Working Papers}}
+
+ "Finance, R\&D Investment, and TFP Dynamics," \textbf{\textit {Job Market Paper}}
+ \vspace{0.05in}
+ \begin{center}
+ \begin{minipage}{0.9\linewidth}
+   \textbf{Abstract:} This paper investigates the role of R\&D investment in shaping the relationship between financial constraints and aggregate total factor productivity (TFP). I study a dynamic model in which R\&D investment, which affects productivity evolution endogenously, is subject to financial constraints. I parameterize the model with production, innovation, and balance sheet data. The estimated model implies sizeable \textit{static} TFP losses caused by capital misallocation and \textit{dynamic} TFP losses from distorting R\&D investment. The accumulation of internal funds reduces the static TFP loss gradually. In contrast, because R\&D has a persistent effect on productivity, the dynamic TFP loss rises initially and declines later. Compared to a model with exogenous productivity, innovation investment makes firms less able to use self-financing to reduce TFP losses, and prolongs the transition. Endogenous productivity growth amplifies the gains in TFP and output from financial reform, and leads to a longer-lasting consequence from a credit crunch. Improving the pledgeability of intangible assets in China to be the US level reduces the static TFP loss only 0.4\%, but the dynamic TFP loss by 7.1\%. 
+ \end{minipage}
+ \end{center}
+ \vspace{0.05in}
+ 
+"A Cost-benefit Analysis of R\&D and Patents: Firm-Level Evidence from China," \textit{R\&R} at \textbf{\textit {European Economic Review}}
+ \vspace{0.05in}
+ \begin{center}
+ \begin{minipage}{0.9\linewidth}
+   \textbf{Abstract:} Building on a standard dynamic model of endogenous productivity change, I develop a flexible empirical framework to analyze the components of the returns to R\&D and quantify the patent value. Applying it to a sample of Chinese high-tech manufacturing firms, I quantify the short-run
+and long-run benefits of R\&D investment. I find that around 70\% of the benefits of R\&D investment comes from non-patenting innovation. On average an invention (a utility model) patent causes 0.76 (0.67) percent increase in the firm value. The start-up costs of R\&D is estimated to be around ten times as large as the maintenance costs. The counterfactual analysis shows that financing start-up innovation is more effective than financing the maintenance costs in stimulating the R\&D investment.
+ \end{minipage}
+ \end{center}
+ \vspace{0.05in}
+ "Is Cracking Down on Corruption Really Good for the Economy? Firm-Level Evidence from a Natural Experiment in China," with Xin Jin and Xu Xu, \textit{R\&R} at \textbf{\textit{Journal of Law, Economics, \& Organization}}
+  \vspace{0.05in}
+ \begin{center}
+ \begin{minipage}{0.9\linewidth}
+   \textbf{Abstract:} This paper investigates the negative consequences of anti-corruption measures on economic outcomes. By exploiting an unexpected corruption crackdown in Northeast China in 2004, we find that the crackdown significantly lowers firm productivity and reduces firm entry. The negative impacts are mainly borne by private and foreign firms while the state-owned firms are intact. We further find that private firms with personal connections fare worse than the state-owned firms, while unconnected private firms do not behave differently after the crackdown. Our findings suggest that cracking down on corruption may weaken some connected private firms' political ties and remove the "grease of the wheels" that supports firm development in weak market institutions.
+ \end{minipage}
+ \end{center}
+ \vspace{0.05in}
+ "Made and Created in China: Super Processors and Two-way Heterogeneity," with Aksel Erbahar and Yuan Zi
+   \vspace{0.05in}
+ \begin{center}
+ \begin{minipage}{0.9\linewidth}
+   \textbf{Abstract:} In this paper, we show that there exists a special breed of firms that are active in both ordinary and processing exports. Contrary to the existing literature that describes processing firms as inferior, these mixed firms are superior to other firms in multiple dimensions, and hence we call them “super processors.” We build on Antras et al. (2017) and Bernard et al. (2019) to develop a model in which firms are heterogeneous in multiple stages of production. Firms endogenously choose to become suppliers or final good producers, with those that excel in both manufacturing ability and blueprint quality engage in both activities. We test the theory by exploiting the adoption of the pilot “paperless” processing trade supervision programme by regional customs authorities in China that lowered the cost of processing trade but left ordinary trade costs unchanged. We find that facilitating processing exports induces productive domestic downstream firms to establish their own trademarks. Our results highlight that processing trade not only leads goods to be “Made in China,” but also “Created in China.”
+ \end{minipage}
+ \end{center}
+
+    
+ \vspace{0.05in}  
+ "Production Function Estimation for Multi-Product Firms," with Moyu Liao
+     \vspace{0.05in}
+ \begin{center}
+ \begin{minipage}{0.9\linewidth}
+   \textbf{Abstract:} We study a stylized model of multi-product firm with firm-product level heterogeneity in Hicks-neutral production technology. We characterize the empirical content of the model and show that the scale and location of the production function are non-parametrically non-identified without observing the allocation of inputs and exogenous input price variations. We develop the model's empirical content to be an estimation strategy for any parametric family of production functions. This procedure, however, suffers from unclear identification and the problem of computing optimal input allocations. In the case of Cobb-Douglas production function, we show the identification of the production function by obtaining a closed-form solution for unobserved input allocations as a function of product-level output quantities or revenues. Monte Carlo evidence shows that our identification strategy performs well. We then apply our methodology to the sector of agricultural goods manufacturing and find multi-product firms' production technology of multi-product differs from single-product firms even for the same product. We also find that multi-product firms produce its core (peripheral) products at higher (lower) technical efficiency than single-product firms. Lastly, we document a negative productivity spillover across different products within the multi-product firm.
+ \end{minipage}
+ \end{center}
+
+\subsection*{\textit{Selected Work in Progress}}
+ Bank Competition, Heterogeneous Defaulting Risks, and Margins of Innovation, with Mengbo Zhang, Fu Xin, and Jie Zhang 
+ 
+ \vspace{0.5em}
+Technological Imports and In-house R\&D, with Wenhao Sun and Jie Zhang
+ 
+ \vspace{0.5em}
+Import, Export, and Innovation, with Qing Liu 
+
+\section*{\textsc{Professional Activities}}
+\subsection*{Teaching \& Research experiences}
+\begin{minipage}{0.8\textwidth}
+  \textbf{Instructor}, Introductory Macroeconomics, Penn State University \\
+  \textbf{Instructor}, Introductory Econometrics, Penn State University \\
+  \textbf{Teaching assistant}, Intermediate Microeconomics, Penn State University \\
+  \textbf{Summer Research Internship} at Central Bank of Mexico
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+    Summer 2019 \\
+    Summer 2018 \\
+   2017-2019  \\
+  2017/07- 2017/09
+\end{minipage}
+
+  \subsection*{Referee Services}
+      {\it Abacus, Applied Economics Letters, Asian Journal of Technology Innovation, China Economic Review, Economic Modelling, International Economics and Economic Policy, Journal of Management Science and Engineering, Emerging Markets Finance and Trade, Journal of Industry, Competition and Trade}
+      
+\subsection*{Conferences \& Seminars}
+{\footnotesize * Co-author presented}
+\vspace{1em}
+
+\textbf{2019:} The \nth{14} Annual Economics Graduate Student Conference (WUSTL), *Midwest International Economic Development Conference
+
+\textbf{2018:} *The first CICE Annual Conference (Tsinghua University), AEA Annual Meeting (poster session, Philadelphia), *Workshop in Applied and Theoretical Economics (WATE), *Special Issue Conference on “The Challenges of Managing and Modelling Innovation and Growth in China” (Renmin University)
+
+\textbf{2017:} China Meeting of the Econometric Society (Wuhan), *Annual Meeting of the International Consortium for China Studies (Mannheim)
+
+\textbf{2014:} Annual Geneva-China workshop (Geneva)
+
+ 
+\section*{\textsc{Honors and Awards}}
+
+\textit{The 7th Peikang Chang Award for Outstanding Papers in Development Economics}, Peikang Chang Research Foundation of Development Economics, 2018
+
+\textit{Top 10 Chinese Papers on International Trade in 2016}, Institute of World Economics and Politics of Chinese Academy of Social Sciences,Yearbook of World Economy, 2017 
+
+\textit{The \nth{3} prize of the \nth{18} An Zijie International Trade Research Awards}, UIBE, 2014
+
+\textit{National scholarship for master students}, Renmin University of China (Top 1\%), 2014
+
+\textit{National scholarship for master students}, Renmin University of China (Top 1\%), 2013
+
+\textit{National scholarship for undergraduate students}, Renmin University of China (Top 1\%), 2012
+
+\section*{\textsc{Skills}}
+\textbf{Software}: Matlab, Stata, Julia, Python
+
+\textbf{Language}: Chinese (native), English (fluent)
+
+
+
+\end{document}
+
+
