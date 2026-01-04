@@ -31,20 +31,22 @@
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer;
       padding: 0px;
-      border: none;
+      border: 1px solid #b23a48;
       text-align: left;
       outline: none;
       font-size: 100%;
       transition: 0.3s;
-      background-color: #f8f8f8;
+      background-color: #f6dce1;
+      color: #8f2f3a;
       }
       button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
+      background-color: #b23a48;
+      color: #fff;
       }
       button.accordion:after {
       content: " [+] ";
       font-size: 90%;
-      color:#777;
+      color: inherit;
       float: left;
       margin-left: 1px;
       }
@@ -69,21 +71,21 @@
       }
       /* Paper title links: black with underline */
       section a {
-      color:#000;
+      color:#333;
       text-decoration: underline;
       }
       section a:hover {
-      color:#000;
+      color:#333;
       text-decoration: underline;
       }
       /* Left panel links: black and bold */
       header a {
-      color:#000;
+      color:#b23a48;
       font-weight:700;
       text-decoration:none;
       }
       header a:hover {
-      color:#000;
+      color:#8f2f3a;
       text-decoration:underline;
       }
     </style>
@@ -93,11 +95,11 @@
       <header>
         <h1>Zhiyuan Chen|陈志远</h1>
         <p></p>
-        <h3><p class="view"><a href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
-        <h3><p class="view"><a href="https://zhiyuanryanchen.github.io/research/EngCV_ZhiyuanChen.pdf">CV</a> | <a href="https://zhiyuanryanchen.github.io/research/EngChinCV_ZY.pdf">简历</a></p></h3>
-            <h3><p class="view"><a href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
-            <h3><p class="view"><a href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
-            <h3><p class="view"><a href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
+        <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
+        <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research/EngCV_ZhiyuanChen.pdf">CV</a> | <a class="nav-button" href="https://zhiyuanryanchen.github.io/research/EngChinCV_ZY.pdf">简历</a></p></h3>
+          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
+          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
+          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
     <p class="view"><b>Circle</b><br>
         <a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
         <a href="https://scholar.google.com/citations?hl=en&user=UKL757gAAAAJ&view_op=list_works&gmla=AJsN-F5aVarHDk1Ju6wUihC0rOl5Sz5B4Tp_igTQWKxW-jhFu3gNVQdavP8VK49Nl-t8tfqyoUUhQdQV2NRiCRn0H6fJNUxgebN-Hh3k6WCZ8tRILWvqtS4" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
@@ -198,8 +200,7 @@
      </div></p>
 
     <p style="margin:0;" }><p > Zhiyuan Chen, Jie Zhang and Yuan Zi, <a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/InnovationCostsBenefits.pdf" target="_explorer.exe">A Cost-Benefit Analysis of R&D and Patents: Firm-level Evidence from China</a>, <i>European Economic Review</i>, Vol. 133, April 2021, 103633. 
-      <button class="accordion">Abstract</button>
-      <br> <button><a href="https://doi.org/10.1016/j.euroecorev.2020.103633">Published PDF</a> </button> <button><a href="https://zhiyuanryanchen.github.io/research/CZZ2021EER_wp.pdf">Online Appendix</a></button> <button><a href="https://zhiyuanryanchen.github.io/EER-D-19-00169_Files.rar">Code</a> </button>
+      <button class="accordion">Abstract</button> <button><a href="https://doi.org/10.1016/j.euroecorev.2020.103633">Published PDF</a> </button> <button><a href="https://zhiyuanryanchen.github.io/research/CZZ2021EER_wp.pdf">Online Appendix</a></button> <button><a href="https://zhiyuanryanchen.github.io/EER-D-19-00169_Files.rar">Code</a> </button>
    </p>
    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
     We extend the empirical framework by Peters et al. (2017) to include both R&D and patents in the productivity evolution. We provide a decomposition of the benefits of R&D into the patent and non-patent components, and a novel measure of the patent value conditioning on the firm's R&D investment. Using a sample of Chinese high-tech manufacturing firms, we find that (1) 47.8% to 67% of the benefits of R&D investment comes from non-patent R&D activities; (2) On average an invention (a utility model) patent causes around 0.76 (0.66) percent increase in the firm value; (3) The start-up costs of R&D are around ten times as large as the maintenance R&D costs. The counterfactual analysis shows that the lump-sum subsidy is more effective than the proportional subsidy in increasing the expected firm value and innovation probability. R&D continuers respond more actively than the R&D starters to the R&D subsidy. 

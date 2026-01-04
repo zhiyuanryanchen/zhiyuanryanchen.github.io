@@ -37,40 +37,40 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+  color:#b23a48;
   text-decoration:none;
 }
 
 a:hover {
-  color:#069;
+  color:#8f2f3a;
 }
 
 /* Left panel links: black and bold */
 header a {
-  color:#000;
+  color:#b23a48;
   font-weight:700;
   text-decoration:none;
 }
 
 header a:hover {
-  color:#000;
+  color:#8f2f3a;
   text-decoration:underline;
 }
 
 /* Paper title links and other section links: black with underline */
 section a {
-  color:#000;
+  color:#333;
   text-decoration:underline;
 }
 
 section a:hover {
-  color:#000;
+  color:#333;
   text-decoration:underline;
 }
 
 /* Paper titles: blue, underlined */
 section a.paper-title {
-  color:#0b63c5;
+  color:#b23a48;
   text-decoration:underline;
 }
 
@@ -78,8 +78,57 @@ section a.paper-title:hover,
 section a.paper-title:visited,
 section a.paper-title:focus,
 section a.paper-title:active {
-  color:#0b63c5;
+  color:#8f2f3a;
   text-decoration:underline;
+}
+
+button {
+  background-color:#f6dce1;
+  color:#8f2f3a;
+  border:1px solid #b23a48;
+  border-radius:4px;
+  padding:6px 10px;
+  cursor:pointer;
+  transition:background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-button {
+  display:inline-block;
+  background-color:#f6dce1;
+  color:#8f2f3a;
+  border:1px solid #b23a48;
+  border-radius:4px;
+  padding:6px 12px;
+  font-weight:700;
+  text-decoration:none;
+  transition:background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+  background-color:#b23a48;
+  color:#fff;
+  border-color:#8f2f3a;
+  text-decoration:none;
+  box-shadow:0 1px 4px rgba(0,0,0,0.15);
+}
+
+.nav-button:active {
+  background-color:#8f2f3a;
+  border-color:#7a2331;
+  color:#fff;
+}
+
+button:hover,
+button:focus {
+  background-color:#b23a48;
+  color:#fff;
+  border-color:#8f2f3a;
+}
+
+button:active {
+  background-color:#8f2f3a;
+  border-color:#7a2331;
 }
 
 /* Buttons should not underline nested links */
@@ -171,6 +220,32 @@ th {
 
 img {
   max-width:100%;
+}
+
+.profile-photo {
+  width:80%;
+  max-width:340px;
+  display:block;
+  margin:0 auto;
+}
+
+.hero {
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  align-items:center;
+}
+
+.hero .profile-photo {
+  flex:0 0 320px;
+  max-width:360px;
+  width:100%;
+  margin:0;
+}
+
+.hero-text {
+  flex:1 1 300px;
+  min-width:260px;
 }
 
 header {
