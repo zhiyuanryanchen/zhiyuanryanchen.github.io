@@ -69,6 +69,17 @@
       font-weight: 700;
       font-style: italic;
       }
+      .pub-toggle {
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin:0.75rem 0 0.25rem;
+      }
+      .pub-btn.active {
+      background-color:#8f2f3a;
+      color:#fff;
+      border-color:#7a2331;
+      }
       /* Paper title links: black with underline */
       section a {
       color:#333;
@@ -93,37 +104,32 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Zhiyuan Chen|陈志远</h1>
         <p></p>
         <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
-        <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research/EngCV_ZhiyuanChen.pdf">CV</a> <a class="nav-button" href="https://zhiyuanryanchen.github.io/research/EngChinCV_ZY.pdf">简历</a></p></h3>
           <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
           <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
           <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
-    <p class="view"><b>Circle</b><br>
-        <a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
-        <a href="https://scholar.google.com/citations?hl=en&user=UKL757gAAAAJ&view_op=list_works&gmla=AJsN-F5aVarHDk1Ju6wUihC0rOl5Sz5B4Tp_igTQWKxW-jhFu3gNVQdavP8VK49Nl-t8tfqyoUUhQdQV2NRiCRn0H6fJNUxgebN-Hh3k6WCZ8tRILWvqtS4" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-        <a href="https://ideas.repec.org/f/pch1696.html"><i class="fa fa-fw fa-share-alt-square"></i> RePEc</a><br>
-        <a href="http://github.com/zhiyuanryanchen"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
-
-      <p><b>Email:</b><br><a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn">chenzhiyuan@rmbs.ruc.edu.cn</a></p>
+    <p class="view"><b></b><br>
       </header>
       <section>
- <p><i>last update: 2026-01-03</i></p>
-    <h2><a id="recent-papers-updated" class="anchor" href="#workingpapers" aria-hidden="true"><span class="octicon octicon-link"></span>
-    </a>Under Revision</h2>
-  
-   <!--
-     <p style="margin:0;" }><p> How Heterogeneous are Productivity Gains from Exporting? A Semi-Structural Approach, with <a href="https://liaomoyu.weebly.com/" target="_explorer.exe">Moyu Liao</a> and Hao Sun, <i>submitted</i>
--->
+    <hr style="height:6px;border:none;background-color:#000;margin:1.5rem 0;">
+     <div class="pub-toggle" aria-label="Publications language toggle">
+       <a class="nav-button pub-btn active" href="#recent-papers-updated" data-target="english-pubs">English Journals</a>
+       <a class="nav-button pub-btn" href="#中文发表" data-target="chinese-pubs">中文期刊</a>
+       <a class="nav-button pub-btn" href="#同行评审" data-target="peer-review-section">同行评审</a>
+       <a class="nav-button pub-btn" href="#荣誉奖励" data-target="honors-section">荣誉奖励</a>
+     </div>
+<div id="english-pubs">
+<h2><a id="recent-papers-updated" class="anchor" href="#workingpapers" aria-hidden="true"><span class="octicon octicon-link"></span>
+   </a></h2>
+<p style="margin:0;"> Micro-to-Macro Gains from Regional Trade Agreements: Evidence from RCEP, with Zhihao Wang, revision requested @<i>The World Economy</i></p>
 
- <p style="margin:0;" ><p>The Impact of Digitalization on Productivity: Evidence from Chinese Manufacturing Firms, with H.X. Chen, J.T. Yi and J.Q. He, Conditionally accepted by <i>Management and Organizational Review</i>
+ <p style="margin:0;" ><p>The Impact of Digitalization on Productivity: Evidence from Chinese Manufacturing Firms, with H.X. Chen, J.T. Yi and J.Q. He, Conditionally accepted @ <i>Management and Organizational Review</i>
 
- <p style="margin:0;"><p> Bank Competition, Defaulting Risks and Innovation, with <a href="https://mengbozhang.weebly.com/" target="_explorer.exe">Mengbo Zhang</a>, Aomeng Zhang, and Xinyang Li, 3rd Round R&R at <i>Canadian Journal of Economics</i>
-
-     <hr>
-     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publications</h2>
-<p style="margin:0;" ><p> Identifying Treatment Effects on Productivity: Theory with An Application to Firms' Production Digitalization <font color="green"></font>, with <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and <a href="https://kschurter.github.io/">Karl Schurter.</a>  conditionally accepted by <i>RAND Journal of Economics</i><button class="accordion"> Abstract </button> 
+ <p style="margin:0;"><p> Bank Competition, Defaulting Risks and Innovation, with <a href="https://mengbozhang.weebly.com/" target="_explorer.exe">Mengbo Zhang</a>, Aomeng Zhang, and Xinyang Li, 3rd Round R&R @ <i>Canadian Journal of Economics</i>
+<hr>
+<h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+<p style="margin:0;" ><p> Identifying Treatment Effects on Productivity: Theory with An Application to Firms' Production Digitalization <font color="green"></font>, with <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and <a href="https://kschurter.github.io/">Karl Schurter.</a> accepted @ <i>RAND Journal of Economics</i><button class="accordion"> Abstract </button> 
     </p>
     <div class="panel" style="background-color: #b1e0f3; color: rgb(28, 29, 29);  padding: 10px;">
       We study the identification and estimation of treatment effects on the productivity
@@ -255,16 +261,17 @@
     </div></p>
 
     <hr>
-
-     <h2><a id="中文发表" class="anchor" href="#中文发表" aria-hidden="true"><span class="octicon octicon-link"></span>
-     </a>中文发表</h2>
+       </div>
+       <div id="chinese-pubs" style="display:none;">
+       <h2><a id="中文发表" class="anchor" href="#中文发表" aria-hidden="true"><span class="octicon octicon-link"></span>
+       </a></h2>
             <p style="margin:0;" ><p>科技金融赋能科技成果转化：内在逻辑、现实困境与突破策略, 与<a>汤岸千，李三希</a>合作, <i>改革</i>, 二轮修改.
-
+    
           <p style="margin:0;" ><p> 国有企业混合所有制改革的绩效评估与机制分析, 与<a>谭学通，朱婷，刘元春</a>合作, <i>产业经济评论</i>, 接收待刊.
 
         <p style="margin:0;" ><p> 新质生产力背景下减税激励的非中性技术进步效应研究--以固定资产加速折旧政策为例, 与<a>尚云舟，崔军</a>合作, <i>统计研究</i>, 接收待刊.
 
-
+  <hr>
           <p style="margin:0;"><p><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/中国知识溢出本地化的行政边界效应研究-中国工业经济2025.pdf" target="_explorer.exe"> 中国知识溢出本地化的行政边界效应研究</a>, 与于皓，张杰合作, <i>中国工业经济</i>, 2025(01):81-99.
       <button class="accordion">
         摘要
@@ -500,25 +507,31 @@
          <p style="margin:0;" }><p><a class="paper-title" style="margin:0; font-size:100%" href="" target="_explorer.exe">中国制造业部门劳动报酬比重的下降及其动因分析</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>, <a href="">卜茂亮</a>合作, <i>中国工业经济</i>, 2012(05).
 
       <hr>
-      <h2><a id="同行评审" class="anchor" href="#同行评审" aria-hidden="true"><span class="octicon octicon-link"></span>
-      </a>同行评审</h2>
-      <h3>期刊匿名审稿</h3>
-      <li><b>英文期刊:</b> <i>Journal of Development Economics, Journal of Comparative Economics, International Journal of Industrial Organization, China Economic Review, Review of World Economy, The World Economy, China&World Economy, Economics Letters, Journal of International Management, Economic Modelling, International Review of Economics and Finance </i></li>
-      <li><b>中文期刊:</b> 经济研究，金融研究，中国社会科学，数量经济与技术经济研究，经济学(季刊)， 经济理论与经济管理，经济学动态，经济科学，经济学报等</li>
-      <h3></h3>
-      <h3>学术会议评审</h3>
-      <li>Academy of International Business (AIB) 2024</li>
-     <hr>
-     
-
-      <h2><a id="荣誉奖励" class="anchor" href="#荣誉奖励" aria-hidden="true"><span class="octicon octicon-link"></span>
-      </a>荣誉奖励</h2>
-      <li>中国知网经济学类高被引学者Top1% [<a href="https://zhiyuanryanchen.github.io/research/2024知网高被引学者证书.pdf" target="_explorer.exe">2024</a>] [<a href="https://zhiyuanryanchen.github.io/research/陈志远-2025全国高被引学者TOP1_证书.pdf">2025</a>]</li>
-      <li>第七届张培刚发展经济学优秀论文奖</li>
-      <li>第七届“高等学校科学研究优秀成果奖(人文社会科学)”论文三等奖</li>
-      <li>第18届安子介国际贸易论文三等奖</li>
+         </div>
+          <div id="peer-review-section" style="display:none;">
+          <h2><a id="同行评审" class="anchor" href="#同行评审" aria-hidden="true"><span class="octicon octicon-link"></span>
+          </a></h2>
+          <h3>期刊匿名审稿</h3>
+          <li><b>英文期刊:</b> <i>Journal of Development Economics, Journal of Comparative Economics, International Journal of Industrial Organization, China Economic Review, Review of World Economy, The World Economy, China&World Economy, Economics Letters, Journal of International Management, Economic Modelling, International Review of Economics and Finance </i></li>
+          <li><b>中文期刊:</b> 经济研究，金融研究，中国社会科学，数量经济与技术经济研究，经济学(季刊)， 经济理论与经济管理，经济学动态，经济科学，经济学报等</li>
+          <h3></h3>
+          <h3>学术会议评审</h3>
+          <li>Academy of International Business (AIB) 2024</li>
+          </div>
+          <hr>
+          <div id="honors-section" style="display:none;">
+          <h2><a id="荣誉奖励" class="anchor" href="#荣誉奖励" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+          <ul class="resource-list">
+            <li><strong>2025</strong>&emsp;<a href="https://zhiyuanryanchen.github.io/research/陈志远-2025全国高被引学者TOP1_证书.pdf">中国知网经济学类高被引学者Top1%</a></li>
+            <li><strong>2024</strong>&emsp;<a href="https://zhiyuanryanchen.github.io/research/2024知网高被引学者证书.pdf" target="_explorer.exe">中国知网经济学类高被引学者Top1% </a></li>
+            <li><strong>第七届</strong>&emsp;张培刚发展经济学优秀论文奖</li>
+            <li><strong>第七届</strong>&emsp;“高等学校科学研究优秀成果奖(人文社会科学)”论文三等奖</li>
+            <li><strong>第18届</strong>&emsp;安子介国际贸易论文三等奖</li>
+          </ul>
+          </div>
 
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/nav-transition.js"></script>
     <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -529,6 +542,46 @@
             this.parentNode.nextElementSibling.classList.toggle("show");
       }
     }
+
+    (function() {
+      const buttons = document.querySelectorAll('.pub-btn');
+      const sections = ['english-pubs', 'chinese-pubs', 'peer-review-section', 'honors-section']
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+      if (!buttons.length || !sections.length) return;
+
+      const showSection = (targetId) => {
+        sections.forEach((section) => {
+          section.style.display = section.id === targetId ? 'block' : 'none';
+        });
+
+        buttons.forEach((btn) => {
+          const isActive = btn.dataset.target === targetId;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-current', isActive ? 'page' : 'false');
+        });
+      };
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          const target = btn.dataset.target;
+          if (!target) return;
+          showSection(target);
+          const hash = btn.getAttribute('href');
+          if (hash && hash.startsWith('#')) {
+            const dest = document.querySelector(hash);
+            if (dest) {
+              e.preventDefault();
+              dest.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.replaceState(null, '', hash);
+            }
+          }
+        });
+      });
+
+      // Initialize view to English journals
+      showSection('english-pubs');
+    })();
     </script>
   </body>
 </html>

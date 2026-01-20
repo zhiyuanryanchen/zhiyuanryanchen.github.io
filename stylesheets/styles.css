@@ -1,3 +1,7 @@
+html {
+  scroll-behavior:smooth;
+}
+
 body {
   background-color: #fff;
   padding:10px;
@@ -6,6 +10,9 @@ body {
   font-weight:400;
   margin: 0 auto; 
   width: 100%;
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity 220ms ease, transform 280ms ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +38,32 @@ h2 {
   font-weight: 500;
 }
 
+.updates-title {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:22px;
+  color:#7a2331;
+  padding:10px 12px;
+  background:linear-gradient(90deg, #fbe7ed 0%, #ffffff 60%);
+  border-left:4px solid #b23a48;
+  border-radius:6px;
+  margin:0 0 14px;
+}
+
+.updates-title .updates-icon {
+  width:28px;
+  height:28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#b23a48;
+  color:#fff;
+  border-radius:50%;
+  box-shadow:0 2px 6px rgba(0,0,0,0.15);
+  font-size:14px;
+}
+
 h3, h4, h5, h6 {
   color:#494949;
   font-weight: 500;
@@ -50,6 +83,20 @@ header a {
   color:#b23a48;
   font-weight:700;
   text-decoration:none;
+}
+
+/* Left panel social links laid out horizontally */
+header .social-inline {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin:6px 0 0;
+}
+
+header .social-inline a {
+  display:inline-block;
+  margin:0;
 }
 
 header a:hover {
@@ -82,6 +129,100 @@ section a.paper-title:active {
   text-decoration:underline;
 }
 
+/* Toggle buttons (used on research/teaching pages) */
+.pub-toggle {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:0.75rem 0 0.25rem;
+}
+
+.pub-btn.active {
+  background-color:#8f2f3a;
+  color:#fff;
+  border-color:#7a2331;
+}
+
+/* Smaller second-level toggle buttons */
+.pub-toggle .sub-btn {
+  font-size:13px;
+  padding:4px 8px;
+  min-height:28px;
+  background-color:transparent;
+  border:1px solid #ddd;
+  border-radius:4px;
+  box-shadow:none;
+}
+
+/* Subsection list links (Lecturing) */
+.sub-links {
+  list-style:disc;
+  padding-left:0;
+  margin-left:0;
+  margin:0.5rem 0 1rem;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.program-sublist {
+  list-style:circle;
+  margin:6px 0 12px 18px;
+  padding-left:18px;
+}
+
+.program-inline {
+  display:inline-block;
+  margin-left:12px;
+}
+
+#supervising li,
+#lecturing li {
+  text-indent:1.2em;
+}
+
+#grad li {
+  text-indent:0;
+  margin-left:0;
+  padding-left:0;
+  list-style:none;
+}
+
+#ug li {
+  text-indent:0;
+  margin-left:0;
+  padding-left:0;
+  list-style:none;
+}
+
+.sub-links li {
+  margin:0;
+}
+
+.sub-link {
+  color:#8f2f3a;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.sub-link:hover,
+.sub-link:focus {
+  text-decoration:underline;
+  color:#8f2f3a;
+}
+
+.sub-link.active {
+  color:#7a2331;
+  text-decoration:underline;
+}
+
+.resource-list {
+  margin:0;
+  padding-left:0;
+  list-style:none;
+  list-style-position:inside;
+}
+
 button {
   background-color:#f6dce1;
   color:#8f2f3a;
@@ -92,9 +233,10 @@ button {
   transition:background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
+
 .nav-button {
   display:inline-block;
-  background-color:#f6dce1;
+  background-color:#fbf6f7;
   color:#8f2f3a;
   border:1px solid #b23a48;
   border-radius:4px;
@@ -102,6 +244,18 @@ button {
   font-weight:700;
   text-decoration:none;
   transition:background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Left panel nav buttons: full-width, uniform sizing */
+header .nav-button {
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  text-align:center;
+  padding:8px 8px;
+  margin:6px 0;
+  min-height:38px;
+  font-size:13px;
 }
 
 .nav-button:hover,
@@ -236,6 +390,42 @@ img {
   align-items:center;
 }
 
+.updates-pagination {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:0.5rem 0 1.5rem;
+}
+
+.updates-page-btn {
+  background-color:#f6dce1;
+  color:#8f2f3a;
+  border:1px solid #b23a48;
+  border-radius:4px;
+  padding:4px 8px;
+  font-size:13px;
+  cursor:pointer;
+  transition:background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.updates-page-btn:hover,
+.updates-page-btn:focus {
+  background-color:#b23a48;
+  color:#fff;
+  border-color:#8f2f3a;
+  box-shadow:0 1px 4px rgba(0,0,0,0.15);
+}
+
+.updates-page-btn:disabled,
+.updates-page-btn.active {
+  background-color:#8f2f3a;
+  color:#fff;
+  border-color:#7a2331;
+  cursor:default;
+  box-shadow:none;
+}
+
 .hero .profile-photo {
   flex:0 0 320px;
   max-width:360px;
@@ -249,10 +439,16 @@ img {
 }
 
 header {
-  width:200px;
+  width:170px;
   float:left;
   position:fixed;
+  margin-top:24px;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+body.page-transition {
+  opacity:0;
+  transform:translateY(-14px);
 }
 
 header ul {
@@ -262,7 +458,7 @@ header ul {
   background: #f4f4f4;
   border-radius:5px;
   border:1px solid #e0e0e0;
-  width:270px;
+  width:220px;
 }
 
 header li {
@@ -315,7 +511,7 @@ header ul a strong {
 }
 
 section {
-  width:calc(100% - 240px);
+  width:calc(100% - 210px);
   max-width:900px;
   float:right;
   padding-bottom:50px;
@@ -333,7 +529,7 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:170px;
   float:left;
   position:fixed;
   bottom:50px;
