@@ -18,6 +18,25 @@
       .home-page section a:visited {
         text-decoration:none;
       }
+      /* Align wrapped lines in recent updates */
+      .updates-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .updates-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-bottom: 0.35rem;
+      }
+      .updates-date {
+        min-width: 8.5rem;
+        white-space: nowrap;
+      }
+      .updates-text {
+        flex: 1;
+        min-width: 0;
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -47,7 +66,10 @@
       <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
       <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
       <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
+      <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a></p></h3>
 
+  <hr>
+ <div class="copyright-corner">&copy;co-designed with copilot</div>
     <p class="view"><b></b><br>
       </header>
   <section> 
@@ -64,48 +86,47 @@
         <p> Hello, welcome to my website! I obtained my PhD degree at the <i>Department of Economics</i>, <i>Pennsylvania State University</i>. My research fields are industrial organization and macro development. In particular, I am interested in topics on productivity and innovation, both from the micro and macro perspectives. In my research, I seek to combine accurate micro estimates with meaningful policy and managerial implications, with an emphasis on the modelling and methodology development.</p>
      
                 <p class="contact">
-          <a href="https://zhiyuanryanchen.github.io/research/EngCV_ZhiyuanChen.pdf"><i class="fa fa-fw fa-file-pdf-o"></i> CV</a> 
-          <a href="https://zhiyuanryanchen.github.io/research/EngChinCV_ZY.pdf"><i class="fa fa-fw fa-file-pdf-o"></i> 简历</a>
+          <a href="https://zhiyuanryanchen.github.io/research/EngCV_ZhiyuanChen.pdf"><i class="fa fa-fw fa-file-pdf-o"></i>CV </a> 
+          <a href="https://zhiyuanryanchen.github.io/research/EngChinCV_ZY.pdf"><i class="fa fa-fw fa-file-pdf-o"></i>简历 </a>
           <span class="social-inline">
-            <a href="https://scholar.google.com/citations?hl=en&user=UKL757gAAAAJ&view_op=list_works&gmla=AJsN-F5aVarHDk1Ju6wUihC0rOl5Sz5B4Tp_igTQWKxW-jhFu3gNVQdavP8VK49Nl-t8tfqyoUUhQdQV2NRiCRn0H6fJNUxgebN-Hh3k6WCZ8tRILWvqtS4" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a>
-            <a href="https://au.cnki.net/author/personalInfo/000066253082?platform=kns-author"><i class="fa fa-fw fa-share-alt-square"></i> CNKI</a>
-            <a href="http://github.com/zhiyuanryanchen"><i class="fa fa-fw fa-github-square"></i> GitHub</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=UKL757gAAAAJ&view_op=list_works&gmla=AJsN-F5aVarHDk1Ju6wUihC0rOl5Sz5B4Tp_igTQWKxW-jhFu3gNVQdavP8VK49Nl-t8tfqyoUUhQdQV2NRiCRn0H6fJNUxgebN-Hh3k6WCZ8tRILWvqtS4" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar </a>
+            <a href="https://au.cnki.net/author/personalInfo/000066253082?platform=kns-author"><i class="fa fa-fw fa-share-alt-square"></i> CNKI </a>
+            <a href="http://github.com/zhiyuanryanchen"><i class="fa fa-fw fa-github-square"></i>GitHub</a>
           </span>
         </p>
-        
       </div>
     </div>
-   <p> </p>
    <p></p>
     <h2 class="updates-title"><span class="updates-icon"><i class="fa fa-bolt"></i></span>Recent Updates</h2>
-    <ul id="recent-updates">
-      <li><strong>2026-01-18:</strong> The methodology paper proposing a new method of identifying treatment effects on productivity accepted @<i><strong>RAND Journal of Economics</strong></i></li>
-      <li><strong>2026-01-01: </strong><strong>国家自然科学基金委专项项目</strong>“基础研究支撑经济发展数据系统构建与集成”，子课题负责人</li>
-     <li><strong>2025-12-30: </strong> <a href="https://news.ruc.edu.cn/2005801224914534401.html" target="_blank"><strong>人大新闻网报道</strong>JDE发表论文： “首创机组层面分析框架，破解电力行业碳管制效率难题”</a></li>
+    <ul id="recent-updates" class="updates-list">
+      <li><span class="updates-date"><strong>2026-01-20</strong>&emsp;</span><span class="updates-text">中国经济研究专题研究会，主题演讲人 @<i><strong>人大经济学院</strong></i></span></li>
+      <li><span class="updates-date"><strong>2026-01-18</strong>&emsp;</span><span class="updates-text">The methodology paper proposing a new method of identifying treatment effects on productivity accepted @<i><strong>RAND Journal of Economics</strong></i></span></li>
+      <li><span class="updates-date"><strong>2026-01-01</strong>&emsp;</span><span class="updates-text"><strong>国家自然科学基金委专项项目</strong>“基础研究支撑经济发展数据系统构建与集成”，子课题负责人</span></li>
+      <li><span class="updates-date"><strong>2025-12-30</strong>&emsp;</span><span class="updates-text"><a href="https://news.ruc.edu.cn/2005801224914534401.html" target="_blank"><strong>人大新闻网报道</strong>JDE发表论文： “首创机组层面分析框架，破解电力行业碳管制效率难题”</a></span></li>
 
 
-      <li><strong>2025-12-26:</strong> <a href="https://linkinghub.elsevier.com/retrieve/pii/S0304387825002627" target="_blank">The paper on applying structural production function estimation and counterfactual analyses to the problem of regulating coal generators forthcoming </a>@<i><strong>Journal of Development Economics</strong></i></li>
+      <li><span class="updates-date"><strong>2025-12-26</strong>&emsp;</span><span class="updates-text"><a href="https://linkinghub.elsevier.com/retrieve/pii/S0304387825002627" target="_blank">The paper on applying structural production function estimation and counterfactual analyses to the problem of regulating coal generators forthcoming </a>@<i><strong>Journal of Development Economics</strong></i></span></li>
 
-      <li><strong>2025-12-19: </strong><a href="https://news.hnust.edu.cn/kdyw/de18362d9e834230bc5a8ac3c65cd4a8.htm" target="_blank">第二届“香樟书院”学术讲堂，主讲嘉宾</a> @<i><strong>湖南科技大学商学院</strong></i></li>
+      <li><span class="updates-date"><strong>2025-12-19</strong>&emsp;</span><span class="updates-text"><a href="https://news.hnust.edu.cn/kdyw/de18362d9e834230bc5a8ac3c65cd4a8.htm" target="_blank">第二届“香樟书院”学术讲堂，主讲嘉宾</a> @<i><strong>湖南科技大学商学院</strong></i></span></li>
 
-      <li><strong>2025-11-15:</strong> <a href="https://www.ahut.edu.cn/info/1002/27413.htm" target="_blank"> 第五届香樟产业经济学论坛，主旨演讲嘉宾 </a>@<i><strong>安徽工业大学</strong></i> </li>
-      <li><strong>2025-09-03:</strong> <a href="https://fss.um.edu.mo/fss-deco-seminar-patent-financing-rd-investment-and-tfp-dynamics/" target="_blank">Invited FSS-DECO Seminar</a>  @<i><strong>University of Macau</strong></i></li>
-    <li><strong>2025-08-14:</strong> Presentation at Eaton's Forum hosted by International Economics and Finance Society, China @<i><strong>对外经济与贸易大学</strong></i></li>
+      <li><span class="updates-date"><strong>2025-11-15</strong>&emsp;</span><span class="updates-text"><a href="https://www.ahut.edu.cn/info/1002/27413.htm" target="_blank"> 第五届香樟产业经济学论坛，主旨演讲嘉宾 </a>@<i><strong>安徽工业大学</strong></i> </span></li>
+      <li><span class="updates-date"><strong>2025-09-03</strong>&emsp;</span><span class="updates-text"><a href="https://fss.um.edu.mo/fss-deco-seminar-patent-financing-rd-investment-and-tfp-dynamics/" target="_blank">Invited FSS-DECO Seminar</a>  @<i><strong>University of Macau</strong></i></span></li>
+    <li><span class="updates-date"><strong>2025-08-14</strong>&emsp;</span><span class="updates-text">Presentation at Eaton's Forum hosted by International Economics and Finance Society, China @<i><strong>对外经济与贸易大学</strong></i></span></li>
 
-    <li><strong>2025-05-19:</strong> Invited Presentation at ISEM Conference: Frontiers of Empirical Research in China @<i><strong>首都经济与贸易大学ISEM</strong></i></li>
-      <li><strong>2023-07-02:</strong> China Financial Research Conference @<i><strong>清华五道口</strong></i>.</li>
+    <li><span class="updates-date"><strong>2025-05-19</strong>&emsp;</span><span class="updates-text">Invited Presentation at ISEM Conference: Frontiers of Empirical Research in China @<i><strong>首都经济与贸易大学ISEM</strong></i></span></li>
+      <li><span class="updates-date"><strong>2023-07-02</strong>&emsp;</span><span class="updates-text">China Financial Research Conference @<i><strong>清华五道口</strong></i>.</span></li>
 
-      <li><strong>2021-07-12:</strong> 7th International Young Finance Scholars' Conference (virtual)  @<i><strong>北大汇丰商学院</strong></i></li>
+      <li><span class="updates-date"><strong>2021-07-12</strong>&emsp;</span><span class="updates-text">7th International Young Finance Scholars' Conference (virtual)  @<i><strong>北大汇丰商学院</strong></i></span></li>
 
-      <li><strong>2022-06-22:</strong> Presentation at 2022 Asian Meeting of Econometric Society @<i><strong>CHUK-Shenzhen</strong></i></li>
+      <li><span class="updates-date"><strong>2022-06-22</strong>&emsp;</span><span class="updates-text">Presentation at 2022 Asian Meeting of Econometric Society @<i><strong>CHUK-Shenzhen</strong></i></span></li>
     </ul>
     <div id="updates-pagination" class="updates-pagination" aria-label="Recent updates pagination"></div>
-   
-
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/nav-transition.js"></script>
     <script src="javascripts/updates-pagination.js"></script>
+              
   </body>
+
 </html>

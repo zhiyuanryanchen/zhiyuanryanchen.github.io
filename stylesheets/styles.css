@@ -104,29 +104,29 @@ header a:hover {
   text-decoration:underline;
 }
 
-/* Paper title links and other section links: black with underline */
+/* Paper title links and other section links: black without underline */
 section a {
-  color:#333;
-  text-decoration:underline;
+  color:#000;
+  text-decoration:none;
 }
 
 section a:hover {
-  color:#333;
-  text-decoration:underline;
+  color:#000;
+  text-decoration:none;
 }
 
-/* Paper titles: blue, underlined */
+/* Paper titles: black, no underline */
 section a.paper-title {
-  color:#b23a48;
-  text-decoration:underline;
+  color:#000;
+  text-decoration:none;
 }
 
 section a.paper-title:hover,
 section a.paper-title:visited,
 section a.paper-title:focus,
 section a.paper-title:active {
-  color:#8f2f3a;
-  text-decoration:underline;
+  color:#000;
+  text-decoration:none;
 }
 
 /* Toggle buttons (used on research/teaching pages) */
@@ -326,7 +326,7 @@ a:hover small {
 
 .wrapper {
   width:100%;
-  max-width:1180px;
+  max-width:1080px;
   margin:0 auto;
   padding:0 20px;
 }
@@ -512,7 +512,7 @@ header ul a strong {
 
 section {
   width:calc(100% - 210px);
-  max-width:900px;
+  max-width:750px;
   float:right;
   padding-bottom:50px;
 }

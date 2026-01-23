@@ -37,6 +37,7 @@
           <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
           <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
           <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
+          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a></p></h3>
 
   <p class="view"><b></b><br>
 
@@ -46,6 +47,8 @@
     <div class="pub-toggle" aria-label="Teaching section links">
       <a class="nav-button pub-btn main-btn active" href="#lecturing">Courses</a>
       <a class="nav-button pub-btn main-btn" href="#supervising">Advising</a>
+      <a class="nav-button pub-btn main-btn" href="#teaching-cases">Teaching Cases</a>
+      <a class="nav-button pub-btn main-btn" href="#textbooks">Textbooks</a>
     </div>
     <div id="lecturing">
       <ul class="sub-links" aria-label="Lecturing subsections">
@@ -71,7 +74,7 @@
         <button class="cohort-toggle" data-target="cohort-imb-2022" aria-expanded="false">2022Fall ▸</button>
         <div class="cohort-panel" id="cohort-imb-2022" hidden>
           <div class="thumb-grid">
-            <span class="cohort-placeholder">Covid-19 Shock</span>
+           <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2022imba1.jpg" src="https://zhiyuanryanchen.github.io/gallary/2022imba1.jpg" alt="2022 iMBA ME">
           </div>
         </div>
 
@@ -80,6 +83,8 @@
           <div class="thumb-grid">
             <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023iMBA-ME.JPEG" src="https://zhiyuanryanchen.github.io/gallary/2023iMBA-ME.JPEG" alt="2023 iMBA ME">
             <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023iMBA-Cup.JPEG" src="https://zhiyuanryanchen.github.io/gallary/2023iMBA-Cup.JPEG" alt="2023 iMBA Cup">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023imba_party.jpeg" src="https://zhiyuanryanchen.github.io/gallary/2023imba_party.jpeg" alt="2023 iMBA Party">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023imba_afterclass.JPEG" src="https://zhiyuanryanchen.github.io/gallary/2023imba_afterclass.JPEG" alt="2023 iMBA class">
           </div>
         </div>
 
@@ -101,6 +106,7 @@
       <div class="cohort-accordion inline" aria-label="MBA cohorts">
         <button class="cohort-toggle" data-target="cohort-2023" aria-expanded="false">2023秋季 ▸</button>
         <div class="cohort-panel" id="cohort-2023" hidden>
+          <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023MBAp5-class.jpeg" src="https://zhiyuanryanchen.github.io/gallary/2023MBAp5-class.jpeg" alt="2023 photo 0">
           <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023MBA-class.jpg" src="https://zhiyuanryanchen.github.io/gallary/2023MBA-class.jpg" alt="2023 photo 1">
           <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2023MBA-group.jpg" src="https://zhiyuanryanchen.github.io/gallary/2023MBA-group.jpg" alt="2023 photo 2">
         </div>
@@ -117,6 +123,7 @@
         <button class="cohort-toggle" data-target="cohort-2025" aria-expanded="false">2025春季 ▸</button>
         <div class="cohort-panel" id="cohort-2025" hidden>
           <div class="thumb-grid">
+          <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2025MBA-class.jpg" src="https://zhiyuanryanchen.github.io/gallary/2025MBA-class.jpg" alt="2025 photo 1">
           </div>
         </div>
       </div>
@@ -157,83 +164,6 @@
       .cohort-close{position:absolute;top:1rem;right:1rem;background:transparent;border:none;color:#fff;font-size:2.2rem;cursor:pointer}
       @media (max-width:480px){ .cohort-thumb{width:100px;height:66px} .cohort-prev,.cohort-next{font-size:1.5rem} }
       </style>
-
-      <script>
-      (function(){
-        // Accordion behaviour
-        const toggles = document.querySelectorAll('.cohort-toggle');
-        toggles.forEach(btn=>{
-          btn.addEventListener('click', ()=>{
-            const targetId = btn.getAttribute('data-target');
-            const panel = document.getElementById(targetId);
-            const expanded = btn.getAttribute('aria-expanded') === 'true';
-            // close all
-            toggles.forEach(b=>{ b.setAttribute('aria-expanded','false'); document.getElementById(b.dataset.target).hidden = true; b.textContent = b.textContent.replace('▾','▸').replace('▸','▸'); });
-            if (!expanded) {
-              btn.setAttribute('aria-expanded','true');
-              panel.hidden = false;
-              btn.textContent = btn.textContent.replace('▸','▾');
-            }
-          });
-        });
-
-        // Modal behaviour
-        const modal = document.getElementById('cohort-modal');
-        const modalImg = document.getElementById('cohort-modal-img');
-        const closeBtn = modal.querySelector('.cohort-close');
-        const prevBtn = modal.querySelector('.cohort-prev');
-        const nextBtn = modal.querySelector('.cohort-next');
-
-        let currentImages = [];
-        let currentIndex = 0;
-
-        function openModal(images, index){
-          currentImages = images;
-          currentIndex = index;
-          modalImg.src = currentImages[currentIndex];
-          modal.style.display = 'flex';
-          modal.setAttribute('aria-hidden','false');
-          document.body.style.overflow = 'hidden';
-        }
-        function closeModal(){
-          modal.style.display = 'none';
-          modal.setAttribute('aria-hidden','true');
-          document.body.style.overflow = '';
-        }
-        function showIndex(i){
-          currentIndex = (i + currentImages.length) % currentImages.length;
-          modalImg.src = currentImages[currentIndex];
-        }
-
-        // thumbnail clicks
-        document.querySelectorAll('.cohort-panel').forEach(panel=>{
-          panel.addEventListener('click', function(e){
-            const thumb = e.target.closest('.cohort-thumb');
-            if (!thumb) return;
-            const thumbs = Array.from(panel.querySelectorAll('.cohort-thumb'));
-            const images = thumbs.map(t => t.getAttribute('data-src') || t.src);
-            const idx = thumbs.indexOf(thumb);
-            openModal(images, idx);
-          });
-        });
-
-        closeBtn.addEventListener('click', closeModal);
-        prevBtn.addEventListener('click', ()=> showIndex(currentIndex-1));
-        nextBtn.addEventListener('click', ()=> showIndex(currentIndex+1));
-
-        modal.addEventListener('click', function(e){
-          if (!e.target.closest('.cohort-content')) closeModal();
-        });
-
-        document.addEventListener('keydown', function(e){
-          if (modal.style.display !== 'flex') return;
-          if (e.key === 'Escape') closeModal();
-          if (e.key === 'ArrowLeft') showIndex(currentIndex-1);
-          if (e.key === 'ArrowRight') showIndex(currentIndex+1);
-        });
-
-      })();
-      </script>
 
       <!-- Gallery modal -->
       <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog" style="display:none;">
@@ -328,6 +258,106 @@
       })();
       </script>
   <p></p>
+      <b><i class="fa fa-globe" aria-hidden="true"></i> Global Network Week (GNAM国际游学周)</b>
+      <br><span class="mba-inline-label"><strong>Program </strong></span>&emsp;
+      <div class="cohort-accordion inline" aria-label="GNAM cohorts">
+        <button class="cohort-toggle" data-target="cohort-gnam-2024" aria-expanded="false">2024春季 ▸</button>
+        <div class="cohort-panel" id="cohort-gnam-2024" hidden>
+          <div class="thumb-grid">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2024gnam_group.jpg" src="https://zhiyuanryanchen.github.io/gallary/2024gnam_group.jpg" alt="2024 GNAM photo 1">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2024gnam_visit.jpg" src="https://zhiyuanryanchen.github.io/gallary/2024gnam_visit.jpg" alt="2024 GNAM photo 2">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2024gnam_visit1.jpg" src="https://zhiyuanryanchen.github.io/gallary/2024gnam_visit1.jpg" alt="2024 GNAM photo 3">
+
+          </div>
+        </div>
+
+        <button class="cohort-toggle" data-target="cohort-gnam-2025" aria-expanded="false">2025春季 ▸</button>
+        <div class="cohort-panel" id="cohort-gnam-2025" hidden>
+          <div class="thumb-grid">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2025gnam_opening.jpg" src="https://zhiyuanryanchen.github.io/gallary/2025gnam_opening.jpg" alt="2025 GNAM photo 1">
+            <img class="cohort-thumb" data-src="https://zhiyuanryanchen.github.io/gallary/2025gnam_group.jpg" src="https://zhiyuanryanchen.github.io/gallary/2025gnam_group.jpg" alt="2025 GNAM photo 2">
+          </div>
+        </div>
+      </div>
+      <p></p>
+
+      <script>
+      (function(){
+        // Accordion behaviour
+        const toggles = document.querySelectorAll('.cohort-toggle');
+        toggles.forEach(btn=>{
+          btn.addEventListener('click', ()=>{
+            const targetId = btn.getAttribute('data-target');
+            const panel = document.getElementById(targetId);
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            // close all
+            toggles.forEach(b=>{ b.setAttribute('aria-expanded','false'); document.getElementById(b.dataset.target).hidden = true; b.textContent = b.textContent.replace('▾','▸').replace('▸','▸'); });
+            if (!expanded) {
+              btn.setAttribute('aria-expanded','true');
+              panel.hidden = false;
+              btn.textContent = btn.textContent.replace('▸','▾');
+            }
+          });
+        });
+
+        // Modal behaviour
+        const modal = document.getElementById('cohort-modal');
+        const modalImg = document.getElementById('cohort-modal-img');
+        const closeBtn = modal.querySelector('.cohort-close');
+        const prevBtn = modal.querySelector('.cohort-prev');
+        const nextBtn = modal.querySelector('.cohort-next');
+
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openModal(images, index){
+          currentImages = images;
+          currentIndex = index;
+          modalImg.src = currentImages[currentIndex];
+          modal.style.display = 'flex';
+          modal.setAttribute('aria-hidden','false');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeModal(){
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden','true');
+          document.body.style.overflow = '';
+        }
+        function showIndex(i){
+          currentIndex = (i + currentImages.length) % currentImages.length;
+          modalImg.src = currentImages[currentIndex];
+        }
+
+        // thumbnail clicks
+        document.querySelectorAll('.cohort-panel').forEach(panel=>{
+          panel.addEventListener('click', function(e){
+            const thumb = e.target.closest('.cohort-thumb');
+            if (!thumb) return;
+            const thumbs = Array.from(panel.querySelectorAll('.cohort-thumb'));
+            const images = thumbs.map(t => t.getAttribute('data-src') || t.src);
+            const idx = thumbs.indexOf(thumb);
+            openModal(images, idx);
+          });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        prevBtn.addEventListener('click', ()=> showIndex(currentIndex-1));
+        nextBtn.addEventListener('click', ()=> showIndex(currentIndex+1));
+
+        modal.addEventListener('click', function(e){
+          if (!e.target.closest('.cohort-content')) closeModal();
+        });
+
+        document.addEventListener('keydown', function(e){
+          if (modal.style.display !== 'flex') return;
+          if (e.key === 'Escape') closeModal();
+          if (e.key === 'ArrowLeft') showIndex(currentIndex-1);
+          if (e.key === 'ArrowRight') showIndex(currentIndex+1);
+        });
+
+      })();
+      </script>
+
       <b><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 创新经济学(Innovation Economics)</b>
       <br><a href=""><i class="fa fa-folder-open-o" aria-hidden="true"></i> Class Repository</a>
       <br><strong>本科生 </strong>&emsp; Fall 2023</br>
@@ -385,6 +415,19 @@
     <li><strong>2023</strong>&emsp;<strong>于皓</strong>-人大应用经济学院(经济学博士)</li>
     </div>
     </div>
+
+    <div id="teaching-cases" style="display:none;">
+      <h4></h4>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>2025</strong>&emsp;<i class="fa fa-file-text-o" aria-hidden="true"></i> <a href="https://casecenter.rmbs.ruc.edu.cn/web/case_info.php?ID=840" target="_blank">美之选：中小型制造业企业的数字化之路</a></li>
+      <li><strong>2023</strong>&emsp;<i class="fa fa-file-text-o" aria-hidden="true"></i> <a href="蚂蚁万里汇：稳健布局助力小微跨境电商企业在疫情中化危为机" target="_blank">蚂蚁万里汇：稳健布局助力小微跨境电商企业在疫情中化危为机</a></li>
+      </ul>
+    </div>
+
+    <div id="textbooks" style="display:none;">
+      <h4></h4>
+      <p>加班加点建设中......</p>
+    </div>
   </div>
 
     <script src="javascripts/scale.fix.js"></script>
@@ -392,7 +435,7 @@
     <script>
       (function() {
         const buttons = document.querySelectorAll('.pub-btn.main-btn');
-        const sections = ['lecturing', 'supervising']
+        const sections = ['lecturing', 'supervising', 'teaching-cases', 'textbooks']
           .map((id) => document.getElementById(id))
           .filter(Boolean);
         if (!buttons.length || !sections.length) return;
