@@ -146,6 +146,12 @@
       .panel.media-panel {
       margin-top: 0;
       }
+
+      /* Remove bottom separator line for tables in Projects & Patents */
+      #funding-section tbody tr:last-child,
+      #patents-section tbody tr:last-child {
+      border-bottom: none !important;
+      }
     </style>
   </head>
   <body>
@@ -174,7 +180,7 @@
 
 <div id="working-papers-section">
 <div class="paper-group" style="counter-reset: paper-counter 9;">
-  <hr>
+
 
 <p class="paper-item" style="margin:0;"> 	
 Learning and Scaling, with Zexuan Liu and Liang Chen, <i>Submitted</i></p>
@@ -199,7 +205,7 @@ Data-driven Vertical Integration, with Zexuan Liu, Fuxin Zhai and Yao-yu Chih, r
 </div>
 <div id="english-pubs">
 <div class="paper-group" style="counter-reset: paper-counter 12;">
-  <hr>
+
 <p class="paper-item representative" style="margin:0;"> Identifying Treatment Effects on Productivity: Theory with An Application to Firms' Production Digitalization <font color="green"></font>, with <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and <a href="https://kschurter.github.io/">Karl Schurter.</a> accepted @ <i>RAND Journal of Economics</i>
 <button class="accordion"> Abstract </button> <button class="paper-btn"><a href="#">Stata Program</a></button>
 </p>
@@ -320,7 +326,7 @@ This paper asks whether banks help or grab the enterprise in the real economy. U
        </div>
 
   <div id="chinese-pubs" style="display:none;">
-      <hr>
+
 <div class="paper-group" style="counter-reset: paper-counter 17;">
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe"> 国有企业混合所有制改革的绩效评估与机制分析</a>, 与谭学通，朱婷，刘元春合作, <i>产业经济评论</i>, 2026(02).(首篇)
       <button class="accordion">
@@ -506,7 +512,14 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
       <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">中国制造业部门劳动报酬比重的下降及其动因分析</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>, <a href="">卜茂亮</a>合作, <i>中国工业经济</i>, 2012(05).</p>
 
       </div>
-         </div>
+      </div>
+  </div>
+
+  <div id="data-section" style="display:none;">
+    <h2><a id="data" class="anchor" href="#data" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+    <p>数据工作繁杂，请耐心等待......</p>
+  </div>
+
           <div id="peer-review-section" style="display:none;">
           <h2><a id="同行评审" class="anchor" href="#同行评审" aria-hidden="true"><span class="octicon octicon-link"></span>
           </a></h2>
@@ -660,18 +673,20 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
 
     (function() {
       const buttons = document.querySelectorAll('.pub-btn');
-      const sections = ['working-papers-section', 'english-pubs', 'chinese-pubs', 'peer-review-section', 'funding-section', 'patents-section', 'honors-section']
+      const sections = ['working-papers-section', 'english-pubs', 'chinese-pubs', 'data-section', 'peer-review-section', 'funding-section', 'patents-section', 'honors-section']
         .map((id) => document.getElementById(id))
         .filter(Boolean);
       if (!buttons.length || !sections.length) return;
 
       const showSection = (targetId) => {
+        const hasTarget = sections.some((section) => section.id === targetId);
+        const effectiveTargetId = hasTarget ? targetId : 'working-papers-section';
         sections.forEach((section) => {
-          section.style.display = section.id === targetId ? 'block' : 'none';
+          section.style.display = section.id === effectiveTargetId ? 'block' : 'none';
         });
 
         buttons.forEach((btn) => {
-          const isActive = btn.dataset.target === targetId;
+          const isActive = btn.dataset.target === effectiveTargetId;
           btn.classList.toggle('active', isActive);
           btn.setAttribute('aria-current', isActive ? 'page' : 'false');
         });
@@ -683,19 +698,24 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
           if (!target) return;
           showSection(target);
           const hash = btn.getAttribute('href');
+          e.preventDefault();
+
           if (hash && hash.startsWith('#')) {
+            history.replaceState(null, '', hash);
             const dest = document.querySelector(hash);
             if (dest) {
-              e.preventDefault();
               dest.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              history.replaceState(null, '', hash);
             }
           }
         });
       });
 
-      // Initialize view to Working Papers
-      showSection('working-papers-section');
+      // Initialize view based on URL hash if possible
+      const initialHash = decodeURIComponent(window.location.hash || '');
+      const initialBtn = initialHash
+        ? Array.from(buttons).find((btn) => btn.getAttribute('href') === initialHash)
+        : null;
+      showSection(initialBtn?.dataset?.target || 'working-papers-section');
     })();
 
     // Handle peer review subsection navigation
