@@ -15,6 +15,20 @@ body {
   transition:opacity 220ms ease, transform 280ms ease;
 }
 
+.visitor-counter {
+  margin: 18px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  color: #8a8a8a;
+  text-align: center;
+}
+
+.visitor-counter .sep {
+  margin: 0 8px;
+  color: #bdbdbd;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
