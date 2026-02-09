@@ -1,11 +1,4 @@
 (function () {
-  function isDisplayed(el) {
-    if (!el) return false;
-    const display = el.style && el.style.display;
-    if (display && display.toLowerCase() === 'none') return false;
-    return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
-  }
-
   function hasNonEmptyText(el) {
     return !!(el && el.textContent && el.textContent.trim());
   }
@@ -20,12 +13,16 @@
     const pvValue = document.getElementById('busuanzi_value_site_pv');
     const sep = counter.querySelector('.sep');
 
-    const uvReady = isDisplayed(uvContainer) && hasNonEmptyText(uvValue);
-    const pvReady = isDisplayed(pvContainer) && hasNonEmptyText(pvValue);
+    const uvReady = hasNonEmptyText(uvValue);
+    const pvReady = hasNonEmptyText(pvValue);
 
     if (uvReady || pvReady) {
       counter.classList.add('is-visible');
       counter.style.display = 'block';
+
+      if (uvContainer) uvContainer.style.display = uvReady ? 'inline' : 'none';
+      if (pvContainer) pvContainer.style.display = pvReady ? 'inline' : 'none';
+
       if (sep) {
         sep.style.display = uvReady && pvReady ? 'inline' : 'none';
       }
@@ -45,7 +42,7 @@
 
     // Poll briefly since busuanzi loads async.
     const startedAt = Date.now();
-    const maxWaitMs = 4000;
+    const maxWaitMs = 15000;
     const intervalMs = 200;
 
     const timer = window.setInterval(function () {
