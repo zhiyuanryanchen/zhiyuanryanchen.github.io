@@ -155,6 +155,33 @@
       #patents-section tbody tr:last-child {
       border-bottom: none !important;
       }
+
+      /* Wide tables: scroll inside the right column, never bleed under left nav */
+      .table-scroll {
+      overflow-x:auto;
+      max-width:100%;
+      -webkit-overflow-scrolling:touch;
+      }
+
+      .table-scroll table {
+      width:100%;
+      max-width:100%;
+      }
+
+      #data-section th, #data-section td,
+      #funding-section th, #funding-section td,
+      #patents-section th, #patents-section td {
+      word-break:break-word;
+      }
+
+      /* Keep the following sections aligned with the paper list column */
+      .right-only {
+      width:100%;
+      max-width:750px;
+      margin-left:0;
+      margin-right:0;
+      box-sizing:border-box;
+      }
     </style>
   </head>
   <body>
@@ -328,8 +355,8 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
     </div>
        </div>
 
-  <div id="chinese-pubs" style="display:none;">
 
+ <div id="chinese-pubs" style="display:none;">
 <div class="paper-group" style="counter-reset: paper-counter 18;">
 <p> </p>
 <p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">中国专利质量的测度，变化机制与经济增长效应</a>, 与章逸然，张杰，刘泽轩合作, <i>经济研究</i>, 条件接收。
@@ -517,26 +544,19 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
        <ul>
         <b>摘要:</b>本文利用大样本微观企业数据,考察了转型背景下融资约束对中国企业R&D投入的影响,识别了企业R&D投入的融资渠道及存在的问题。研究发现,融资约束对民营企业R&D投入造成了显著抑制效应;企业R&D投入的融资渠道主要来源于自身现金流、注册资本增加及商业信用,而银行贷款对企业R&D投入有负面影响。不同融资约束、规模、年龄以及是否出口对企业R&D投入的融资渠道影响存在显著差异。国有企业R&D投入依靠现金流、注册资本以及银行贷款,而民营企业则依赖现金流、注册资本和商业信用。对于那些获得政府补贴的私人所有性质民营企业来说,与政府建立联系可以帮助企业获得银行贷款并将之作为R&D投入来源。这些结果说明,中国现阶段金融市场化改革并没能够有效缓解金融体制对民营企业发展的抑制效应。
          </ul>         
-      </div>
+  </div>
 
     <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">出口对劳动收入份额抑制效应研究--基于微观视角的经验证据</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>, <a href="">周晓艳</a>合作, <i>数量经济技术经济研究</i>, 2012(07).</p>
         
-      <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">中国制造业部门劳动报酬比重的下降及其动因分析</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>, <a href="">卜茂亮</a>合作, <i>中国工业经济</i>, 2012(05).</p>
-
-      </div>
+   <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">中国制造业部门劳动报酬比重的下降及其动因分析</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>, <a href="">卜茂亮</a>合作, <i>中国工业经济</i>, 2012(05).</p>
       </div>
   </div>
 
-  <div id="data-section" style="display:none;">
-    <!-- 占位：保留左侧栏宽度，让数据库内容从右侧列开始 -->
-    <ul class="sub-links" aria-hidden="true" style="visibility:hidden;">
-      <a class="sub-link" href="#"></a>
-    </ul>
+  <div id="data-section" class="right-only" style="display:none;">
+     <h4><a id="data" class="anchor" href="#data" aria-hidden="true"><span class="octicon octicon-link"></span></a></h4>
+    <p style="margin:0 0 10px; color:#777; font-size:13px;">持续更新中。如需数据访问权限，请按"下载方式"提交申请。</p>
 
-    <div id="data-content">
-      <h2><a id="data" class="anchor" href="#data" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据库</h2>
-      <p style="margin:0 0 10px; color:#777; font-size:13px;">持续更新中。如需数据访问权限，请按“下载方式”提交申请。</p>
-
+      <div class="table-scroll">
       <table style="width:100%; border-collapse:collapse; margin-top:0.5rem;">
         <thead>
           <tr style="border-bottom:2px solid #000;">
@@ -562,20 +582,20 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
           </tr>
         </tbody>
       </table>
-    </div>
+      </div>
   </div>
 
-          <div id="peer-review-section" style="display:none;">
-          <h2><a id="同行评审" class="anchor" href="#同行评审" aria-hidden="true"><span class="octicon octicon-link"></span>
-          </a></h2>
-          
-          <ul class="sub-links" aria-label="Peer review subsections">
-            <a class="sub-link active" href="#anonymous-review" data-target="anonymous-review"><i class="fa fa-file-text-o" aria-hidden="true"></i> 期刊</a>
-            <a class="sub-link" href="#conference-review" data-target="conference-review"><i class="fa fa-users" aria-hidden="true"></i> 会议</a>
-            <a class="sub-link" href="#project-review" data-target="project-review"><i class="fa fa-flask" aria-hidden="true"></i> 项目</a>
-          </ul>
-          
-          <div id="anonymous-review">
+          <div id="peer-review-section" class="right-only" style="display:none;">
+            <h2><a id="同行评审" class="anchor" href="#同行评审" aria-hidden="true"><span class="octicon octicon-link"></span>
+            </a></h2>
+            
+            <ul class="sub-links" aria-label="Peer review subsections">
+              <a class="sub-link active" href="#anonymous-review" data-target="anonymous-review"><i class="fa fa-file-text-o" aria-hidden="true"></i> 期刊</a>
+              <a class="sub-link" href="#conference-review" data-target="conference-review"><i class="fa fa-users" aria-hidden="true"></i> 会议</a>
+              <a class="sub-link" href="#project-review" data-target="project-review"><i class="fa fa-flask" aria-hidden="true"></i> 项目</a>
+            </ul>
+            
+            <div id="anonymous-review">
             <h3 style="margin-bottom: 0.5rem;"></h3>
             <ul style="list-style-type: none; padding-left: 0; text-align: left;">
               <li><i>Journal of Development Economics</i></li>
@@ -590,14 +610,15 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
               <li><i>Economic Modelling</i></li>
               <li><i>International Review of Economics and Finance</i></li>
               <li><i>经济研究</i></li>
-              <li><i>金融研究</i></li>
               <li><i>中国社会科学</i></li>
+              <li><i>金融研究</i></li>
               <li><i>数量经济与技术经济研究</i></li>
               <li><i>经济学(季刊)</i></li>
               <li><i>经济理论与经济管理</i></li>
               <li><i>经济学动态</i></li>
               <li><i>经济科学</i></li>
               <li><i>经济学报</i></li>
+              <li><i>中国经济问题</i></li>
             </ul>
           </div>
           
@@ -605,13 +626,14 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
           <strong>2024 </strong>&emsp; Academy of International Business (AIB) 会议评审
           </div>
           
-          <div id="project-review" style="display:none;">
-          待补充
-          </div>
+            <div id="project-review" style="display:none;">
+            待补充
+            </div>
           </div>
       
-          <div id="funding-section" style="display:none;">
+          <div id="funding-section" class="right-only" style="display:none;">
           <h2><a id="科研项目" class="anchor" href="#科研项目" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+          <div class="table-scroll">
           <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
             <thead>
               <tr style="border-bottom: 2px solid #000;">
@@ -667,9 +689,11 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
             </tbody>
           </table>
           </div>
+          </div>
 
-          <div id="patents-section" style="display:none;">
+          <div id="patents-section" class="right-only" style="display:none;">
           <h2><a id="专利" class="anchor" href="#专利" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+          <div class="table-scroll">
           <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
             <thead>
               <tr style="border-bottom: 2px solid #000;">
@@ -691,6 +715,7 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
             </tbody>
           </table>
           </div>
+          </div>
 
           <div id="honors-section" style="display:none;">
           <h2><a id="荣誉奖励" class="anchor" href="#荣誉奖励" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
@@ -702,6 +727,9 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素,这可能
             <li><strong>第18届</strong>&emsp;安子介国际贸易论文三等奖</li>
           </ul>
           </div>
+
+      </section>
+    </div>
 
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/nav-transition.js"></script>
