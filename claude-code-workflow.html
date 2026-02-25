@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+  <head>
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Building Claude Code Workflow for Economics Scholars</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+
+  </head>
+  <body>
+    <!-- Language toggle -->
+    <div style="text-align:right; padding:10px 20px; background-color:#f8f9fa; border-bottom:1px solid #e1e4e8;">
+      <a href="https://zhiyuanryanchen.github.io/claude-code-workflow.html" style="margin-right:15px; text-decoration:none; color:#0366d6; font-weight:bold;">English</a>
+      <a href="https://zhiyuanryanchen.github.io/claude-code-workflow-zh.html" style="text-decoration:none; color:#999;">中文</a>
+    </div>
+
+    <div class="wrapper">
+      <header>
+        <p></p>
+        <div>
+          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a></p></h3>
+        </div>
+
+  <p class="view"><b></b><br>
+
+      </header>
+
+      <section>
+    <hr style="height:3px;border:none;background-color:#000;margin:1.5rem 0;">
+    
+    <h1>Building Claude Code Workflow for Economics Scholars</h1>
+    
+    <p>A practical guide to leveraging Claude Code for academic research in economics — from data analysis and econometric modeling to manuscript preparation and presentation creation. This guide shares proven workflows that help economics scholars automate repetitive tasks, maintain code quality, and focus on research impact.</p>
+
+    <p style="color:#666; font-style:italic; background-color:#f5f5f5; padding:10px; border-left:3px solid #888;">
+      <strong>Acknowledgment:</strong> This guide is inspired by and builds upon <a href="https://psantanna.com/claude-code-my-workflow/" target="_blank">Pedro H. C. Sant'Anna's comprehensive Claude Code workflow guide</a> for academics. Sant'Anna's work at Emory University demonstrates how Claude Code can be adapted for research in economics, statistics, and quantitative disciplines. His open-source templates and workflows provide an excellent foundation for scholars looking to integrate AI assistance into their research pipelines.
+    </p>
+
+    <div style="text-align:center; margin:20px 0;">
+      <a href="https://psantanna.com/claude-code-my-workflow/" target="_blank" style="display:inline-block; background-color:#0366d6; color:white; padding:12px 24px; text-decoration:none; border-radius:5px; font-weight:bold; margin:10px 5px;">
+        <i class="fa fa-external-link" aria-hidden="true"></i> Visit Pedro Sant'Anna's Complete Guide
+      </a>
+      <a href="https://github.com/pedrohcgs/claude-code-my-workflow" target="_blank" style="display:inline-block; background-color:#28a745; color:white; padding:12px 24px; text-decoration:none; border-radius:5px; font-weight:bold; margin:10px 5px;">
+        <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
+      </a>
+    </div>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>What's Claude Code?</h2>
+    <p><a href="https://code.claude.com/" target="_blank">Claude Code</a> is an integrated development environment in Claude that allows you to write, run, and iterate on code projects autonomously. For economics scholars, this means:</p>
+    <ul>
+      <li>Autonomous project planning and execution</li>
+      <li>Multi-stage verification and quality checks</li>
+      <li>Integration with your existing tools (R, Python, LaTeX, Quarto)</li>
+      <li>Context-aware assistance across your entire project</li>
+      <li>Iterative refinement until quality standards are met</li>
+    </ul>
+
+    <h2>Core Workflows for Economics Research</h2>
+
+    <h3><i class="fa fa-line-chart" aria-hidden="true"></i> 1. Data Analysis & Econometrics</h3>
+    <p>Automated R/Python pipelines for:</p>
+    <ul>
+      <li>Data cleaning and preparation with audit trails</li>
+      <li>Descriptive statistics and exploratory analysis</li>
+      <li>Econometric estimation with diagnostic checks</li>
+      <li>Robustness testing and sensitivity analysis</li>
+      <li>Publication-ready tables and figures</li>
+    </ul>
+
+    <h3><i class="fa fa-pencil" aria-hidden="true"></i> 2. Manuscript Development</h3>
+    <p>Streamlined workflows for academic writing:</p>
+    <ul>
+      <li>LaTeX/Quarto document setup and version control</li>
+      <li>Automated figure and table generation</li>
+      <li>Bibliography management and citation verification</li>
+      <li>Manuscript review and revision tracking</li>
+      <li>Multi-agent feedback (semantic review, technical review, exposition review)</li>
+    </ul>
+
+    <h3><i class="fa fa-presentation" aria-hidden="true"></i> 3. Presentation & Slides</h3>
+    <p>Coordinated creation of course materials and presentations:</p>
+    <ul>
+      <li>Beamer/Quarto slide generation from source documents</li>
+      <li>Mathematical notation consistency checking</li>
+      <li>Multi-language slide production (English/Chinese)</li>
+      <li>Automated diagram creation and formatting</li>
+      <li>Accessibility and pedagogy verification</li>
+    </ul>
+
+    <h3><i class="fa fa-book" aria-hidden="true"></i> 4. Literature Review & Ideation</h3>
+    <p>Enhance your research planning:</p>
+    <ul>
+      <li>Systematic literature synthesis from PDFs</li>
+      <li>Hypothesis generation from related work</li>
+      <li>Research conceptualization and formalization</li>
+      <li>Gap identification in the literature</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Key Features for Academic Work</h2>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>Quality Gates & Verification</h3>
+      <p>Every output is scored and verified before completion. No manuscript ships below quality standards. Every code output is tested and validated.</p>
+    </div>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>Specialized Agents</h3>
+      <p>Different agents handle different tasks: code review, econometric diagnostics, writing feedback, mathematical verification, and domain expertise. They work together and check each other's work.</p>
+    </div>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>Plan-First Approach</h3>
+      <p>Non-trivial tasks start with Claude creating a detailed plan. You review and approve before implementation, ensuring alignment with your research goals.</p>
+    </div>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>Context Persistence</h3>
+      <p>Learning corrections persist across sessions. Your preferences, notation standards, and research conventions are remembered and applied consistently.</p>
+    </div>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Getting Started</h2>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Claude Code access (from Claude.ai or API)</li>
+      <li>Basic familiarity with your preferred tools (R, Python, LaTeX, etc.)</li>
+      <li>A research project or task you want to automate</li>
+    </ul>
+
+    <h3>Setup Steps</h3>
+    <ol>
+      <li>Open Claude Code and describe your project (2-3 sentences about what you're working on)</li>
+      <li>Include your research domain and tools (e.g., "econometric analysis in R" or "write a LaTeX paper")</li>
+      <li>Specify any preferences or requirements (coding style, output formats, quality standards)</li>
+      <li>Claude will analyze your project structure and propose a workflow</li>
+      <li>Review the plan, ask for adjustments, then proceed with execution</li>
+    </ol>
+
+    <h3>First Session Prompt Template</h3>
+    <pre style="background-color:#f5f5f5; padding:15px; border-radius:5px; overflow-x:auto;">
+I'm working on [DESCRIBE YOUR PROJECT].
+My goal is to [DESCRIBE MAIN OBJECTIVE].
+I use [YOUR TOOLS: R/Python/LaTeX/Quarto].
+Important conventions: [ANY SPECIFIC REQUIREMENTS].
+Please analyze my current structure and propose a workflow.</pre>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Common Use Cases</h2>
+
+    <h3>Econometric Analysis Pipeline</h3>
+    <p>Describe your dataset, analysis goals, and specifications. Claude will write R code to:</p>
+    <ul>
+      <li>Load and explore the data</li>
+      <li>Perform descriptive analysis</li>
+      <li>Run econometric models (OLS, IV, panel methods, etc.)</li>
+      <li>Generate diagnostic tests</li>
+      <li>Create publication-ready tables</li>
+      <li>Verify results through robustness checks</li>
+    </ul>
+
+    <h3>Research Paper Development</h3>
+    <p>Work on your paper with Claude handling:</p>
+    <ul>
+      <li>Creating the LaTeX structure</li>
+      <li>Embedding code results as figures/tables</li>
+      <li>Reference management and formatting</li>
+      <li>Multi-round editing with expert feedback</li>
+      <li>Consistency checking across sections</li>
+    </ul>
+
+    <h3>Course Materials</h3>
+    <p>Generate lecture slides and educational content:</p>
+    <ul>
+      <li>Convert notes to formatted slide decks</li>
+      <li>Create exercise sets with solutions</li>
+      <li>Verify mathematical exposition for clarity</li>
+      <li>Generate accompanying R labs</li>
+      <li>Maintain consistency across lectures</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Best Practices</h2>
+
+    <ul>
+      <li><strong>Be Specific:</strong> More detailed project descriptions lead to better workflows</li>
+      <li><strong>Review Plans First:</strong> Always review Claude's proposed plan before implementation</li>
+      <li><strong>Use Quality Gates:</strong> Set clear quality criteria for your outputs</li>
+      <li><strong>Document Your Preferences:</strong> Keep a preferences file (conventions, coding style, etc.)</li>
+      <li><strong>Iterate Carefully:</strong> Use the planning phase to catch issues early</li>
+      <li><strong>Validate Results:</strong> Always verify outputs, especially for econometric results</li>
+      <li><strong>Version Control:</strong> Keep your project in Git for easy rollback if needed</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Resources & Further Learning</h2>
+
+    <ul>
+      <li><a href="https://code.claude.com/docs/en/overview" target="_blank">Claude Code Documentation</a></li>
+      <li><a href="https://psantanna.com/claude-code-my-workflow/" target="_blank">Claude Code Workflow Guide (by Pedro Sant'Anna)</a> - A detailed guide with templates for academics</li>
+      <li><a href="https://github.com/pedrohcgs/claude-code-my-workflow" target="_blank">Claude Code Workflow Repository</a> - Open-source starter templates</li>
+      <li><a href="https://code.claude.com/" target="_blank">Try Claude Code</a></li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Tips for Economics Scholars</h2>
+
+    <div style="background-color:#fffbf0; padding:15px; border-radius:5px; margin:20px 0; border-left:4px solid #ff9800;">
+      <h4 style="margin-top:0;"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Data Security</h4>
+      <p>For sensitive data, use local processing and keep confidential data out of Claude conversations. Consider anonymizing datasets before analysis.</p>
+    </div>
+
+    <div style="background-color:#fffbf0; padding:15px; border-radius:5px; margin:20px 0; border-left:4px solid #ff9800;">
+      <h4 style="margin-top:0;"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Reproducibility</h4>
+      <p>Always use seed values for random operations. Document all assumptions and keep comprehensive logs of your analysis choices.</p>
+    </div>
+
+    <div style="background-color:#fffbf0; padding:15px; border-radius:5px; margin:20px 0; border-left:4px solid #ff9800;">
+      <h4 style="margin-top:0;"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Version Control</h4>
+      <p>Use Git to track all changes. This helps with collaboration, reverting mistakes, and maintaining a clear research timeline.</p>
+    </div>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>Getting Help</h2>
+
+    <p>If you run into issues:</p>
+    <ul>
+      <li>Check the <a href="https://code.claude.com/docs/en/overview" target="_blank">Claude Code documentation</a></li>
+      <li>Review the <a href="https://psantanna.com/claude-code-my-workflow/" target="_blank">detailed guide by Pedro Sant'Anna</a></li>
+      <li>Start with a simpler task to test your workflow</li>
+      <li>Be explicit about error messages and what you want to accomplish</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#000;margin:1.5rem 0;">
+
+    <p style="color:#888; font-size:12px; margin-top:30px;">Last updated: February 2025. This guide evolves as Claude Code features and best practices develop.</p>
+
+    </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/nav-transition.js"></script>
+
+  </body>
+</html>

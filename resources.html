@@ -32,19 +32,28 @@
     <div class="wrapper">
       <header>
         <p></p>
-        <!-- <p>Research Affiliate<br><a href="http://legacy.iza.org/en/webcontent/personnel/photos/index_html?key=24155">Institute for the Study of Labor (IZA)</a></p> -->
-        <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
-          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
-          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
-          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
-          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a></p></h3>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
+              <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
+              <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
+              <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
+              <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a></p></h3>
+          </div>
+          <div style="text-align:right;">
+            <p style="margin:0;">
+              <a href="https://zhiyuanryanchen.github.io/resources.html" style="margin-right:15px; text-decoration:none; color:#0366d6; font-weight:bold;">English</a>
+              <span style="color:#999;">中文</span>
+            </p>
+          </div>
+        </div>
 
   <p class="view"><b></b><br>
 
       </header>
 
       <section>
-    <hr style="height:6px;border:none;background-color:#000;margin:1.5rem 0;">
+    <hr style="height:3px;border:none;background-color:#000;margin:1.5rem 0;">
     <div class="pub-toggle" aria-label="Resources categories">
       <a class="nav-button pub-btn active" href="#models" data-target="models-section">Models</a>
       <a class="nav-button pub-btn" href="#econometrics" data-target="econometrics-section">Econometrics</a>
@@ -89,8 +98,8 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
 
     <div id="ml-section" style="display:none;">
       <ul class="sub-links" aria-label="Artificial intelligence subsections">
-        <a class="sub-link active" href="#machine-learning-list"><i class="fa fa-bar-chart" aria-hidden="true"></i> Machine Learning</a>
         <a class="sub-link" href="#llm-agents"><i class="fa fa-android" aria-hidden="true"></i> LLM Agents</a>
+        <a class="sub-link active" href="#machine-learning-list"><i class="fa fa-bar-chart" aria-hidden="true"></i> Machine Learning</a>
         <a class="sub-link" href="#nlp"><i class="fa fa-comment" aria-hidden="true"></i> NLP</a>
         
       </ul>
@@ -101,7 +110,9 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
         </ul>
       </div>
       <div id="llm-agents" style="display:none;">
-        <p>Coming soon.</p>
+        <ul class="resource-list">
+          <li><i class="fa fa-code" aria-hidden="true"></i> Building Claude Code Workflow for Economics Scholars &emsp; <a href="https://zhiyuanryanchen.github.io/claude-code-workflow.html" target="_explorer.exe">Guide</a></li>
+        </ul>
       </div>
       <div id="nlp" style="display:none;">
         <p>Coming soon.</p>
@@ -204,7 +215,7 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
         });
 
         const aiLinks = document.querySelectorAll('#ml-section .sub-link');
-        const aiSections = ['machine-learning-list', 'llm-agents', 'nlp']
+        const aiSections = ['llm-agents', 'machine-learning-list', 'nlp']
           .map((id) => document.getElementById(id))
           .filter(Boolean);
 
@@ -234,7 +245,7 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
         showSection('models-section');
         showModelSection('macro-section');
         showEconSection('applied-micro');
-        showAiSection('machine-learning-list');
+        showAiSection('llm-agents');
       })();
     </script>
 

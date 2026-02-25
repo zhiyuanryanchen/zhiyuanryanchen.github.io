@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+  <head>
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>为经济学家构建Claude代码工作流</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+
+  </head>
+  <body>
+    <!-- Language toggle -->
+    <div style="text-align:right; padding:10px 20px; background-color:#f8f9fa; border-bottom:1px solid #e1e4e8;">
+      <a href="https://zhiyuanryanchen.github.io/claude-code-workflow.html" style="margin-right:15px; text-decoration:none; color:#999;">English</a>
+      <a href="https://zhiyuanryanchen.github.io/claude-code-workflow-zh.html" style="text-decoration:none; color:#0366d6; font-weight:bold;">中文</a>
+    </div>
+
+    <div class="wrapper">
+      <header>
+        <p></p>
+        <div>
+          <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a></p></h3>
+            <h3><p class="view"><a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a></p></h3>
+        </div>
+
+  <p class="view"><b></b><br>
+
+      </header>
+
+      <section>
+    <hr style="height:3px;border:none;background-color:#000;margin:1.5rem 0;">
+    
+    <h1>为经济学家构建Claude代码工作流</h1>
+    
+    <p>一份实用指南，帮助经济研究者利用Claude Code进行学术研究 — 从数据分析和计量经济学建模到手稿准备和演示文稿创建。本指南分享了经过验证的工作流程，帮助经济学家自动化重复性任务、维持代码质量并专注于研究影响力。</p>
+
+    <p style="color:#666; font-style:italic; background-color:#f5f5f5; padding:10px; border-left:3px solid #888;">
+      <strong>致谢：</strong>本指南受到了<a href="https://psantanna.com/claude-code-my-workflow/" target="_blank">Pedro H. C. Sant'Anna 的完整Claude代码工作流指南</a>的启发。Sant'Anna 在埃默里大学的工作展示了如何将Claude Code应用于经济学、统计学和定量学科的研究。他的开源模板和工作流为希望将AI辅助集成到研究流程中的学者提供了宝贵的基础。
+    </p>
+
+    <div style="text-align:center; margin:20px 0;">
+      <a href="https://psantanna.com/claude-code-my-workflow/" target="_blank" style="display:inline-block; background-color:#0366d6; color:white; padding:12px 24px; text-decoration:none; border-radius:5px; font-weight:bold; margin:10px 5px;">
+        <i class="fa fa-external-link" aria-hidden="true"></i> 查看Pedro Sant'Anna的完整指南
+      </a>
+      <a href="https://github.com/pedrohcgs/claude-code-my-workflow" target="_blank" style="display:inline-block; background-color:#28a745; color:white; padding:12px 24px; text-decoration:none; border-radius:5px; font-weight:bold; margin:10px 5px;">
+        <i class="fa fa-github" aria-hidden="true"></i> 在GitHub上查看
+      </a>
+    </div>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>什么是Claude Code？</h2>
+    <p><a href="https://code.claude.com/" target="_blank">Claude Code</a> 是Claude中的集成开发环境，允许您自主编写、运行和迭代代码项目。对于经济学家来说，这意味着：</p>
+    <ul>
+      <li>自主的项目规划和执行</li>
+      <li>多阶段验证和质量检查</li>
+      <li>与现有工具的集成（R、Python、LaTeX、Quarto）</li>
+      <li>跨整个项目的上下文感知辅助</li>
+      <li>迭代精化直到达到质量标准</li>
+    </ul>
+
+    <h2>经济学研究的核心工作流</h2>
+
+    <h3><i class="fa fa-line-chart" aria-hidden="true"></i> 1. 数据分析与计量经济学</h3>
+    <p>自动化的R/Python管道用于：</p>
+    <ul>
+      <li>数据清洗和准备（含追踪记录）</li>
+      <li>描述性统计和探索性分析</li>
+      <li>带诊断检验的计量经济学估计</li>
+      <li>稳健性测试和敏感性分析</li>
+      <li>出版就绪的表格和图形</li>
+    </ul>
+
+    <h3><i class="fa fa-pencil" aria-hidden="true"></i> 2. 手稿开发</h3>
+    <p>学术写作的简化工作流：</p>
+    <ul>
+      <li>LaTeX/Quarto文档设置和版本控制</li>
+      <li>自动图形和表格生成</li>
+      <li>参考文献管理和引用验证</li>
+      <li>手稿审查和修订跟踪</li>
+      <li>多代理反馈（语义审查、技术审查、表述审查）</li>
+    </ul>
+
+    <h3><i class="fa fa-presentation" aria-hidden="true"></i> 3. 演示与幻灯片</h3>
+    <p>课程材料和演示文稿的协调创建：</p>
+    <ul>
+      <li>从源文档生成Beamer/Quarto幻灯片</li>
+      <li>数学符号一致性检查</li>
+      <li>多语言幻灯片生成（英文/中文）</li>
+      <li>自动图表创建和格式化</li>
+      <li>可访问性和教育学验证</li>
+    </ul>
+
+    <h3><i class="fa fa-book" aria-hidden="true"></i> 4. 文献综述与思想构思</h3>
+    <p>增强您的研究规划：</p>
+    <ul>
+      <li>从PDF进行系统的文献综合</li>
+      <li>从相关工作生成假设</li>
+      <li>研究概念化和形式化</li>
+      <li>文献中的差距识别</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>面向学术工作的关键特性</h2>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>质量把关与验证</h3>
+      <p>每个输出都被评分和验证。没有低于质量标准的手稿会被交付。每个代码输出都经过测试和验证。</p>
+    </div>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>专业化代理</h3>
+      <p>不同的代理处理不同的任务：代码审查、计量诊断、写作反馈、数学验证和领域专业知识。它们互相协作并检查彼此的工作。</p>
+    </div>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>规划优先方法</h3>
+      <p>非平凡的任务从Claude创建详细计划开始。您审查并批准后再进行实施，确保与您的研究目标一致。</p>
+    </div>
+
+    <div style="background-color:#f8f9fa; padding:15px; border-radius:5px; margin:20px 0;">
+      <h3>上下文持久化</h3>
+      <p>学习矫正在会话间持久化。您的偏好、符号标准和研究习惯被记住并始终应用。</p>
+    </div>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>快速开始</h2>
+
+    <h3>前置条件</h3>
+    <ul>
+      <li>Claude Code访问权限（来自Claude.ai或API）</li>
+      <li>对您首选工具的基本熟悉（R、Python、LaTeX等）</li>
+      <li>您想要自动化的研究项目或任务</li>
+    </ul>
+
+    <h3>设置步骤</h3>
+    <ol>
+      <li>打开Claude Code并描述您的项目（2-3句关于您在做什么）</li>
+      <li>包括您的研究领域和工具（如"计量经济学R分析"或"写LaTeX论文"）</li>
+      <li>指定任何偏好或要求（编码风格、输出格式、质量标准）</li>
+      <li>Claude将分析您的项目结构并提议一个工作流</li>
+      <li>审查计划，要求调整，然后继续执行</li>
+    </ol>
+
+    <h3>首次会话提示模板</h3>
+    <pre style="background-color:#f5f5f5; padding:15px; border-radius:5px; overflow-x:auto;">
+我在做[描述您的项目]。
+我的目标是[描述主要目标]。
+我使用[您的工具：R/Python/LaTeX/Quarto]。
+重要习惯：[任何特定要求]。
+请分析我的现有结构并提议一个工作流。</pre>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>常见用例</h2>
+
+    <h3>计量经济学分析管道</h3>
+    <p>描述您的数据集、分析目标和规格说明。Claude将编写R代码来：</p>
+    <ul>
+      <li>加载和探索数据</li>
+      <li>进行描述性分析</li>
+      <li>运行计量模型（OLS、IV、面板方法等）</li>
+      <li>生成诊断测试</li>
+      <li>创建出版就绪的表格</li>
+      <li>通过稳健性检查验证结果</li>
+    </ul>
+
+    <h3>研究论文开发</h3>
+    <p>与Claude合作处理您的论文：</p>
+    <ul>
+      <li>创建LaTeX结构</li>
+      <li>将代码结果嵌入为图形/表格</li>
+      <li>参考文献管理和格式化</li>
+      <li>多轮编辑与专家反馈</li>
+      <li>各部分间的一致性检查</li>
+    </ul>
+
+    <h3>课程材料</h3>
+    <p>生成讲义幻灯片和教育内容：</p>
+    <ul>
+      <li>将笔记转换为格式化的幻灯片</li>
+      <li>创建附练习题及解答</li>
+      <li>验证数学表述的清晰度</li>
+      <li>生成附带的R实验室</li>
+      <li>保持讲座间的一致性</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>最佳实践</h2>
+
+    <ul>
+      <li><strong>具体明确：</strong>更详细的项目描述导致更好的工作流</li>
+      <li><strong>先审查计划：</strong>总是在实施前审查Claude的提议计划</li>
+      <li><strong>使用质量把关：</strong>为您的输出设定明确的质量标准</li>
+      <li><strong>记录您的偏好：</strong>保持一份偏好文件（习惯、编码风格等）</li>
+      <li><strong>谨慎迭代：</strong>在规划阶段使用以早期捕获问题</li>
+      <li><strong>验证结果：</strong>始终验证输出，特别是计量结果</li>
+      <li><strong>版本控制：</strong>将您的项目保存在Git中以便轻松回滚</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>资源与进一步学习</h2>
+
+    <ul>
+      <li><a href="https://code.claude.com/docs/en/overview" target="_blank">Claude Code文档</a></li>
+      <li><a href="https://psantanna.com/claude-code-my-workflow/" target="_blank">Claude代码工作流指南（由Pedro Sant'Anna提供）</a> - 为学术工作者提供的详细指南和模板</li>
+      <li><a href="https://github.com/pedrohcgs/claude-code-my-workflow" target="_blank">Claude代码工作流存储库</a> - 开源初始模板</li>
+      <li><a href="https://code.claude.com/" target="_blank">尝试Claude Code</a></li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>经济学家的贴士</h2>
+
+    <div style="background-color:#fffbf0; padding:15px; border-radius:5px; margin:20px 0; border-left:4px solid #ff9800;">
+      <h4 style="margin-top:0;"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 数据安全</h4>
+      <p>对于敏感数据，使用本地处理并将机密数据排除在Claude对话之外。考虑在分析前匿名化数据集。</p>
+    </div>
+
+    <div style="background-color:#fffbf0; padding:15px; border-radius:5px; margin:20px 0; border-left:4px solid #ff9800;">
+      <h4 style="margin-top:0;"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 可重复性</h4>
+      <p>始终对随机操作使用种子值。记录所有假设并保持详细的分析选择日志。</p>
+    </div>
+
+    <div style="background-color:#fffbf0; padding:15px; border-radius:5px; margin:20px 0; border-left:4px solid #ff9800;">
+      <h4 style="margin-top:0;"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 版本控制</h4>
+      <p>使用Git追踪所有更改。这有助于协作、恢复错误和维护清晰的研究时间线。</p>
+    </div>
+
+    <hr style="height:3px;border:none;background-color:#ddd;margin:2rem 0;">
+
+    <h2>获取帮助</h2>
+
+    <p>如果遇到问题：</p>
+    <ul>
+      <li>检查<a href="https://code.claude.com/docs/en/overview" target="_blank">Claude Code文档</a></li>
+      <li>查看<a href="https://psantanna.com/claude-code-my-workflow/" target="_blank">Pedro Sant'Anna的详细指南</a></li>
+      <li>从更简单的任务开始以测试您的工作流</li>
+      <li>明确说明错误信息和您想要实现的目标</li>
+    </ul>
+
+    <hr style="height:3px;border:none;background-color:#000;margin:1.5rem 0;">
+
+    <p style="color:#888; font-size:12px; margin-top:30px;">最后更新：2025年2月。本指南随着Claude Code功能和最佳实践的发展而不断演进。</p>
+
+    </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/nav-transition.js"></script>
+
+  </body>
+</html>
