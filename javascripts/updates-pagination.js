@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderPage = () => {
     items.forEach((item, index) => {
       const pageIndex = Math.floor(index / pageSize);
-      item.style.display = pageIndex === currentPage ? 'list-item' : 'none';
+      item.style.display = pageIndex === currentPage ? '' : 'none';
     });
 
     const buttons = pagination.querySelectorAll('[data-page]');
