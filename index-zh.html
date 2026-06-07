@@ -22,28 +22,64 @@
       .updates-list {
         list-style: none;
         padding-left: 0;
+        margin: 0;
       }
       .updates-list li {
         display: flex;
         align-items: flex-start;
-        gap: 1.2rem;
-        margin-bottom: 0.35rem;
+        gap: 1rem;
+        margin-bottom: 0.55rem;
+        padding: 0.6rem 0.75rem;
+        border: 1px solid #eceff3;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .updates-list li:hover {
+        border-color: #ead0d6;
+        background: #fffafa;
       }
       .updates-date {
-        min-width: 8.5rem;
+        min-width: 7.8rem;
         white-space: nowrap;
+        color: #7a2331;
+        padding-top: 0.05rem;
       }
       .updates-text {
         flex: 1;
         min-width: 0;
+        display: block;
+        line-height: 1.48;
+        line-break: strict;
+        overflow-wrap: break-word;
+        word-break: normal;
       }
       .updates-image {
         display: block;
         width: min(100%, 260px);
         height: auto;
-        margin-top: 0.45rem;
+        margin-top: 0;
         border: 1px solid #e1e4e8;
         border-radius: 6px;
+      }
+      .home-page section .updates-text > a:not(.updates-media-link),
+      .home-page section .updates-text > a:not(.updates-media-link):visited {
+        color: #8f2f3a;
+        font-weight: 600;
+      }
+      .home-page section .updates-media-link,
+      .home-page section .updates-media-link:visited {
+        display: block;
+        width: fit-content;
+        margin-top: 0.45rem;
+      }
+      @media (max-width: 720px) {
+        .updates-list li {
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+        .updates-date {
+          min-width: 0;
+        }
       }
       .scheduled-updates {
         margin: 0 0 1rem;
@@ -186,30 +222,30 @@
       </div>
     </div>
     <ul id="recent-updates" class="updates-list">
-      <li><span class="updates-date"><strong>2026-06-04</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/QnbrZ2Igfxc58_0QAvvFWA" target="_blank" rel="noopener">人大经济学院讲座：一站式科研:VS Code 与大模型实操应用<img class="updates-image" src="gallary/20260604_One-StopVScode.jpeg" alt="人大经济学院讲座：一站式科研:VS Code 与大模型实操应用"></a></span></li>
+      <li><span class="updates-date"><strong>2026-06-04</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/QnbrZ2Igfxc58_0QAvvFWA" target="_blank" rel="noopener">人大经济学院讲座：一站式科研:VS Code 与大模型实操应用</a><a class="updates-media-link" href="https://mp.weixin.qq.com/s/QnbrZ2Igfxc58_0QAvvFWA" target="_blank" rel="noopener"><img class="updates-image" src="gallary/20260604_One-StopVScode.jpeg" alt="人大经济学院讲座：一站式科研:VS Code 与大模型实操应用"></a></span></li>
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">论文《Banking Competition, Defaulting Risks, and Margins of Innovation》最终被 <i><strong>Canadian Journal of Economics</strong></i> 接受。论文初稿写于 2017 年，并入选 2018 年 AEA Poster Session。</span></li>
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">与管理学者合作的论文《The Impact of Digital Transformation on Productivity: Evidence from Chinese Manufacturing Firms》被 <i><strong>Management and Organization Review</strong></i> 条件接受。</span></li>
-      <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Network Week (国际游学周)</a>，模块项目主任 @<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></span></li>
-      <li><span class="updates-date"><strong>2026-01-20</strong>&emsp;</span><span class="updates-text">中国经济研究专题研究会，主题演讲人 @<i><strong>人大经济学院</strong></i></span></li>
-      <li><span class="updates-date"><strong>2026-01-18</strong>&emsp;</span><span class="updates-text">提出新的处理效应识别方法的方法论论文被接受 @<i><strong>RAND经济学杂志</strong></i></span></li>
+      <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Network Week (国际游学周)</a>，模块项目主任&nbsp;@<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></a></span></li>
+      <li><span class="updates-date"><strong>2026-01-20</strong>&emsp;</span><span class="updates-text">中国经济研究专题研究会，主题演讲人&nbsp;@<i><strong>人大经济学院</strong></i></span></li>
+      <li><span class="updates-date"><strong>2026-01-18</strong>&emsp;</span><span class="updates-text">提出新的处理效应识别方法的方法论论文被接受&nbsp;@<i><strong>RAND经济学杂志</strong></i></span></li>
       <li><span class="updates-date"><strong>2026-01-01</strong>&emsp;</span><span class="updates-text"><strong>国家自然科学基金委专项项目</strong>"基础研究支撑经济发展数据系统构建与集成"，子课题负责人</span></li>
       <li><span class="updates-date"><strong>2025-12-30</strong>&emsp;</span><span class="updates-text"><a href="https://news.ruc.edu.cn/2005801224914534401.html" target="_blank"><strong>人大新闻网报道</strong>JDE发表论文： "首创机组层面分析框架，破解电力行业碳管制效率难题"</a></span></li>
 
 
       <li><span class="updates-date"><strong>2025-12-26</strong>&emsp;</span><span class="updates-text"><a href="https://linkinghub.elsevier.com/retrieve/pii/S0304387825002627" target="_blank">关于应用结构性生产函数估计和反事实分析解决煤炭发电厂监管问题的论文即将发表</a>@<i><strong>发展经济学杂志</strong></i></span></li>
 
-      <li><span class="updates-date"><strong>2025-12-19</strong>&emsp;</span><span class="updates-text"><a href="https://news.hnust.edu.cn/kdyw/de18362d9e834230bc5a8ac3c65cd4a8.htm" target="_blank">第二届"香樟书院"学术讲堂，主讲嘉宾</a> @<i><strong>湖南科技大学商学院</strong></i></span></li>
+      <li><span class="updates-date"><strong>2025-12-19</strong>&emsp;</span><span class="updates-text"><a href="https://news.hnust.edu.cn/kdyw/de18362d9e834230bc5a8ac3c65cd4a8.htm" target="_blank">第二届"香樟书院"学术讲堂，主讲嘉宾</a>&nbsp;@<i><strong>湖南科技大学商学院</strong></i></span></li>
 
       <li><span class="updates-date"><strong>2025-11-15</strong>&emsp;</span><span class="updates-text"><a href="https://www.ahut.edu.cn/info/1002/27413.htm" target="_blank"> 第五届香樟产业经济学论坛，主旨演讲嘉宾 </a>@<i><strong>安徽工业大学</strong></i> </span></li>
-      <li><span class="updates-date"><strong>2025-09-03</strong>&emsp;</span><span class="updates-text"><a href="https://fss.um.edu.mo/fss-deco-seminar-patent-financing-rd-investment-and-tfp-dynamics/" target="_blank">应邀FSS-DECO讲座</a>  @<i><strong>澳门大学</strong></i></span></li>
-    <li><span class="updates-date"><strong>2025-08-14</strong>&emsp;</span><span class="updates-text">伊顿论坛演讲，国际经济与金融学会主办 @<i><strong>对外经济与贸易大学</strong></i></span></li>
+      <li><span class="updates-date"><strong>2025-09-03</strong>&emsp;</span><span class="updates-text"><a href="https://fss.um.edu.mo/fss-deco-seminar-patent-financing-rd-investment-and-tfp-dynamics/" target="_blank">应邀FSS-DECO讲座</a>&nbsp;@<i><strong>澳门大学</strong></i></span></li>
+    <li><span class="updates-date"><strong>2025-08-14</strong>&emsp;</span><span class="updates-text">伊顿论坛演讲，国际经济与金融学会主办&nbsp;@<i><strong>对外经济与贸易大学</strong></i></span></li>
 
-    <li><span class="updates-date"><strong>2025-05-19</strong>&emsp;</span><span class="updates-text">ISEM会议应邀演讲：中国经验研究的前沿 @<i><strong>首都经济与贸易大学ISEM</strong></i></span></li>
-      <li><span class="updates-date"><strong>2023-07-02</strong>&emsp;</span><span class="updates-text">中国金融研究会 @<i><strong>清华五道口</strong></i></span></li>
+    <li><span class="updates-date"><strong>2025-05-19</strong>&emsp;</span><span class="updates-text">ISEM会议应邀演讲：中国经验研究的前沿&nbsp;@<i><strong>首都经济与贸易大学ISEM</strong></i></span></li>
+      <li><span class="updates-date"><strong>2023-07-02</strong>&emsp;</span><span class="updates-text">中国金融研究会&nbsp;@<i><strong>清华五道口</strong></i></span></li>
 
-      <li><span class="updates-date"><strong>2021-07-12</strong>&emsp;</span><span class="updates-text">第七届国际青年金融学者会议（虚拟）  @<i><strong>北大汇丰商学院</strong></i></span></li>
+      <li><span class="updates-date"><strong>2021-07-12</strong>&emsp;</span><span class="updates-text">第七届国际青年金融学者会议（虚拟）&nbsp;@<i><strong>北大汇丰商学院</strong></i></span></li>
 
-      <li><span class="updates-date"><strong>2022-06-22</strong>&emsp;</span><span class="updates-text">2022年计量经济学会亚洲年会演讲 @<i><strong>香港中文大学-深圳</strong></i></span></li>
+      <li><span class="updates-date"><strong>2022-06-22</strong>&emsp;</span><span class="updates-text">2022年计量经济学会亚洲年会演讲&nbsp;@<i><strong>香港中文大学-深圳</strong></i></span></li>
     </ul>
     <div id="updates-pagination" class="updates-pagination" aria-label="最新更新分页"></div>
 
