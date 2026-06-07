@@ -61,6 +61,44 @@
       .scheduled-updates p {
         margin: 0;
       }
+      .handout-card {
+        margin: 0 0 1rem;
+        padding: 0.9rem 1rem;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      .handout-card h3 {
+        margin: 0 0 0.4rem;
+        color: #222;
+        font-size: 17px;
+      }
+      .handout-card p {
+        margin: 0 0 0.65rem;
+      }
+      .handout-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .home-page section .handout-button,
+      .home-page section .handout-button:visited {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.4rem 0.7rem;
+        border: 1px solid #b23a48;
+        border-radius: 4px;
+        color: #8f2f3a;
+        background: #fbf6f7;
+        font-weight: 600;
+      }
+      .home-page section .handout-button:hover,
+      .home-page section .handout-button:focus {
+        color: #fff;
+        background: #8f2f3a;
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -136,8 +174,19 @@
       <h3>Scheduled Talks</h3>
       <p><strong>VS Code与一站式科研系列交流：</strong>中央财大，首都经贸大学，对外经贸大学，南京大学，中国人民大学（苏州校区），江西财经大学</p>
     </div>
+    <div class="handout-card" aria-label="One-Stop Research handout">
+      <h3>Handout: One-Stop Research with VS Code and LLMs</h3>
+      <p>Lecture handout for the invited talk series. Students and colleagues can read it online or download the HTML copy for later reference.</p>
+      <div class="handout-actions">
+        <a class="handout-button" href="notebooks/handout.html" target="_blank" rel="noopener"><i class="fa fa-book" aria-hidden="true"></i> Read Online</a>
+        <a class="handout-button" href="notebooks/handout.html" download><i class="fa fa-download" aria-hidden="true"></i> Download HTML</a>
+        <a class="handout-button" href="resources.html#llm-agents"><i class="fa fa-archive" aria-hidden="true"></i> Notebooks Archive</a>
+      </div>
+    </div>
     <ul id="recent-updates" class="updates-list">
       <li><span class="updates-date"><strong>2026-06-04</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/QnbrZ2Igfxc58_0QAvvFWA" target="_blank" rel="noopener">人大经济学院讲座：一站式科研:VS Code 与大模型实操应用<img class="updates-image" src="gallary/20260604_One-StopVScode.jpeg" alt="人大经济学院讲座：一站式科研:VS Code 与大模型实操应用"></a></span></li>
+      <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">The paper <i>Banking Competition, Defaulting Risks, and Margins of Innovation</i> was finally accepted by <i><strong>Canadian Journal of Economics</strong></i>. The first version of the paper was written in 2017 and included in the 2018 AEA poster session.</span></li>
+      <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">The paper <i>The Impact of Digital Transformation on Productivity: Evidence from Chinese Manufacturing Firms</i>, coauthored with management scholars, was conditionally accepted by <i><strong>Management and Organization Review</strong></i>.</span></li>
       <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Network Week (国际游学周)</a>，模块项目主任 @<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></span></li>
       <li><span class="updates-date"><strong>2026-01-20</strong>&emsp;</span><span class="updates-text">中国经济研究专题研究会，主题演讲人 @<i><strong>人大经济学院</strong></i></span></li>
       <li><span class="updates-date"><strong>2026-01-18</strong>&emsp;</span><span class="updates-text">The methodology paper proposing a new method of identifying treatment effects on productivity accepted @<i><strong>RAND Journal of Economics</strong></i></span></li>

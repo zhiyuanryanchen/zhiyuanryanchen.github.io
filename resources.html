@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+      .handout-resource {
+        margin: 0.5rem 0 0.75rem;
+        padding: 0.75rem 0.9rem;
+        border: 1px solid #ead0d6;
+        border-left: 4px solid #b23a48;
+        border-radius: 6px;
+        background: #fff8fa;
+      }
+      .handout-resource p {
+        margin: 0.35rem 0 0;
+      }
+      .handout-resource .resource-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.55rem;
+      }
+    </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -102,6 +121,13 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
       </div>
       <div id="llm-agents" style="display:none;">
         <ul class="resource-list">
+          <li class="handout-resource"><i class="fa fa-book" aria-hidden="true"></i> <strong>一站式科研：VS Code 与大模型实操应用</strong>
+            <p>受邀讲座配套讲义，面向希望用 VS Code、大模型与自动化工具组织科研流程的老师和同学。</p>
+            <div class="resource-actions">
+              <a href="notebooks/handout.html" target="_blank" rel="noopener">Handout</a>
+              <a href="notebooks/handout.html" download>Download HTML</a>
+            </div>
+          </li>
           <li><i class="fa fa-code" aria-hidden="true"></i> Building Claude Code Workflow for Economics Scholars &emsp; <a href="https://zhiyuanryanchen.github.io/claude-code-workflow.html" target="_explorer.exe">Guide</a></li>
         </ul>
       </div>
@@ -233,10 +259,60 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
           });
         });
 
-        showSection('models-section');
+        const activateHash = () => {
+          const hash = window.location.hash.slice(1);
+          const targetMap = {
+            macro: () => {
+              showSection('models-section');
+              showModelSection('macro-section');
+            },
+            'macro-section': () => {
+              showSection('models-section');
+              showModelSection('macro-section');
+            },
+            io: () => {
+              showSection('models-section');
+              showModelSection('io-section');
+            },
+            'io-section': () => {
+              showSection('models-section');
+              showModelSection('io-section');
+            },
+            'applied-micro': () => {
+              showSection('econometrics-section');
+              showEconSection('applied-micro');
+            },
+            'structural-estimation': () => {
+              showSection('econometrics-section');
+              showEconSection('structural-estimation');
+            },
+            'machine-learning': () => {
+              showSection('ml-section');
+              showAiSection('machine-learning-list');
+            },
+            'machine-learning-list': () => {
+              showSection('ml-section');
+              showAiSection('machine-learning-list');
+            },
+            'llm-agents': () => {
+              showSection('ml-section');
+              showAiSection('llm-agents');
+            },
+            nlp: () => {
+              showSection('ml-section');
+              showAiSection('nlp');
+            },
+            data: () => showSection('data-section'),
+          };
+
+          const activate = targetMap[hash] || targetMap.macro;
+          activate();
+        };
+
         showModelSection('macro-section');
         showEconSection('applied-micro');
         showAiSection('llm-agents');
+        activateHash();
       })();
     </script>
 
