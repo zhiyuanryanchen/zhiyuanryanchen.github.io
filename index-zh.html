@@ -135,6 +135,20 @@
         color: #fff;
         background: #8f2f3a;
       }
+      .lecture-gallery {
+        display: none;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e1e4e8;
+      }
+      .lecture-gallery.expanded {
+        display: block;
+      }
+      .lecture-card-location.upcoming-list {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #666;
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -185,15 +199,14 @@
       <img src="profile.jpg" class="center profile-photo" alt="Profile photo">
       <div class="hero-text">
         <h1 class="name">陈志远</h1>
-        <h4 class="title">中国人民大学商学院助理教授,吴玉章青年学者，教育部“长江学者奖励计划”青年学者, 人民大学商学院MIB与MBA教指委委员</h4>
+        <h4 class="title">中国人民大学商学院助理教授，吴玉章青年学者，教育部青年长江学者(2025), 人民大学商学院MIB与MBA教指委委员</h4>
         <p class="title"></p>
         <p class="contact">电子邮件：<a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn">chenzhiyuan@rmbs.ruc.edu.cn</a></p>
         <p> </p>
         <p>欢迎来到我的网站！我于宾夕法尼亚州立大学<i>经济系</i>获得博士学位，博士导师是<a href="https://economics.yale.edu/news/240220/memoriam-jonathan-eaton-phd-76-renowned-international-economist">Jonathan Eaton</a>和<a href="https://sites.google.com/view/markroberts/home">Mark Roberts</a>，委员会成员包括<a href="https://fanjt.weebly.com/">樊静霆</a>和<a href="https://sites.psu.edu/jtybout/">James Tybout</a>。</p>
         <p>          
-        我的研究领域是产业组织和宏观发展，特别对技术进步、创新和产业政策等话题感兴趣。我致力于将精确的微观估计与有意义的宏观含义相结合，强调建模和方法论开发。论文成果发表于<i>RAND Journal of Economics, Journal of Development Economics, 经济研究，世界经济，中国工业经济</i>等顶尖或权威期刊。研究论文曾获教育部人文社科优秀成果奖，张培刚发展经济学优秀论文奖和安子介国际贸易论文奖, 2024、2025连续两年受评为中国知网（CNKI）高被引学者TOP 1%。</p>
+        我的研究领域是产业组织和宏观发展，特别对技术进步、创新和产业政策等话题感兴趣。我致力于将精确的微观估计与有意义的宏观含义相结合，强调建模和方法论开发。论文成果发表于<i>RAND Journal of Economics, Journal of Development Economics, European Economic Review, Canadian Journal of Economics, Journal of Law, Economics & Organization, Scandinavian Journal of Economics, China Economic Review, Cities, 经济研究，世界经济，中国工业经济</i>等顶尖或权威期刊。研究论文曾获教育部人文社科优秀成果奖，张培刚发展经济学优秀论文奖和安子介国际贸易论文奖, AOM论文提名奖，2024、2025连续两年受评为中国知网（CNKI）高被引学者TOP 1%。多项资政研究成果获党和国家领导人批示。</p>
 
-        <p>我入选教育部“长江学者奖励计划”青年学者, 担任中国人民大学商学院科研主任，GNAM国际游学周(Global Network Week)项目主任, 人民大学国家发展与战略研究院、首都发展与战略研究院研究员，国务院发展研究中心产业部访问学者，商学院MBA、MIB教指委委员，中国人民大学一带一路国际商学院国际产业经济研究中心研究团队。多项资政研究成果获党和国家领导人批示。</p>
      
                 <p class="contact">
           <a href="https://zhiyuanryanchen.github.io/research/EngCV_ZhiyuanChen.pdf"><i class="fa fa-fw fa-file-pdf-o"></i>CV </a> 
@@ -208,124 +221,90 @@
     </div>
    <p></p>
     <h2 class="updates-title"><span class="updates-icon"><i class="fa fa-bolt"></i></span>最新消息</h2>
-    <div class="lecture-series" aria-label="一站式科研系列讲座">
-      <h3><span class="lecture-icon"><i class="fa fa-microphone"></i></span>开源IDE与一站式科研工作流系列交流</h3>
-      <div class="lecture-scroll">
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260604_One-StopVScode.jpeg" alt="人民大学经济学院一站式科研讲座" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-04</div>
-            <p class="lecture-card-location">中国人民大学<br>经济学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images double">
-            <img src="gallary/20260609-onestopresearch-cufe1.jpg" alt="中央财经大学一站式科研交流" loading="lazy">
-            <img src="gallary/20260609-onestopresearch-cufe2.jpg" alt="中央财经大学一站式科研交流" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-09</div>
-            <p class="lecture-card-location">中央财经大学<br>国际经济与贸易学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260615_onestopresearch_nju.jpeg" alt="南京大学商学院一站式科研交流" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-15</div>
-            <p class="lecture-card-location">南京大学<br>经济学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260617-onestopresearch-uibe.png" alt="对外经济贸易大学WTO研究院一站式科研交流" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-17</div>
-            <p class="lecture-card-location">对外经济贸易大学<br>WTO研究院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260624CUEB_SOF.png" alt="首都经济贸易大学金融学院一站式科研交流" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-24</div>
-            <p class="lecture-card-location">首都经济贸易大学<br>金融学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260624CUEB-ISEM.png" alt="首都经济贸易大学国际经济管理学院一站式科研交流" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-24</div>
-            <p class="lecture-card-location">首都经济贸易大学<br>国际经济管理学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-07-04</div>
-            <p class="lecture-card-location">北京师范大学<br>经济管理学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-07-07/08</div>
-            <p class="lecture-card-location">中央财经大学<br>国际经济与贸易学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">待定</div>
-            <p class="lecture-card-location">中国人民大学<br>（苏州校区）</p>
-            <span class="lecture-card-status upcoming">即将举行</span>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">待定</div>
-            <p class="lecture-card-location">江西财经大学</p>
-            <span class="lecture-card-status upcoming">即将举行</span>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">待定</div>
-            <p class="lecture-card-location">西安交通大学<br>经济与金融学院</p>
-            <span class="lecture-card-status upcoming">即将举行</span>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">待定</div>
-            <p class="lecture-card-location">重庆大学<br>管理科学与房地产学院</p>
-            <span class="lecture-card-status upcoming">即将举行</span>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="handout-card" aria-label="一站式科研讲义资料">
       <h3>一站式科研讲义资料</h3>
-      <p>供参加“开源IDE与一站式科研系列交流”的老师和同学查阅。可在线阅读，也可下载 HTML 版本留作课后参考。</p>
+      <p>供参加"开源IDE与一站式科研系列交流"的老师和同学查阅。可在线阅读，也可下载 HTML 版本留作课后参考。</p>
       <div class="handout-actions">
         <a class="handout-button" href="notebooks/handout.html" target="_blank" rel="noopener"><i class="fa fa-book" aria-hidden="true"></i> 在线阅读</a>
         <a class="handout-button" href="notebooks/handout.html" download><i class="fa fa-download" aria-hidden="true"></i> 下载HTML</a>
+        <button class="handout-button" id="gallery-toggle" aria-expanded="true"><i class="fa fa-image" aria-hidden="true"></i> 图集</button>
+      </div>
+      <div id="lecture-gallery" class="lecture-gallery">
+        <div class="lecture-scroll">
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260604_One-StopVScode.jpeg" alt="人民大学经济学院一站式科研讲座" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-04</div>
+              <p class="lecture-card-location">中国人民大学<br>经济学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images double">
+              <img src="gallary/20260609-onestopresearch-cufe1.jpg" alt="中央财经大学一站式科研交流" loading="lazy">
+              <img src="gallary/20260609-onestopresearch-cufe2.jpg" alt="中央财经大学一站式科研交流" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-09</div>
+              <p class="lecture-card-location">中央财经大学<br>国际经济与贸易学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260615_onestopresearch_nju.jpeg" alt="南京大学商学院一站式科研交流" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-15</div>
+              <p class="lecture-card-location">南京大学<br>经济学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260617-onestopresearch-uibe.png" alt="对外经济贸易大学WTO研究院一站式科研交流" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-17</div>
+              <p class="lecture-card-location">对外经济贸易大学<br>WTO研究院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260624CUEB_SOF.png" alt="首都经济贸易大学金融学院一站式科研交流" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-24</div>
+              <p class="lecture-card-location">首都经济贸易大学<br>金融学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260624CUEB-ISEM.png" alt="首都经济贸易大学国际经济管理学院一站式科研交流" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-24</div>
+              <p class="lecture-card-location">首都经济贸易大学<br>国际经济管理学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">待定</div>
+              <p class="lecture-card-location upcoming-list">北京师范大学 经济管理学院<br>中央财经大学 国际经济与贸易学院<br>深圳大学 中国经济特区研究中心 (7-14)<br>西北大学 ✖️YES (7-17)<br>中国人民大学（苏州校区）<br>江西财经大学<br>西安交通大学 经济与金融学院<br>重庆大学 管理科学与房地产学院</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <ul id="recent-updates" class="updates-list">
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">论文《Banking Competition, Defaulting Risks, and Margins of Innovation》最终被 <i><strong>Canadian Journal of Economics</strong></i> 接受。论文初稿写于 2017 年，并入选 2018 年 AEA Poster Session。</span></li>
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">与管理学者合作的论文《The Impact of Digital Transformation on Productivity: Evidence from Chinese Manufacturing Firms》被 <i><strong>Management and Organization Review</strong></i> 条件接受。</span></li>
-      <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Network Week (国际游学周)</a>，模块项目主任&nbsp;@<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></a></span></li>
+      <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Week (国际游学周)</a>，模块项目主任&nbsp;@<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><button class="updates-gallery-toggle" data-target="gnam-gallery" aria-expanded="false"><i class="fa fa-image" aria-hidden="true"></i> 图集</button></span>
+      <div id="gnam-gallery" class="updates-gallery">
+        <a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></a>
+        <a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group1.jpeg" alt="2026 GNAM Global Network Week photo 2"></a>
+        <a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_open.jpeg" alt="2026 GNAM Global Network Week photo 3"></a>
+      </div></li>
       <li><span class="updates-date"><strong>2026-01-20</strong>&emsp;</span><span class="updates-text">中国经济研究专题研究会，主题演讲人&nbsp;@<i><strong>人大经济学院</strong></i></span></li>
       <li><span class="updates-date"><strong>2026-01-18</strong>&emsp;</span><span class="updates-text">提出新的处理效应识别方法的方法论论文被接受&nbsp;@<i><strong>RAND经济学杂志</strong></i></span></li>
       <li><span class="updates-date"><strong>2026-01-01</strong>&emsp;</span><span class="updates-text"><strong>国家自然科学基金委专项项目</strong>"基础研究支撑经济发展数据系统构建与集成"，子课题负责人</span></li>
@@ -334,7 +313,7 @@
 
       <li><span class="updates-date"><strong>2025-12-26</strong>&emsp;</span><span class="updates-text"><a href="https://linkinghub.elsevier.com/retrieve/pii/S0304387825002627" target="_blank">关于应用结构性生产函数估计和反事实分析解决煤炭发电厂监管问题的论文即将发表</a>@<i><strong>发展经济学杂志</strong></i></span></li>
 
-      <li><span class="updates-date"><strong>2025-12-19</strong>&emsp;</span><span class="updates-text"><a href="https://news.hnust.edu.cn/kdyw/de18362d9e834230bc5a8ac3c65cd4a8.htm" target="_blank">第二届"香樟书院"学术讲堂，主讲嘉宾</a>&nbsp;@<i><strong>湖南科技大学商学院</strong></i></span></li>
+      <li><span class="updates-date"><strong>2025-12-19</strong>&emsp;</span><span class="updates-text"><a href="https://news.hnust.edu.cn/kdyw/de18362d9e834230bc5a8ac3c65cd4a8.htm" target="_blank">第二届"香樟书院"学术讲座，主讲嘉宾</a>&nbsp;@<i><strong>湖南科技大学商学院</strong></i></span></li>
 
       <li><span class="updates-date"><strong>2025-11-15</strong>&emsp;</span><span class="updates-text"><a href="https://www.ahut.edu.cn/info/1002/27413.htm" target="_blank"> 第五届香樟产业经济学论坛，主旨演讲嘉宾 </a>@<i><strong>安徽工业大学</strong></i> </span></li>
       <li><span class="updates-date"><strong>2025-09-03</strong>&emsp;</span><span class="updates-text"><a href="https://fss.um.edu.mo/fss-deco-seminar-patent-financing-rd-investment-and-tfp-dynamics/" target="_blank">应邀FSS-DECO讲座</a>&nbsp;@<i><strong>澳门大学</strong></i></span></li>
@@ -361,6 +340,30 @@
     <script src="javascripts/updates-pagination.js"></script>
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="javascripts/visitor-counter.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Gallery toggle for handout section
+        var toggleBtn = document.getElementById('gallery-toggle');
+        var gallery = document.getElementById('lecture-gallery');
+        if (toggleBtn && gallery) {
+          toggleBtn.addEventListener('click', function() {
+            var isExpanded = gallery.classList.toggle('expanded');
+            toggleBtn.setAttribute('aria-expanded', isExpanded);
+          });
+        }
+        // Updates gallery toggles
+        document.querySelectorAll('.updates-gallery-toggle').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var targetId = btn.getAttribute('data-target');
+            var target = document.getElementById(targetId);
+            if (target) {
+              var isExpanded = target.classList.toggle('expanded');
+              btn.setAttribute('aria-expanded', isExpanded);
+            }
+          });
+        });
+      });
+    </script>
               
   </body>
 

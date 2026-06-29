@@ -135,6 +135,20 @@
         color: #fff;
         background: #8f2f3a;
       }
+      .lecture-gallery {
+        display: none;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e1e4e8;
+      }
+      .lecture-gallery.expanded {
+        display: block;
+      }
+      .lecture-card-location.upcoming-list {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #666;
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -206,124 +220,90 @@
     </div>
    <p></p>
     <h2 class="updates-title"><span class="updates-icon"><i class="fa fa-bolt"></i></span>Recent Updates</h2>
-    <div class="lecture-series" aria-label="One-Stop Research Lecture Series">
-      <h3><span class="lecture-icon"><i class="fa fa-microphone"></i></span>One-Stop Research with Open Source IDE &amp; LLMs — Lecture Series</h3>
-      <div class="lecture-scroll">
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260604_One-StopVScode.jpeg" alt="VS Code One-Stop Research at RUC" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-04</div>
-            <p class="lecture-card-location">中国人民大学<br>经济学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images double">
-            <img src="gallary/20260609-onestopresearch-cufe1.jpg" alt="VS Code One-Stop Research at CUFE" loading="lazy">
-            <img src="gallary/20260609-onestopresearch-cufe2.jpg" alt="VS Code One-Stop Research at CUFE" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-09</div>
-            <p class="lecture-card-location">中央财经大学<br>国际经济与贸易学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260615_onestopresearch_nju.jpeg" alt="VS Code One-Stop Research at Nanjing University" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-15</div>
-            <p class="lecture-card-location">南京大学<br>经济学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260617-onestopresearch-uibe.png" alt="VS Code One-Stop Research at UIBE WTO Institute" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-17</div>
-            <p class="lecture-card-location">对外经济贸易大学<br>WTO研究院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260624CUEB_SOF.png" alt="VS Code One-Stop Research at CUEB School of Finance" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-24</div>
-            <p class="lecture-card-location">首都经济贸易大学<br>金融学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images single">
-            <img src="gallary/20260624CUEB-ISEM.png" alt="VS Code One-Stop Research at CUEB ISEM" loading="lazy">
-          </div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-06-24</div>
-            <p class="lecture-card-location">首都经济贸易大学<br>国际经济管理学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="Upcoming lecture">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-07-04</div>
-            <p class="lecture-card-location">北京师范大学<br>经济管理学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="Upcoming lecture">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">2026-07-07/08</div>
-            <p class="lecture-card-location">中央财经大学<br>国际经济与贸易学院</p>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="Upcoming lecture">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">TBD</div>
-            <p class="lecture-card-location">中国人民大学<br>（苏州校区）</p>
-            <span class="lecture-card-status upcoming">Upcoming</span>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="Upcoming lecture">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">TBD</div>
-            <p class="lecture-card-location">江西财经大学</p>
-            <span class="lecture-card-status upcoming">Upcoming</span>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="Upcoming lecture">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">TBD</div>
-            <p class="lecture-card-location">西安交通大学<br>经济与金融学院</p>
-            <span class="lecture-card-status upcoming">Upcoming</span>
-          </div>
-        </div>
-        <div class="lecture-card">
-          <div class="lecture-card-images placeholder" aria-label="Upcoming lecture">即将举行</div>
-          <div class="lecture-card-info">
-            <div class="lecture-card-date">TBD</div>
-            <p class="lecture-card-location">重庆大学<br>管理科学与房地产学院</p>
-            <span class="lecture-card-status upcoming">Upcoming</span>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="handout-card" aria-label="One-Stop Research handout">
       <h3>Handout: One-Stop Research with Open Source IDE and LLMs</h3>
       <p>Lecture handout for the invited talk series. Students and colleagues can read it online or download the HTML copy for later reference.</p>
       <div class="handout-actions">
         <a class="handout-button" href="notebooks/handout.html" target="_blank" rel="noopener"><i class="fa fa-book" aria-hidden="true"></i> Read Online</a>
         <a class="handout-button" href="notebooks/handout.html" download><i class="fa fa-download" aria-hidden="true"></i> Download HTML</a>
+        <button class="handout-button" id="gallery-toggle" aria-expanded="true"><i class="fa fa-image" aria-hidden="true"></i> Gallery</button>
+      </div>
+      <div id="lecture-gallery" class="lecture-gallery">
+        <div class="lecture-scroll">
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260604_One-StopVScode.jpeg" alt="VS Code One-Stop Research at RUC" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-04</div>
+              <p class="lecture-card-location">中国人民大学<br>经济学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images double">
+              <img src="gallary/20260609-onestopresearch-cufe1.jpg" alt="VS Code One-Stop Research at CUFE" loading="lazy">
+              <img src="gallary/20260609-onestopresearch-cufe2.jpg" alt="VS Code One-Stop Research at CUFE" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-09</div>
+              <p class="lecture-card-location">中央财经大学<br>国际经济与贸易学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260615_onestopresearch_nju.jpeg" alt="VS Code One-Stop Research at Nanjing University" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-15</div>
+              <p class="lecture-card-location">南京大学<br>经济学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260617-onestopresearch-uibe.png" alt="VS Code One-Stop Research at UIBE WTO Institute" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-17</div>
+              <p class="lecture-card-location">对外经济贸易大学<br>WTO研究院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260624CUEB_SOF.png" alt="VS Code One-Stop Research at CUEB School of Finance" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-24</div>
+              <p class="lecture-card-location">首都经济贸易大学<br>金融学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260624CUEB-ISEM.png" alt="VS Code One-Stop Research at CUEB ISEM" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-06-24</div>
+              <p class="lecture-card-location">首都经济贸易大学<br>国际经济管理学院</p>
+            </div>
+          </div>
+          <div class="lecture-card">
+            <div class="lecture-card-images placeholder" aria-label="Upcoming lectures">Upcoming Lectures</div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">TBD</div>
+              <p class="lecture-card-location upcoming-list">北京师范大学 经济管理学院<br>中央财经大学 国际经济与贸易学院<br>深圳大学 中国经济特区研究中心 (7-14)<br>西北大学 ✖️YES (7-17)<br>中国人民大学（苏州校区）<br>江西财经大学<br>西安交通大学 经济与金融学院<br>重庆大学 管理科学与房地产学院</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <ul id="recent-updates" class="updates-list">
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">The paper <i>Banking Competition, Defaulting Risks, and Margins of Innovation</i> was finally accepted by <i><strong>Canadian Journal of Economics</strong></i>. The first version of the paper was written in 2017 and included in the 2018 AEA poster session.</span></li>
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">The paper <i>The Impact of Digital Transformation on Productivity: Evidence from Chinese Manufacturing Firms</i>, coauthored with management scholars, was conditionally accepted by <i><strong>Management and Organization Review</strong></i>.</span></li>
-      <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Network Week (国际游学周)</a>，模块项目主任&nbsp;@<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></a></span></li>
+      <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Network Week (国际游学周)</a>，模块项目主任&nbsp;@<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><button class="updates-gallery-toggle" data-target="gnam-gallery" aria-expanded="false"><i class="fa fa-image" aria-hidden="true"></i> Gallery</button></span>
+      <div id="gnam-gallery" class="updates-gallery">
+        <a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group.jpeg" alt="2026 GNAM Global Network Week group photo"></a>
+        <a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_group1.jpeg" alt="2026 GNAM Global Network Week photo 2"></a>
+        <a class="updates-media-link" href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026gnam_open.jpeg" alt="2026 GNAM Global Network Week photo 3"></a>
+      </div></li>
       <li><span class="updates-date"><strong>2026-01-20</strong>&emsp;</span><span class="updates-text">中国经济研究专题研究会，主题演讲人&nbsp;@<i><strong>人大经济学院</strong></i></span></li>
       <li><span class="updates-date"><strong>2026-01-18</strong>&emsp;</span><span class="updates-text">The methodology paper proposing a new method of identifying treatment effects on productivity accepted&nbsp;@<i><strong>RAND Journal of Economics</strong></i></span></li>
       <li><span class="updates-date"><strong>2026-01-01</strong>&emsp;</span><span class="updates-text"><strong>国家自然科学基金委专项项目</strong>“基础研究支撑经济发展数据系统构建与集成”，子课题负责人</span></li>
@@ -359,6 +339,30 @@
     <script src="javascripts/updates-pagination.js"></script>
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="javascripts/visitor-counter.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Gallery toggle for handout section
+        var toggleBtn = document.getElementById('gallery-toggle');
+        var gallery = document.getElementById('lecture-gallery');
+        if (toggleBtn && gallery) {
+          toggleBtn.addEventListener('click', function() {
+            var isExpanded = gallery.classList.toggle('expanded');
+            toggleBtn.setAttribute('aria-expanded', isExpanded);
+          });
+        }
+        // Updates gallery toggles
+        document.querySelectorAll('.updates-gallery-toggle').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var targetId = btn.getAttribute('data-target');
+            var target = document.getElementById(targetId);
+            if (target) {
+              var isExpanded = target.classList.toggle('expanded');
+              btn.setAttribute('aria-expanded', isExpanded);
+            }
+          });
+        });
+      });
+    </script>
               
   </body>
 
