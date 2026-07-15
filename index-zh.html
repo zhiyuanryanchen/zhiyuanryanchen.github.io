@@ -27,6 +27,7 @@
       .updates-list li {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
         gap: 1rem;
         margin-bottom: 0.55rem;
         padding: 0.6rem 0.75rem;
@@ -60,6 +61,16 @@
         margin-top: 0;
         border: 1px solid #e1e4e8;
         border-radius: 6px;
+      }
+      .updates-gallery {
+        display: none;
+        flex-basis: 100%;
+        margin-top: 0.15rem;
+        padding-top: 0.45rem;
+        border-top: 1px solid #e1e4e8;
+      }
+      .updates-gallery.expanded {
+        display: block;
       }
       .home-page section .updates-text > a:not(.updates-media-link),
       .home-page section .updates-text > a:not(.updates-media-link):visited {
@@ -134,6 +145,16 @@
       .home-page section .handout-button:focus {
         color: #fff;
         background: #8f2f3a;
+      }
+      #gallery-toggle::after,
+      .updates-gallery-toggle::after {
+        content: " \25BE";
+        font-size: 0.82em;
+        margin-left: 0.12rem;
+      }
+      #gallery-toggle[aria-expanded="true"]::after,
+      .updates-gallery-toggle[aria-expanded="true"]::after {
+        content: " \25B4";
       }
       .lecture-gallery {
         display: none;
@@ -307,20 +328,30 @@
             </div>
           </div>
           <div class="lecture-card">
+            <div class="lecture-card-images single">
+              <img src="gallary/20260714SZU-SummerSchool.png" alt="深圳大学中国特区经济研究中心暑期夏令营" loading="lazy">
+            </div>
+            <div class="lecture-card-info">
+              <div class="lecture-card-date">2026-07-14</div>
+              <p class="lecture-card-location">深圳大学<br>中国特区经济研究中心<br>暑期夏令营</p>
+            </div>
+          </div>
+          <div class="lecture-card">
             <div class="lecture-card-images placeholder" aria-label="即将举行的讲座">即将举行</div>
             <div class="lecture-card-info">
               <div class="lecture-card-date">待定</div>
-              <p class="lecture-card-location upcoming-list">深圳大学 中国经济特区研究中心 (7-14)<br>西北大学 ✖️YES (7-17)<br>中国人民大学（苏州校区）<br>江西财经大学<br>西安交通大学 经济与金融学院<br>重庆大学 管理科学与房地产学院</p>
+              <p class="lecture-card-location upcoming-list">香樟暑期课程 (7-24)<br>中国人民大学（苏州校区）<br>江西财经大学<br>西安交通大学 经济与金融学院<br>重庆大学 管理科学与房地产学院</p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <ul id="recent-updates" class="updates-list">
-     <li><span class="updates-date"><strong>2026-07-09</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/bKG0pHA6-7z-mFGv2bhGeA" target="_blank" rel="noopener">首届人工智能赋能哲学社会科学创新研讨会</a><strong>主题交流：为实证研究者打造真正需要的IDE</strong></span><button class="updates-gallery-toggle" data-target="gnam-gallery" aria-expanded="false"><i class="fa fa-image" aria-hidden="true"></i> 图集</button></span>
-      <div id="gnam-gallery" class="updates-gallery">
+     <li><span class="updates-date"><strong>2026-07-09</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/bKG0pHA6-7z-mFGv2bhGeA" target="_blank" rel="noopener">首届人工智能赋能哲学社会科学创新研讨会</a><strong>主题交流：为实证研究者打造真正需要的IDE</strong></span><span><button class="updates-gallery-toggle" data-target="ai-gallery" aria-expanded="false"><i class="fa fa-image" aria-hidden="true"></i> 图集</button></span>
+      <div id="ai-gallery" class="updates-gallery">
         <a class="updates-media-link" href="https://mp.weixin.qq.com/s/bKG0pHA6-7z-mFGv2bhGeA" target="_blank" rel="noopener"><img class="updates-image" src="gallary/2026AI+.png" alt="2026 首届人工智能赋能哲学社会科学创新研讨会 group photo"></a>
       </div></li>
+      <li><span class="updates-date"><strong>2026-06-27</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/iMm40r4c-8vmPMt-5QR6jQ" target="_blank" rel="noopener">中国人民大学商学院2026年毕业典礼</a>，教师代表发言。</span></li>
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">论文《Banking Competition, Defaulting Risks, and Margins of Innovation》最终被 <i><strong>Canadian Journal of Economics</strong></i> 接受。论文初稿写于 2017 年，并入选 2018 年 AEA Poster Session。</span></li>
       <li><span class="updates-date"><strong>2026-05-27</strong>&emsp;</span><span class="updates-text">与管理学者合作的论文《The Impact of Digital Transformation on Productivity: Evidence from Chinese Manufacturing Firms》被 <i><strong>Management and Organization Review</strong></i> 条件接受。</span></li>
       <li><span class="updates-date"><strong>2026-03-08</strong>&emsp;</span><span class="updates-text"><a href="https://mp.weixin.qq.com/s/pvp9-G4iB195thYO95aUjw" target="_blank" rel="noopener">2026 GNAM Global Week (国际游学周)</a>，模块项目主任&nbsp;@<i><strong>人民大学一带一路国际商学院（浙江义乌）</strong></i><button class="updates-gallery-toggle" data-target="gnam-gallery" aria-expanded="false"><i class="fa fa-image" aria-hidden="true"></i> 图集</button></span>

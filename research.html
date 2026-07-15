@@ -143,7 +143,7 @@
       margin: 0 0 10px 0 !important;
       }
       .paper-item::before {
-      counter-increment: paper-counter -1;
+      counter-increment: paper-counter;
       content: "[" counter(paper-counter) "] ";
       font-weight: 700;
       }
@@ -209,15 +209,16 @@
      <a class="nav-button pub-btn active" href="#Working Papers" data-target="working-papers-section">Working Papers</a>
        <a class="nav-button pub-btn" href="#recent-papers-updated" data-target="english-pubs">English Journals</a>
        <a class="nav-button pub-btn" href="#中文发表" data-target="chinese-pubs">中文期刊</a>
+       <a class="nav-button pub-btn" href="#books" data-target="books-section">Books/专著</a>
        <a class="nav-button pub-btn" href="#data" data-target="data-section">数据库</a>
-       <a class="nav-button pub-btn" href="#专利" data-target="patents-section">专利</a>
+      <a class="nav-button pub-btn" href="#专利程序" data-target="patents-section">专利&程序</a>
        <a class="nav-button pub-btn" href="#科研项目" data-target="funding-section">项目</a>
        <a class="nav-button pub-btn" href="#同行评审" data-target="peer-review-section">评审</a>
      </div>
 
 
 <div id="working-papers-section">
-<div class="paper-group" style="counter-reset: paper-counter 15;">
+<div class="paper-group" style="counter-reset: paper-counter 0;">
 <p></p>
 <p class="paper-item" style="margin:0;">
   <a href="">Externalities and Vertical Bargaining in Two-sided Retail Platforms</a>, with <a href="">Rong Luo</a> and <a href="">Mark Roberts</a>   <span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">working</span>
@@ -273,14 +274,14 @@ Data-driven Vertical Integration, with <a href="https://lzxlll.github.io/">Zexua
 </div>
 </div>
 <div id="english-pubs">
-<div class="paper-group" style="counter-reset: paper-counter 14;">
+<div class="paper-group" style="counter-reset: paper-counter 0;">
 <p></p>
 <p class="paper-item" style="margin:0;">The Impact of Digitalization on Productivity: Evidence from Chinese Manufacturing Firms, with Hongxi Chen, Jingtao Yi and Jinqiu He, accepted @ <i>Management and Organizational Review</i>.</p>
 
 <p class="paper-item" style="margin:0;">Bank Competition, Defaulting Risks and Innovation, with <a href="https://mengbozhang.weebly.com/" target="_explorer.exe">Mengbo Zhang</a>, Aomeng Zhang, and Xinyang Li, accepted @ <i>Canadian Journal of Economics</i>.</p>
 
 <p class="paper-item representative" style="margin:0;"> Identifying Treatment Effects on Productivity: Theory with An Application to Firms' Production Digitalization <font color="green"></font>, with <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and <a href="https://kschurter.github.io/">Karl Schurter.</a> accepted @ <i>RAND Journal of Economics</i>
-<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="#">Stata Program</a></button>
+<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="https://github.com/wenddymacro/pte.git" target="_blank" rel="noopener">Stata Program</a></button>
 </p>
 <div class="panel" style="background-color: white; color: black;  padding: 10px;">
       We study the identification and estimation of treatment effects on the productivity
@@ -400,7 +401,7 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
 
 
  <div id="chinese-pubs" style="display:none;">
-<div class="paper-group" style="counter-reset: paper-counter 18;">
+<div class="paper-group" style="counter-reset: paper-counter 0;">
 <p> </p>
 <p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">中国专利质量的测度，变化机制与经济增长效应</a>，与章逸然，张杰，刘泽轩合作，<i>经济研究</i>，2026(03).
       <button class="accordion">
@@ -595,6 +596,13 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
       </div>
   </div>
 
+  <div id="books-section" class="right-only" style="display:none;">
+    <h4><a id="books" class="anchor" href="#books" aria-hidden="true"><span class="octicon octicon-link"></span></a></h4>
+    <div class="paper-group">
+      <p class="paper-item" style="margin:0;">陈志远著，《生产函数的结构估计与应用》，经济管理出版社，2026年6月第1版，ISBN-978-7-5243-1075-4。</p>
+    </div>
+  </div>
+
   <div id="data-section" class="right-only" style="display:none;">
      <h4><a id="data" class="anchor" href="#data" aria-hidden="true"><span class="octicon octicon-link"></span></a></h4>
     <p style="margin:0 0 10px; color:#777; font-size:13px;">持续更新中。如需数据访问权限，请按“下载方式”提交申请。</p>
@@ -735,28 +743,14 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
           </div>
 
           <div id="patents-section" class="right-only" style="display:none;">
-          <h2><a id="专利" class="anchor" href="#专利" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
-          <div class="table-scroll">
-          <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-            <thead>
-              <tr style="border-bottom: 2px solid #000;">
-                <th style="padding: 8px; text-align: center;">专利号</th>
-                <th style="padding: 8px; text-align: center;">作者</th>
-                <th style="padding: 8px; text-align: center;">类型</th>
-                <th style="padding: 8px; text-align: center;">名称</th>
-                <th style="padding: 8px; text-align: center;">状态</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom: 1px solid #ddd;">
-                <td style="padding: 8px;">202511435652.2</td>
-                <td style="padding: 8px;">陈志远；刘泽轩；赵乡阳</td>
-                <td style="padding: 8px;">发明</td>
-                <td style="padding: 8px;">基于专利文本相似度的专利质量测算方法及系统</td>
-                <td style="padding: 8px;">实质审查</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2><a id="专利程序" class="anchor" href="#专利程序" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+          <h3 style="margin:0.4rem 0 0.2rem;">专利</h3>
+          <div class="paper-group">
+            <p class="paper-item" style="margin:0;">基于专利文本相似度的专利质量测算方法及系统（专利号：202511435652.2；发明人：陈志远、刘泽轩、赵乡阳；状态：实质审查）。</p>
+          </div>
+          <h3 style="margin:0.9rem 0 0.2rem;">程序</h3>
+          <div class="paper-group">
+            <p class="paper-item" style="margin:0;">Cai, X., Chen, Z., Liao, M. &amp; Xu, W. (2026). <i>pte: Stata module for Productivity Treatment Effects estimation</i> (Version 1.0.0) [Stata Package]. <a href="https://github.com/wenddymacro/pte.git" target="_blank" rel="noopener">https://github.com/wenddymacro/pte.git</a></p>
           </div>
           </div>
 
@@ -789,7 +783,7 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
 
     (function() {
       const buttons = document.querySelectorAll('.pub-btn');
-      const sections = ['working-papers-section', 'english-pubs', 'chinese-pubs', 'data-section', 'peer-review-section', 'funding-section', 'patents-section', 'honors-section']
+      const sections = ['working-papers-section', 'english-pubs', 'chinese-pubs', 'books-section', 'data-section', 'peer-review-section', 'funding-section', 'patents-section', 'honors-section']
         .map((id) => document.getElementById(id))
         .filter(Boolean);
       if (!buttons.length || !sections.length) return;
