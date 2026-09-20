@@ -7,6 +7,7 @@
     <title>Zhiyuan's Website</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="javascripts/lang-state.js"></script>
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -27,17 +28,6 @@
     <link rel="stylesheet" href="assets/css/academicons.css"/>
 
     <style>
-      .pub-toggle {
-        display:flex;
-        gap:8px;
-        flex-wrap:wrap;
-        margin:0.75rem 0 0.25rem;
-      }
-      .pub-btn.active {
-        background-color:#8f2f3a;
-        color:#fff;
-        border-color:#7a2331;
-      }
       section a {
         color:#000;
         text-decoration: none;
@@ -68,24 +58,6 @@
         color: #7a2331;
         font-size: 17px;
       }
-      .seminar-series-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 0;
-      }
-      .seminar-series-table td {
-        padding: 8px;
-        border-bottom: 1px solid #ead0d6;
-      }
-      .seminar-series-table tr:last-child td {
-        border-bottom: none;
-      }
-      .seminar-series-date {
-        width: 18%;
-        color: #7a2331;
-        font-weight: 700;
-        white-space: nowrap;
-      }
       .seminar-history-title {
         margin: 0.5rem 0 0;
         color: #494949;
@@ -97,123 +69,80 @@
     <div class="wrapper">
       <header>
         <div class="nav-links">
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/"><span class="nav-zh">首页</span><span class="nav-en">Home</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html"><span class="nav-zh">研究</span><span class="nav-en">Research</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html"><span class="nav-zh">教学</span><span class="nav-en">Teaching</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html"><span class="nav-zh">笔记</span><span class="nav-en">Notebooks</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html"><span class="nav-zh">活动</span><span class="nav-en">Events</span></a>
+          <span class="nav-spacer"></span>
+          <span class="lang-switch"><a href="#" class="lang-link-en" data-lang="en">English</a><a href="#" class="lang-link-zh" data-lang="zh" style="margin-left:12px;">中文</a></span><span class="nav-icons">
+            <a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn" title="Email" aria-label="Email"><i class="fa fa-fw fa-envelope"></i></a>
+            <a href="https://github.com/zhiyuanryanchen" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa fa-fw fa-github-square"></i></a>
+          </span>
         </div>
       </header>
       <section>
 
     <div class="pub-toggle" aria-label="Events categories">
-      <a class="nav-button pub-btn active" href="#workshop" data-target="workshop-section">Workshop</a>
-      <a class="nav-button pub-btn" href="#seminar" data-target="seminar-section">Seminar</a>
-      <a class="nav-button pub-btn" href="#conference" data-target="conference-section">Conference</a>
-      <a class="nav-button pub-btn" href="#honors" data-target="honors-section">荣誉奖励</a>
+      <a class="nav-button pub-btn active" href="#workshop" data-target="workshop-section"><span class="label-zh">工作坊</span><span class="label-en">Workshop</span></a>
+      <a class="nav-button pub-btn" href="#seminar" data-target="seminar-section"><span class="label-zh">研讨会</span><span class="label-en">Seminar</span></a>
+      <a class="nav-button pub-btn" href="#conference" data-target="conference-section"><span class="label-zh">会议</span><span class="label-en">Conference</span></a>
+      <a class="nav-button pub-btn" href="#honors" data-target="honors-section"><span class="label-zh">荣誉奖励</span><span class="label-en">Honors & Awards</span></a>
     </div>
     <div id="seminar-section">
       <h2><a id="seminar" class="anchor" href="#seminar" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
-      <div class="seminar-series-block" aria-label="AI赋能的一站式科研">
-        <h3>AI赋能的一站式科研</h3>
-        <table class="seminar-series-table">
-          <tbody>
-            <tr>
-              <td class="seminar-series-date">2026-06-04</td>
-              <td>中国人民大学经济学院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-06-09</td>
-              <td>中央财经大学国际经济与贸易学院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-06-15</td>
-              <td>南京大学经济学院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-06-17</td>
-              <td>对外经济与贸易大学WTO研究院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-06-24</td>
-              <td>首都经济贸易大学金融学院</td>
-            </tr>
-             <tr>
-              <td class="seminar-series-date">2026-06-24</td>
-              <td>首都经济贸易大学国际经济管理学院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-07-07/08</td>
-              <td>中央财经大学国际经济与贸易学院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-07-09</td>
-              <td>北京师范大学工商管理学院</td>
-            </tr>
-            <tr>
-              <td class="seminar-series-date">2026-07-14</td>
-              <td>深圳大学中国特区经济研究中心</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="seminar-series-block" aria-label="即将举行的讲座">
+        <h3>即将举行的讲座（计划中，按时间先后顺序）</h3>
+        <div class="event-table event-table--series">
+          <ul class="event-list">
+            <li><span class="event-date">待定</span><span class="event-main">湘潭大学商学院</span></li>
+            <li><span class="event-date">待定</span><span class="event-main">邵阳学院</span></li>
+            <li><span class="event-date">待定</span><span class="event-main">湖南大学国际经贸学院</span></li>
+            <li><span class="event-date">待定</span><span class="event-main">北京大学新结构经济学研究院</span></li>
+            <li><span class="event-date">待定</span><span class="event-main">中国人民大学（苏州校区）</span></li>
+            <li><span class="event-date">待定</span><span class="event-main">西安交通大学</span></li>
+            <li><span class="event-date">待定</span><span class="event-main">澳门大学经济系</span></li>
+          </ul>
+        </div>
       </div>
 
-      <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-        <tbody>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2026-07-17</td>
-            <td style="padding: 8px; width: 85%;"><a href="https://mp.weixin.qq.com/s/zSdIibY-5jqRxqbK1BlLNg" target="_blank" rel="noopener">西北大学YES暑期学术讲座</a></td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2025-12-18</td>
-            <td style="padding: 8px; width: 85%;">湖南师范大学商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2025-09-03</td>
-            <td style="padding: 8px; width: 85%;">澳门大学社会科学学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2023-04-07</td>
-            <td style="padding: 8px; width: 85%;">南京大学商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2022-12-14</td>
-            <td style="padding: 8px; width: 85%;">中国人民大学国家发展与战略研究院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2022-10-27</td>
-            <td style="padding: 8px; width: 85%;">UIBE全球价值链研究院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2022-10-11</td>
-            <td style="padding: 8px; width: 85%;">复旦大学中国社会主义市场经济研究中心</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2021-11-19</td>
-            <td style="padding: 8px; width: 85%;">北大经院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2020-09-28</td>
-            <td style="padding: 8px; width: 85%;">人大商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2019-12-12</td>
-            <td style="padding: 8px; width: 85%;">UIBE国际经济贸易学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2019-12-10</td>
-            <td style="padding: 8px; width: 85%;">湘潭大学商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2019-12-04</td>
-            <td style="padding: 8px; width: 85%;">湖南大学经济与贸易学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2019年</td>
-            <td style="padding: 8px; width: 85%;">CUHK-Shenzhen，北大新结构，人大经院</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="seminar-series-block" aria-label="AI赋能的一站式科研">
+        <h3>AI赋能的一站式科研</h3>
+        <div class="event-table event-table--series">
+          <ul class="event-list">
+            <li><span class="event-date">2026-09-16</span><span class="event-main">清华大学社科院经济所</span></li>
+            <li><span class="event-date">2026-07-29/08-01</span><span class="event-main">江西财经大学数字经济学院</span></li>
+            <li><span class="event-date">2026-07-24</span><span class="event-main">第九期“香樟青苗计划”讲座（线上）</span></li>
+            <li><span class="event-date">2026-07-14</span><span class="event-main">深圳大学中国特区经济研究中心</span></li>
+            <li><span class="event-date">2026-07-09</span><span class="event-main">北京师范大学工商管理学院</span></li>
+            <li><span class="event-date">2026-07-07/08</span><span class="event-main">中央财经大学国际经济与贸易学院</span></li>
+            <li><span class="event-date">2026-06-24</span><span class="event-main">首都经济贸易大学金融学院</span></li>
+            <li><span class="event-date">2026-06-24</span><span class="event-main">首都经济贸易大学国际经济管理学院</span></li>
+            <li><span class="event-date">2026-06-17</span><span class="event-main">对外经济与贸易大学WTO研究院</span></li>
+            <li><span class="event-date">2026-06-15</span><span class="event-main">南京大学经济学院</span></li>
+            <li><span class="event-date">2026-06-09</span><span class="event-main">中央财经大学国际经济与贸易学院</span></li>
+            <li><span class="event-date">2026-06-04</span><span class="event-main">中国人民大学经济学院</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="event-table event-table--2col">
+        <ul class="event-list">
+          <li><span class="event-date">2026-07-17</span><span class="event-main"><a href="https://mp.weixin.qq.com/s/zSdIibY-5jqRxqbK1BlLNg" target="_blank" rel="noopener">西北大学YES暑期学术讲座</a></span></li>
+          <li><span class="event-date">2025-12-18</span><span class="event-main">湖南师范大学商学院</span></li>
+          <li><span class="event-date">2025-09-03</span><span class="event-main">澳门大学社会科学学院</span></li>
+          <li><span class="event-date">2023-04-07</span><span class="event-main">南京大学商学院</span></li>
+          <li><span class="event-date">2022-12-14</span><span class="event-main">中国人民大学国家发展与战略研究院</span></li>
+          <li><span class="event-date">2022-10-27</span><span class="event-main">UIBE全球价值链研究院</span></li>
+          <li><span class="event-date">2022-10-11</span><span class="event-main">复旦大学中国社会主义市场经济研究中心</span></li>
+          <li><span class="event-date">2021-11-19</span><span class="event-main">北大经院</span></li>
+          <li><span class="event-date">2020-09-28</span><span class="event-main">人大商学院</span></li>
+          <li><span class="event-date">2019-12-12</span><span class="event-main">UIBE国际经济贸易学院</span></li>
+          <li><span class="event-date">2019-12-10</span><span class="event-main">湘潭大学商学院</span></li>
+          <li><span class="event-date">2019-12-04</span><span class="event-main">湖南大学经济与贸易学院</span></li>
+          <li><span class="event-date">2019年</span><span class="event-main">CUHK-Shenzhen，北大新结构，人大经院</span></li>
+        </ul>
+      </div>
     </div>
 
     <div id="workshop-section" style="display:none;">
@@ -227,60 +156,56 @@
       </ul>
       
       <div id="classics-workshop">
-        <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-          <thead>
-            <tr style="border-bottom: 2px solid #000;">
-              <th style="padding: 8px; text-align: center; width: 15%;">日期</th>
-              <th style="padding: 8px; text-align: center; width: 55%;">研讨内容</th>
-              <th style="padding: 8px; text-align: center; width: 30%;">汇报人</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 8px; vertical-align: top; width: 15%;">
+        <div class="event-table event-table--classics">
+          <div class="event-list-head">
+            <span>日期</span><span>研讨内容</span><span>汇报人</span>
+          </div>
+          <ul class="event-list">
+            <li>
+              <div class="event-date">
                 <div>2026-01-23</div>
                 <button class="photo-btn" data-event="2026-01-23" style="padding: 4px 8px; font-size: 12px; margin-top: 6px;"><i class="fa fa-camera" aria-hidden="true"></i> 查看照片</button>
-              </td>
-              <td style="padding: 8px;">增长与结构转型CLM(ECTA, 2024)、偏向性技术进步RO(ECTA, 2020)、内生增长</td>
-              <td style="padding: 8px;">陈宠、尚云舟、刘树霖</td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+              <div class="event-main">增长与结构转型CLM(ECTA, 2024)、偏向性技术进步RO(ECTA, 2020)、内生增长</div>
+              <div class="event-side">陈宠、尚云舟、刘树霖</div>
+            </li>
+          </ul>
+        </div>
       </div>
       
       <div id="eio-workshop" style="display:none;">
-        <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-          <tbody>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 8px; vertical-align: top; width: 15%;">
+        <div class="event-table event-table--3col">
+          <ul class="event-list">
+            <li>
+              <div class="event-date">
                 <div>2023-07-06</div>
                 <button class="photo-btn" data-event="2023-07-06" style="padding: 4px 8px; font-size: 12px; margin-top: 6px;"><i class="fa fa-camera" aria-hidden="true"></i> 查看照片</button>
-              </td>
-              <td style="padding: 8px; vertical-align: top; width: 50%;">Penn State Alumni Empirical IO Workshop</td>
-              <td style="padding: 8px; vertical-align: top; width: 35%;">人民大学经济学院</td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+              <div class="event-main">Penn State Alumni Empirical IO Workshop</div>
+              <div class="event-side">人民大学经济学院</div>
+            </li>
+          </ul>
+        </div>
       </div>
       
       <div id="trade-dev-workshop" style="display:none;">
-        <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-          <tbody>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 8px; width: 15%;">2026-01-20</td>
-              <td style="padding: 8px; width: 50%;">中国经济研究专题研讨会，主题演讲人</td>
-              <td style="padding: 8px; width: 35%;">人大经济学院</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 8px; width: 15%;">2025-07-07-08</td>
-              <td style="padding: 8px; width: 50%;">
+        <div class="event-table event-table--3col">
+          <ul class="event-list">
+            <li>
+              <div class="event-date">2026-01-20</div>
+              <div class="event-main">中国经济研究专题研讨会，主题演讲人</div>
+              <div class="event-side">人大经济学院</div>
+            </li>
+            <li>
+              <div class="event-date">2025-07-07-08</div>
+              <div class="event-main">
                 <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-                <a href="https://www.econ.sdu.edu.cn/info/1060/12934.htm" target="_blank">山东大学人文社科青年学者学术沙龙暨第二届发展经济学青年学者论坛</a>
-              </td>
-              <td style="padding: 8px; width: 35%;">山东大学经济学院</td>
-            </tr>
-          </tbody>
-        </table>
+                <a href="https://www.econ.sdu.edu.cn/info/1060/12934.htm" target="_blank" rel="noopener">山东大学人文社科青年学者学术沙龙暨第二届发展经济学青年学者论坛</a>
+              </div>
+              <div class="event-side">山东大学经济学院</div>
+            </li>
+          </ul>
+        </div>
       </div>
       
       <div id="cetw-workshop" style="display:none;">
@@ -288,179 +213,183 @@
         <p>中国经济转型讨论班（China's Economic Transition Workshop，CETW）是由中国人民大学刘瑞明教授发起，由中国人民大学刘瑞明老师、江艇老师、张琼老师、陈强远老师、卢昂荻老师、陈志远老师、中央财经大学闫昊生老师等多位老师联合常驻指导的学术讨论班，旨在为有学术兴趣和学术志向的经济学相关专业的老师和学生，搭建一个共同学习经济学前沿知识、探讨中国经济转型问题的平台。</p>
         
         <h3 style="margin-top: 1.5rem;">论文点评与汇报</h3>
-        <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-          <thead>
-            <tr style="border-bottom: 2px solid #000;">
-              <th style="padding: 8px; text-align: center; width: 15%;">日期</th>
-              <th style="padding: 8px; text-align: center; width: 42.5%;">点评论文</th>
-              <th style="padding: 8px; text-align: center; width: 42.5%;">汇报论文</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 8px; vertical-align: top;">
+        <div class="event-table event-table--cetw">
+          <div class="event-list-head">
+            <span>日期</span><span>点评论文</span><span>汇报论文</span>
+          </div>
+          <ul class="event-list">
+            <li>
+              <div class="event-date">
+                <div>2026-6-23</div>
+              </div>
+              <div class="event-main"><strong>自然灾害与成年后创业</strong>，工作论文</div>
+              <div class="event-side"><strong>生产函数的结构估计及其应用</strong> &emsp;<a href="teaching/treatmenteffects_productivity_cn.pdf" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color:#b23a48;"></i> Slides</a></div>
+            </li>
+            <li>
+              <div class="event-date">
                 <div>2025-12-9</div>
-              </td>
-              <td style="padding: 8px; vertical-align: top;">Garg, T. 2025,<strong>Can industrial policy overcome coordination failures? Theory and evidence.</strong> <i>Job Market Paper</i> &emsp;<a href="events/IP_Coordination_Comments.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color:#b23a48;"></i> Comments</a></td>
-              <td style="padding: 8px; vertical-align: top;"><strong>Intangible Collateral, Innovation Investment and Aggregate Productivity.</strong></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 8px; vertical-align: top;">
+              </div>
+              <div class="event-main">Garg, T. 2025,<strong>Can industrial policy overcome coordination failures? Theory and evidence.</strong> <i>Job Market Paper</i> &emsp;<a href="events/IP_Coordination_Comments.pdf" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color:#b23a48;"></i> Comments</a></div>
+              <div class="event-side"><strong>Intangible Collateral, Innovation Investment and Aggregate Productivity.</strong></div>
+            </li>
+            <li>
+              <div class="event-date">
                 <div>2025-5-20</div>
                 <button class="photo-btn" data-event="2025-5-20" style="padding: 4px 8px; font-size: 12px; margin-top: 6px;"><i class="fa fa-camera" aria-hidden="true"></i> 查看照片</button>
-              </td>
-              <td style="padding: 8px; vertical-align: top;">Hsieh, Konig and Liu, 2023, <strong>Endogeneous Technology Spillovers in R&D Collaboration Networks</strong>, <i>RAND Journal of Economics</i> &emsp;<a href="https://zhiyuanryanchen.github.io/events/R&D-Networks.html" target="_blank"><i class="fa fa-file-code-o" aria-hidden="true" style="color:#b23a48;"></i> Comments</a></td> 
-              <td style="padding: 8px; vertical-align: top;"><strong>Identifying Treatment Effects on Productivity</strong></td> 
-            </tr>
-          </tbody>
-        </table>
+              </div>
+              <div class="event-main">Hsieh, Konig and Liu, 2023, <strong>Endogeneous Technology Spillovers in R&D Collaboration Networks</strong>, <i>RAND Journal of Economics</i> &emsp;<a href="https://zhiyuanryanchen.github.io/events/R&D-Networks.html" target="_blank" rel="noopener"><i class="fa fa-file-code-o" aria-hidden="true" style="color:#b23a48;"></i> Comments</a></div>
+              <div class="event-side"><strong>Identifying Treatment Effects on Productivity</strong></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div id="conference-section" style="display:none;">
       <h2><a id="conference" class="anchor" href="#conference" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
-      <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-        <tbody>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2026-07-03~05</td>
-            <td style="padding: 8px; width: 50%;">10th CCER Summer Institute</td>
-            <td style="padding: 8px; width: 35%;">河北崇礼; 北京大学国家发展研究院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; vertical-align: top; width: 15%;">
+      <div class="event-table event-table--3col">
+        <ul class="event-list">
+          <li>
+            <div class="event-date">2026-07-03~05</div>
+            <div class="event-main">10th CCER Summer Institute</div>
+            <div class="event-side">河北崇礼; 北京大学国家发展研究院</div>
+          </li>
+          <li>
+            <div class="event-date">
               <div>2026-07-04</div>
               <button class="photo-btn" data-event="2026-07-04" style="padding: 4px 8px; font-size: 12px; margin-top: 6px;"><i class="fa fa-camera" aria-hidden="true"></i> 查看照片</button>
-            </td>
-            <td style="padding: 8px; vertical-align: top; width: 50%;">2026中国数字经济发展和治理学术年会</td>
-            <td style="padding: 8px; vertical-align: top; width: 35%;">清华大学经管学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2026-07-02</td>
-            <td style="padding: 8px; width: 50%;">
+            </div>
+            <div class="event-main">2026中国数字经济发展和治理学术年会</div>
+            <div class="event-side">清华大学经管学院</div>
+          </li>
+          <li>
+            <div class="event-date">2026-07-02</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
               <a href="https://editorialexpress.com/conference/CFRC2026/program/CFRC2026.html" target="_blank" rel="noopener">China Financial Research Conference (CFRC)</a>
-            </td>
-            <td style="padding: 8px; width: 35%;">清华大学五道口金融学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2026-01-20</td>
-            <td style="padding: 8px; width: 50%;">
+            </div>
+            <div class="event-side">清华大学五道口金融学院</div>
+          </li>
+          <li>
+            <div class="event-date">2026-01-20</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://mp.weixin.qq.com/s/DlMCgDHukTzJpXLl7m04Qw" target="_blank">中国经济研究系列讲座及专题研讨会（第一期）</a>，演讲嘉宾
-            </td>
-            <td style="padding: 8px; width: 35%;">中国人民大学经济学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2025-12-27</td>
-            <td style="padding: 8px; width: 50%;">
+              <a href="https://mp.weixin.qq.com/s/DlMCgDHukTzJpXLl7m04Qw" target="_blank" rel="noopener">中国经济研究系列讲座及专题研讨会（第一期）</a>，演讲嘉宾
+            </div>
+            <div class="event-side">中国人民大学经济学院</div>
+          </li>
+          <li>
+            <div class="event-date">2025-12-27</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://mp.weixin.qq.com/s/PYIG7JHnY5DJ9iUHheGetg" target="_blank">上海财经大学第四届开放经济与宏观金融会议</a>
-            </td>
-            <td style="padding: 8px; width: 35%;">上海财经大学金融学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2025-12-19</td>
-            <td style="padding: 8px; width: 50%;">
+              <a href="https://mp.weixin.qq.com/s/PYIG7JHnY5DJ9iUHheGetg" target="_blank" rel="noopener">上海财经大学第四届开放经济与宏观金融会议</a>
+            </div>
+            <div class="event-side">上海财经大学金融学院</div>
+          </li>
+          <li>
+            <div class="event-date">2025-12-19</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://sxy.hnust.edu.cn/sylm/ggxw/xwdt/1580cca92ac94f9ab6d680d79102e798.htm" target="_blank">第二届"香樟书院"学术讲堂</a>，主讲嘉宾
-            </td>
-            <td style="padding: 8px; width: 35%;">湖南科技大学商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2025-11-15</td>
-            <td style="padding: 8px;">
+              <a href="https://sxy.hnust.edu.cn/sylm/ggxw/xwdt/1580cca92ac94f9ab6d680d79102e798.htm" target="_blank" rel="noopener">第二届“香樟书院”学术讲堂</a>，主讲嘉宾
+            </div>
+            <div class="event-side">湖南科技大学商学院</div>
+          </li>
+          <li>
+            <div class="event-date">2025-11-15</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://www.ahut.edu.cn/info/1002/27413.htm" target="_blank">第五届香樟产业经济学论坛</a>，主旨演讲嘉宾
-            </td>
-            <td style="padding: 8px;">安徽工业大学</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2025-09-27-28</td>
-            <td style="padding: 8px;">
+              <a href="https://www.ahut.edu.cn/info/1002/27413.htm" target="_blank" rel="noopener">第五届香樟产业经济学论坛</a>，主旨演讲嘉宾
+            </div>
+            <div class="event-side">安徽工业大学</div>
+          </li>
+          <li>
+            <div class="event-date">2025-09-27-28</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://soe.xmu.edu.cn/info/6411/899595.htm" target="_blank">两岸微观经济研讨会：理论与应用</a>
-            </td>
-            <td style="padding: 8px;">厦门大学</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; vertical-align: top;">
+              <a href="https://soe.xmu.edu.cn/info/6411/899595.htm" target="_blank" rel="noopener">两岸微观经济研讨会：理论与应用</a>
+            </div>
+            <div class="event-side">厦门大学</div>
+          </li>
+          <li>
+            <div class="event-date">
               <div>2025-08-14</div>
               <button class="photo-btn" data-event="2025-08-14" style="padding: 4px 8px; font-size: 12px; margin-top: 6px;"><i class="fa fa-camera" aria-hidden="true"></i> 查看照片</button>
-            </td>
-            <td style="padding: 8px; vertical-align: top;">
+            </div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://site.uibe.edu.cn/aspxNews/ViewNews.aspx?NewsID=15710" target="_blank"><strong>Eaton's Forum hosted by International Economics and Finance Society, China</strong></a>
-            </td>
-            <td style="padding: 8px; vertical-align: top;">对外经济与贸易大学</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2025-07-04</td>
-            <td style="padding: 8px; width: 50%;">第三届人大财金全球校友学术年会</td>
-            <td style="padding: 8px; width: 35%;">中国人民大学</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2025-05-19</td>
-            <td style="padding: 8px; width: 50%;">
+              <a href="https://site.uibe.edu.cn/aspxNews/ViewNews.aspx?NewsID=15710" target="_blank" rel="noopener"><strong>Eaton's Forum hosted by International Economics and Finance Society, China</strong></a>
+            </div>
+            <div class="event-side">对外经济与贸易大学</div>
+          </li>
+          <li>
+            <div class="event-date">2025-07-04</div>
+            <div class="event-main">第三届人大财金全球校友学术年会</div>
+            <div class="event-side">中国人民大学</div>
+          </li>
+          <li>
+            <div class="event-date">2025-05-19</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://mp.weixin.qq.com/s/tAhMEVO4n_XklU7l8S96gQ" target="_blank">ISEM Conference: Frontiers of Empirical Research in China</a>
-            </td>
-            <td style="padding: 8px; width: 35%;">首都经济与贸易大学ISEM</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; width: 15%;">2024-04-21</td>
-            <td style="padding: 8px; width: 50%">
+              <a href="https://mp.weixin.qq.com/s/tAhMEVO4n_XklU7l8S96gQ" target="_blank" rel="noopener">ISEM Conference: Frontiers of Empirical Research in China</a>
+            </div>
+            <div class="event-side">首都经济与贸易大学ISEM</div>
+          </li>
+          <li>
+            <div class="event-date">2024-04-21</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://www.rmbs.ruc.edu.cn/xwzx/jsgd/3ed19e8d4704468aa39b56a948ec812f.htm" target="_blank">发布《平台企业数字技术发明专利研究报告》</a>
+              <a href="https://www.rmbs.ruc.edu.cn/xwzx/jsgd/3ed19e8d4704468aa39b56a948ec812f.htm" target="_blank" rel="noopener">发布《平台企业数字技术发明专利研究报告》</a>
               <br>
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://www.rmbs.ruc.edu.cn/xwzx/xydt/6dfe2b9848f04c5497258c4cede8e9dd.htm?f_link_type=f_linkinlinenote&amp;flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiI1ZmJlMTQxNTA2NDk3ODg2LWM3NWUwN2U5NzNiMDhjMjkifQ%3D%3D" target="_blank">第二届建构中国自主知识体系工商管理学科联盟论坛——平行分论坛“新质生产力与数字经济学术论坛”</a>
-            </td>
-            <td style="padding: 8px; width: 35%;">人大商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2023-07-02</td>
-            <td style="padding: 8px;">China Financial Research Conference</td>
-            <td style="padding: 8px;">清华五道口</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2022-08-02</td>
-            <td style="padding: 8px;">
+              <a href="https://www.rmbs.ruc.edu.cn/xwzx/xydt/6dfe2b9848f04c5497258c4cede8e9dd.htm?f_link_type=f_linkinlinenote&amp;flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiI1ZmJlMTQxNTA2NDk3ODg2LWM3NWUwN2U5NzNiMDhjMjkifQ%3D%3D" target="_blank" rel="noopener">第二届建构中国自主知识体系工商管理学科联盟论坛——平行分论坛“新质生产力与数字经济学术论坛”</a>
+            </div>
+            <div class="event-side">人大商学院</div>
+          </li>
+          <li>
+            <div class="event-date">2023-07-02</div>
+            <div class="event-main">China Financial Research Conference</div>
+            <div class="event-side">清华五道口</div>
+          </li>
+          <li>
+            <div class="event-date">2022-08-02</div>
+            <div class="event-main">
               <i class="fa fa-newspaper-o" aria-hidden="true" style="color:#b23a48;"></i>&emsp;
-              <a href="https://www.nse.pku.edu.cn/xsyj/xshd/xjgjjxgjhy/3ffce0827ce4427abc953625b722324b.htm" target="_blank">第九届新结构经济学国际研讨会</a>，点评人
-            </td>
-            <td style="padding: 8px;">北大新结构经济学研究院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2022-07-02</td>
-            <td style="padding: 8px;">第六届CCER夏季研讨会</td>
-            <td style="padding: 8px;">北大国发院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2022-06-22</td>
-            <td style="padding: 8px;">2022 Asian Meeting of Econometric Society</td>
-            <td style="padding: 8px;">CHUK-Shenzhen</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2021-07-12</td>
-            <td style="padding: 8px;">7th International Young Finance Scholars' Conference</td>
-            <td style="padding: 8px;">北大汇丰商学院</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px;">2013</td>
-            <td style="padding: 8px;">复旦大学博士生论坛</td>
-            <td style="padding: 8px;">复旦大学</td>
-          </tr>
-        </tbody>
-      </table>
+              <a href="https://www.nse.pku.edu.cn/xsyj/xshd/xjgjjxgjhy/3ffce0827ce4427abc953625b722324b.htm" target="_blank" rel="noopener">第九届新结构经济学国际研讨会</a>，点评人
+            </div>
+            <div class="event-side">北大新结构经济学研究院</div>
+          </li>
+          <li>
+            <div class="event-date">2022-07-02</div>
+            <div class="event-main">第六届CCER夏季研讨会</div>
+            <div class="event-side">北大国发院</div>
+          </li>
+          <li>
+            <div class="event-date">2022-06-22</div>
+            <div class="event-main">2022 Asian Meeting of Econometric Society</div>
+            <div class="event-side">CHUK-Shenzhen</div>
+          </li>
+          <li>
+            <div class="event-date">2021-07-12</div>
+            <div class="event-main">7th International Young Finance Scholars' Conference</div>
+            <div class="event-side">北大汇丰商学院</div>
+          </li>
+          <li>
+            <div class="event-date">2013</div>
+            <div class="event-main">复旦大学博士生论坛</div>
+            <div class="event-side">复旦大学</div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div id="honors-section" style="display:none;">
       <h2><a id="honors" class="anchor" href="#honors" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
       <ul class="resource-list">
+                <li><strong>2025</strong>&emsp;<a>教育部青年长江学者</a></li>
         <li><strong>2025</strong>&emsp;<a href="https://zhiyuanryanchen.github.io/research/陈志远-2025全国高被引学者TOP1_证书.pdf">中国知网经济学类高被引学者Top1%</a></li>
         <li><strong>2024</strong>&emsp;<a href="https://zhiyuanryanchen.github.io/research/2024知网高被引学者证书.pdf" target="_expler.exe">中国知网经济学类高被引学者Top1% </a></li>
-        <li><strong>第七届</strong>&emsp;张培刚发展经济学优秀论文奖</li>
-        <li><strong>第七届</strong>&emsp;“高等学校科学研究优秀成果奖(人文社会科学)”论文三等奖</li>
-        <li><strong>第18届</strong>&emsp;安子介国际贸易论文三等奖</li>
+        <li><strong>2018</strong>&emsp;第七届张培刚发展经济学优秀论文奖</li>
+        <li><strong>2015</strong>&emsp;第七届高等学校科学研究优秀成果奖(人文社会科学)论文三等奖</li>
+        <li><strong>2014</strong>&emsp;第18届安子介国际贸易论文三等奖</li>
       </ul>
     </div>
     </section>
@@ -491,6 +420,7 @@
     
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/nav-transition.js"></script>
+    <script src="javascripts/motion.js" defer></script>
     <script>
       (function() {
         const buttons = document.querySelectorAll('.pub-btn');

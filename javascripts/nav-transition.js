@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Respect reduced-motion preference: navigate instantly
+  const reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const navLinks = document.querySelectorAll('.nav-button');
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -10,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!href) return;
       const url = new URL(href, window.location.href);
       if (url.origin !== window.location.origin) return;
+      if (reduceMotion) return; // fall through to native navigation
 
       event.preventDefault();
       document.body.classList.add('page-transition');

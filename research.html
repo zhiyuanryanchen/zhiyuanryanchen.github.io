@@ -7,6 +7,7 @@
     <title>Zhiyuan's Website</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="javascripts/lang-state.js"></script>
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -92,17 +93,6 @@
       section i {
       font-weight: 700;
       font-style: italic;
-      }
-      .pub-toggle {
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin:0.75rem 0 0.25rem;
-      }
-      .pub-btn.active {
-      background-color:#8f2f3a;
-      color:#fff;
-      border-color:#7a2331;
       }
       /* Paper title links: black without underline */
       section a {
@@ -220,24 +210,34 @@
     <div class="wrapper">
       <header>
         <div class="nav-links">
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/"><span class="nav-zh">首页</span><span class="nav-en">Home</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html"><span class="nav-zh">研究</span><span class="nav-en">Research</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html"><span class="nav-zh">教学</span><span class="nav-en">Teaching</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html"><span class="nav-zh">笔记</span><span class="nav-en">Notebooks</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html"><span class="nav-zh">活动</span><span class="nav-en">Events</span></a>
+          <span class="nav-spacer"></span>
+          <span class="lang-switch"><a href="#" class="lang-link-en" data-lang="en">English</a><a href="#" class="lang-link-zh" data-lang="zh" style="margin-left:12px;">中文</a></span><span class="nav-icons">
+            <a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn" title="Email" aria-label="Email"><i class="fa fa-fw fa-envelope"></i></a>
+            <a href="https://github.com/zhiyuanryanchen" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa fa-fw fa-github-square"></i></a>
+          </span>
         </div>
       </header>
       <section>
 
-     <div class="pub-toggle" aria-label="Publications language toggle">
-     <a class="nav-button pub-btn active" href="#Working Papers" data-target="working-papers-section">Working Papers</a>
-       <a class="nav-button pub-btn" href="#recent-papers-updated" data-target="english-pubs">English Journals</a>
-       <a class="nav-button pub-btn" href="#中文发表" data-target="chinese-pubs">中文期刊</a>
-       <a class="nav-button pub-btn" href="#books" data-target="books-section">Books/专著</a>
-       <a class="nav-button pub-btn" href="#data" data-target="data-section">数据库</a>
-      <a class="nav-button pub-btn" href="#专利程序" data-target="patents-section">专利&程序</a>
-       <a class="nav-button pub-btn" href="#科研项目" data-target="funding-section">项目</a>
-       <a class="nav-button pub-btn" href="#同行评审" data-target="peer-review-section">评审</a>
+     <div class="pub-toggle" aria-label="Publications navigation">
+      <div class="pub-mainrow">
+     <a class="nav-button pub-btn active" href="#Working%20Papers" data-target="working-papers-section" data-group="papers" data-hash="#Working Papers"><span class="label-zh">论文</span><span class="label-en">Papers</span></a>
+       <a class="nav-button pub-btn" href="#books" data-target="books-section"><span class="label-zh">专著</span><span class="label-en">Books</span></a>
+       <a class="nav-button pub-btn" href="#data" data-target="data-section"><span class="label-zh">数据库</span><span class="label-en">Databases</span></a>
+      <a class="nav-button pub-btn" href="#专利程序" data-target="patents-section"><span class="label-zh">专利&程序</span><span class="label-en">Patents & Software</span></a>
+       <a class="nav-button pub-btn" href="#科研项目" data-target="funding-section"><span class="label-zh">项目</span><span class="label-en">Grants</span></a>
+       <a class="nav-button pub-btn" href="#同行评审" data-target="peer-review-section"><span class="label-zh">评审</span><span class="label-en">Peer Review</span></a>
+      </div>
+       <span class="pub-subbar open" id="papers-subbar">
+         <button type="button" class="pub-subbtn active" data-target="working-papers-section" data-hash="#Working Papers"><span class="sub-zh">工作论文</span><span class="sub-en">Working Papers</span></button>
+         <button type="button" class="pub-subbtn" data-target="english-pubs" data-hash="#recent-papers-updated"><span class="sub-zh">英文期刊</span><span class="sub-en">English Journals</span></button>
+         <button type="button" class="pub-subbtn" data-target="chinese-pubs" data-hash="#中文发表"><span class="sub-zh">中文期刊</span><span class="sub-en">Chinese Journals</span></button>
+       </span>
      </div>
 
 
@@ -644,7 +644,7 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
   <div id="books-section" class="right-only" style="display:none;">
     <h4><a id="books" class="anchor" href="#books" aria-hidden="true"><span class="octicon octicon-link"></span></a></h4>
     <div class="paper-group">
-      <p class="paper-item" style="margin:0;">陈志远著，《生产函数的结构估计与应用》，经济管理出版社，2026年6月第1版，ISBN-978-7-5243-1075-4。</p>
+      <p class="paper-item" style="margin:0;">陈志远著，《生产函数的结构估计与应用》，经济管理出版社，2026年6月第1版。 <button class="paper-btn"><a href="research/生产率结构估计-序言-陈志远.pdf" target="_blank" rel="noopener">大纲</a></button></p>
     </div>
   </div>
 
@@ -827,23 +827,32 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
 
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/nav-transition.js"></script>
+    <script src="javascripts/motion.js" defer></script>
     <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.parentNode.nextElementSibling.classList.toggle("show");
-      }
-    }
+    /* Abstract 手风琴改由 javascripts/motion.js 统一接管（grid 折叠动画） */
 
     (function() {
-      const buttons = document.querySelectorAll('.pub-btn');
-      const sections = ['working-papers-section', 'english-pubs', 'chinese-pubs', 'books-section', 'data-section', 'peer-review-section', 'funding-section', 'patents-section', 'honors-section']
+      const mainButtons = Array.from(document.querySelectorAll('.pub-mainrow > .pub-btn'));
+      const subButtons = Array.from(document.querySelectorAll('.pub-subbtn'));
+      const subbar = document.getElementById('papers-subbar');
+      const PAPERS_GROUP = ['working-papers-section', 'english-pubs', 'chinese-pubs'];
+      const sections = ['working-papers-section', 'english-pubs', 'chinese-pubs',
+          'books-section', 'data-section', 'peer-review-section',
+          'funding-section', 'patents-section', 'honors-section']
         .map((id) => document.getElementById(id))
         .filter(Boolean);
-      if (!buttons.length || !sections.length) return;
+      if (!mainButtons.length || !sections.length) return;
+
+      const hashOf = (btn) => btn.dataset.hash || btn.getAttribute('href') || '';
+
+      const updateHash = (hash, scroll) => {
+        if (!hash || !hash.startsWith('#')) return;
+        history.replaceState(null, '', hash);
+        if (scroll) {
+          const dest = document.getElementById(decodeURIComponent(hash.slice(1)));
+          if (dest) dest.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
 
       const showSection = (targetId) => {
         const hasTarget = sections.some((section) => section.id === targetId);
@@ -852,37 +861,53 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
           section.style.display = section.id === effectiveTargetId ? 'block' : 'none';
         });
 
-        buttons.forEach((btn) => {
-          const isActive = btn.dataset.target === effectiveTargetId;
+        const inPapers = PAPERS_GROUP.indexOf(effectiveTargetId) !== -1;
+        mainButtons.forEach((btn) => {
+          const isPapersBtn = btn.dataset.group === 'papers';
+          const isActive = isPapersBtn ? inPapers : btn.dataset.target === effectiveTargetId;
           btn.classList.toggle('active', isActive);
           btn.setAttribute('aria-current', isActive ? 'page' : 'false');
         });
+        if (subbar) subbar.classList.toggle('open', inPapers);
+        subButtons.forEach((btn) => {
+          const isActive = btn.dataset.target === effectiveTargetId;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
       };
 
-      buttons.forEach((btn) => {
+      mainButtons.forEach((btn) => {
         btn.addEventListener('click', (e) => {
-          const target = btn.dataset.target;
-          if (!target) return;
-          showSection(target);
-          const hash = btn.getAttribute('href');
           e.preventDefault();
-
-          if (hash && hash.startsWith('#')) {
-            history.replaceState(null, '', hash);
-            const dest = document.querySelector(hash);
-            if (dest) {
-              dest.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+          const target = btn.dataset.target;
+          if (btn.dataset.group === 'papers' && subbar.classList.contains('open')) {
+            /* 已在 Papers 组内：保持当前三级选择，仅确保三级条展开 */
+            return;
           }
+          showSection(target);
+          updateHash(hashOf(btn), true);
+        });
+      });
+
+      subButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          showSection(btn.dataset.target);
+          updateHash(btn.dataset.hash, true);
         });
       });
 
       // Initialize view based on URL hash if possible
-      const initialHash = decodeURIComponent(window.location.hash || '');
-      const initialBtn = initialHash
-        ? Array.from(buttons).find((btn) => btn.getAttribute('href') === initialHash)
-        : null;
-      showSection(initialBtn?.dataset?.target || 'working-papers-section');
+      const targetFromHash = () => {
+        const initialHash = decodeURIComponent(window.location.hash || '');
+        if (!initialHash) return 'working-papers-section';
+        const hit = subButtons.find((btn) => btn.dataset.hash === initialHash)
+          || mainButtons.find((btn) => hashOf(btn) === initialHash)
+          || mainButtons.find((btn) => decodeURIComponent(btn.getAttribute('href') || '') === initialHash);
+        return hit ? hit.dataset.target : 'working-papers-section';
+      };
+      showSection(targetFromHash());
+      // 浏览器前进/后退或同页锚点变化时同步区块
+      window.addEventListener('hashchange', () => showSection(targetFromHash()));
     })();
 
     // Handle peer review subsection navigation

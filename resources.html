@@ -7,6 +7,7 @@
     <title>Zhiyuan's website</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="javascripts/lang-state.js"></script>
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
@@ -51,21 +52,26 @@
     <div class="wrapper">
       <header>
         <div class="nav-links">
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/">Home</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html">Research</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html">Teaching</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html">Notebooks</a>
-          <a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html">Events</a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/"><span class="nav-zh">首页</span><span class="nav-en">Home</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/research.html"><span class="nav-zh">研究</span><span class="nav-en">Research</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/teaching.html"><span class="nav-zh">教学</span><span class="nav-en">Teaching</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/resources.html"><span class="nav-zh">笔记</span><span class="nav-en">Notebooks</span></a>
+          <a class="nav-button" href="https://zhiyuanryanchen.github.io/events.html"><span class="nav-zh">活动</span><span class="nav-en">Events</span></a>
+          <span class="nav-spacer"></span>
+          <span class="lang-switch"><a href="#" class="lang-link-en" data-lang="en">English</a><a href="#" class="lang-link-zh" data-lang="zh" style="margin-left:12px;">中文</a></span><span class="nav-icons">
+            <a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn" title="Email" aria-label="Email"><i class="fa fa-fw fa-envelope"></i></a>
+            <a href="https://github.com/zhiyuanryanchen" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa fa-fw fa-github-square"></i></a>
+          </span>
         </div>
       </header>
 
       <section>
 
     <div class="pub-toggle" aria-label="Resources categories">
-      <a class="nav-button pub-btn active" href="#models" data-target="models-section">Models</a>
-      <a class="nav-button pub-btn" href="#econometrics" data-target="econometrics-section">Econometrics</a>
-      <a class="nav-button pub-btn" href="#machine-learning" data-target="ml-section">Artificial Intelligence</a>
-      <a class="nav-button pub-btn" href="#data" data-target="data-section">Databases</a>
+      <a class="nav-button pub-btn active" href="#models" data-target="models-section"><span class="label-zh">模型</span><span class="label-en">Models</span></a>
+      <a class="nav-button pub-btn" href="#econometrics" data-target="econometrics-section"><span class="label-zh">计量经济学</span><span class="label-en">Econometrics</span></a>
+      <a class="nav-button pub-btn" href="#machine-learning" data-target="ml-section"><span class="label-zh">人工智能</span><span class="label-en">Artificial Intelligence</span></a>
+      <a class="nav-button pub-btn" href="#data" data-target="data-section"><span class="label-zh">数据库</span><span class="label-en">Databases</span></a>
     </div>
 
     <div id="models-section">
@@ -142,6 +148,7 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
     </div>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/nav-transition.js"></script>
+    <script src="javascripts/motion.js" defer></script>
     <script>
       (function() {
         const buttons = document.querySelectorAll('.pub-btn');
