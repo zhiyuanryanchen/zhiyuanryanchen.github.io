@@ -190,6 +190,30 @@
       margin-right:0;
       box-sizing:border-box;
       }
+
+      /* Journal tag cloud for peer review list */
+      .journal-tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      }
+      .journal-tags + .journal-tags {
+      margin-top:1.2rem;
+      }
+      .journal-tag {
+      display:inline-block;
+      padding:4px 12px;
+      background-color:#f0f0f0;
+      border-radius:4px;
+      font-size:0.9em;
+      transition:background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      cursor:default;
+      }
+      .journal-tag:hover {
+      background-color:#e0e0e0;
+      transform:translateY(-2px);
+      box-shadow:0 2px 6px rgba(0,0,0,0.15);
+      }
     </style>
   </head>
   <body>
@@ -255,33 +279,27 @@ Learning and Scaling, with <a href="https://lzxlll.github.io/">Zexuan Liu</a> an
 </p> 
 
 <p class="paper-item" style="margin:0;">
-  <a class="working-paper-link" href="https://zhiyuanryanchen.github.io/research/Main_Finance_RD_2026_V66.pdf">Intellectual Property Financing, Innovation, and Aggregate TFP</a>, with <a href="https://sites.google.com/view/guanlianghu">Guanliang Hu</a>. Revision Requested @<i>Journal of Financial Economics</i> <span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">20/11→26/3</span>
+  <a class="working-paper-link" href="https://zhiyuanryanchen.github.io/research/Main_Finance_RD_2026_V66.pdf">Intellectual Property Financing, Innovation, and Aggregate TFP</a>, with <a href="https://sites.google.com/view/guanlianghu">Guanliang Hu</a>. resubmitted to <i>Journal of Financial Economics</i> <span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">20/11→26/3</span>
 </p>
 
 <p class="paper-item" style="margin:0;"> 	
 Data-driven Vertical Integration, with <a href="https://lzxlll.github.io/">Zexuan Liu</a>, Fuxin Zhai and <a href="https://faculty.txst.edu/profile/1637039">Yao-yu Chih</a>. Revision Requested @<i>Management Science</i><span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">25/11</span></p> 
 
-<p class="paper-item" style="margin:0;"> <a class="working-paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5096016">Identification of Multiproduct Production Functions: Non-Parametric Limits and a CES Solution</a>, with  <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and Jie Zhang. Revision Requested @<i>Econometric Reviews</i> <span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">22/4→25/11</span></p> 
+<p class="paper-item" style="margin:0;"> <a class="working-paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5096016">Identification of Multiproduct Production Functions: Non-Parametric Limits and a CES Solution</a>, with  <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and Jie Zhang. Resubmitted @<i>Econometric Reviews</i> <span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">22/4→25/11</span></p> 
 
 <p class="paper-item" style="margin:0;"> How Heterogeneous are Productivity Gains from Exporting? with  <a href="https://liaomoyu.weebly.com/">Moyu Liao</a>, Hao Yu and Jinqiu He. Revision Requested @<i>Journal of Productivity Analysis</i> <span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">26/03</span></p> 
 
 
 
-<p class="paper-item" style="margin:0;"> Micro-to-Macro Gains from Regional Trade Agreements: Evidence from RCEP, with Zhihao Wang. Revision Requested @<i>The World Economy</i><span style="display: inline-block; background-color: #f0f0f0; color: #555; padding: 2px 6px; border-radius: 3px; font-size: 85%; margin-left: 6px;">26/01</span></p> 
 
 
-<!-- <p class="paper-item" style="margin:0;">科技金融赋能科技成果转化：内在逻辑、现实困境与突破策略，与<a>汤岸千，李三希</a>合作，<i>改革</i>，二轮修改.</p> -->
 </div>
 </div>
 <div id="english-pubs">
 <div class="paper-group" style="counter-reset: paper-counter 0;">
 <p></p>
-<p class="paper-item" style="margin:0;">The Impact of Digitalization on Productivity: Evidence from Chinese Manufacturing Firms, with Hongxi Chen, Jingtao Yi and Jinqiu He, accepted @ <i>Management and Organizational Review</i>.</p>
-
-<p class="paper-item" style="margin:0;">Bank Competition, Defaulting Risks and Innovation, with <a href="https://mengbozhang.weebly.com/" target="_explorer.exe">Mengbo Zhang</a>, Aomeng Zhang, and Xinyang Li, accepted @ <i>Canadian Journal of Economics</i>.</p>
-
-<p class="paper-item representative" style="margin:0;"> Identifying Treatment Effects on Productivity: Theory with An Application to Firms' Production Digitalization <font color="green"></font>, with <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and <a href="https://kschurter.github.io/">Karl Schurter.</a> accepted @ <i>RAND Journal of Economics</i>
-<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="https://github.com/wenddymacro/pte.git" target="_blank" rel="noopener">Stata Program</a></button>
+<p class="paper-item representative" style="margin:0;"> Identifying Treatment Effects on Productivity: Theory with An Application to Firms' Production Digitalization <font color="green"></font>, with <a href="https://liaomoyu.weebly.com/">Moyu Liao</a> and <a href="https://kschurter.github.io/">Karl Schurter, </a> forthcoming @ <i>RAND Journal of Economics</i>
+<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="research/ProductivityTE-CLS2026RAND.pdf">Accepted PDF</a></button> <button class="paper-btn"><a href="research/ProductivityTreatmentEffects2022CLS.pdf">First Version PDF</a></button> <button class="paper-btn"><a href="https://github.com/wenddymacro/pte.git" target="_blank" rel="noopener">Stata Program</a></button>
 </p>
 <div class="panel" style="background-color: white; color: black;  padding: 10px;">
       We study the identification and estimation of treatment effects on the productivity
@@ -302,6 +320,53 @@ Data-driven Vertical Integration, with <a href="https://lzxlll.github.io/">Zexua
   Abstract: Using a generator-level framework, we analyze the impacts of different regulation levels of CO<sub>2</sub> emissions on total emissions and generation costs in the China Southern Power Grid Corporation. We employ a structural approach to estimating the generator-level production functions that incorporate heterogeneous returns to scale and unobserved productivity, using a novel generator-level dataset. We find substantial heterogeneity in generation efficiency across generators, and large generators are the most efficient. Counterfactual analyses show that regulating emissions and allocating generation at a more aggregate level (province or region) can reduce total emissions and generation costs by shifting generation toward more efficient generators and plants. The generator-level framework allows for more efficient allocation than the plant-level framework.
  </div>
 
+ <p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/InnovationCostsBenefits.pdf" target="_expler.exe">A Cost-Benefit Analysis of R&D and Patents: Firm-level Evidence from China</a>, with Jie Zhang and Yuan Zi, <i>European Economic Review</i>, Vol. 133, April 2021, 103633. 
+<button class="accordion">Abstract</button> <button class="paper-btn"><a href="https://doi.org/10.1016/j.euroecorev.2020.103633">PDF</a> </button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CZZ2021EER_wp.pdf">Appendix</a></button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/EER-D-19-00169_Files.rar">Code</a> </button>
+</p>
+<div class="panel" style="background-color: white; color: black; padding: 10px;">
+Abstract: We extend the empirical framework by Peters et al. (2017) to include both R&D and patents in the productivity evolution. We provide a decomposition of the benefits of R&D into the patent and non-patent components, and a novel measure of the patent value conditioning on the firm's R&D investment. Using a sample of Chinese high-tech manufacturing firms, we find that (1) 47.8% to 67% of the benefits of R&D investment comes from non-patent R&D activities; (2) On average an invention (a utility model) patent causes around 0.76 (0.66) percent increase in the firm value; (3) The start-up costs of R&D are around ten times as large as the maintenance R&D costs. The counterfactual analysis shows that the lump-sum subsidy is more effective than the proportional subsidy in increasing the expected firm value and innovation probability. R&D continuers respond more actively than the R&D starters to the R&D subsidy. 
+</div>
+
+<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://www.sciencedirect.com/science/article/pii/S0014292117300338" target="_expler.exe">Import and Innovation: Evidence from Chinese Firms</a>; with <a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">Jie Zhang</a> and <a href="http://site.uibe.edu.cn/actionszdw/ViewTeacher.aspx?NewsID=449">Wenping Zheng</a>, <i>European Economic Review</i>, 2017(94), 205 -220.
+      <button class="accordion">
+        Abstract
+      </button>  <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CZZ2017EER.pdf">PDF</a></button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/czz2017_EER_onlinApp.pdf">Appendix</a> </button> <button class="paper-btn"><a href="https://web/research/CZZ_EER2016acceptedManuscript.pdf">WP</a> </button> 
+ 
+    </p>
+    <div class="panel" style="background-color: white; color: black; padding: 10px;">
+      Abstract:This paper investigates the relationship between imports and innovation by importing
+      firms. We first construct a theoretical model in which imports stimulate innovation
+      through cost-reducing knowledge spillovers. We then employ a combined micro dataset
+      of Chinese manufacturing firms to estimate the effects of imported intermediates on the
+      firm’s R&D investment. The dataset allows us to construct firm-year level instruments for
+      importing and exporting that are uncorrelated with the innovation decision of the firm.
+      Our estimations find that: (1) importing intermediates tends to increase importing firms’
+      R&D intensity; and that (2) exporting also increases importing firms’ R&D intensity. Examining
+      the channels through which importing affects innovation, we find that importing
+      from high-income sources has a greater impact on innovation. High-tech firms tend to
+      experience greater increases in innovation intensity, as do private firms. Our results are
+      supported by a series of robustness checks.  </div>
+
+<p class="paper-item" style="margin:0;"> Micro-to-Macro Gains from Regional Trade Agreements: Evidence from RCEP, with Zhihao Wang and Fuxin Zhai, forthcoming @<i>The World Economy</i>
+<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="research/WCZ2026MMGR-TWEC.pdf">PDF</a></button>
+</p>
+<div class="panel" style="background-color: white; color: black;  padding: 10px;">
+      We assess how the Regional Comprehensive Economic Partnership (RCEP)—the Asia–Pacific's largest trade agreement—affects trade and welfare when firms differ in productivity. Using a widely applied firm-level trade framework, we quantify how lower tariffs and easier market entry reshape which firms export, the volume of trade, and the gains for member economies. Most benefits arise because more productive firms start exporting and expand, while less efficient producers shrink or exit. This reallocation toward high-productivity firms raises overall efficiency, with especially strong effects in sectors that face limited import competition. Beyond the familiar gains from higher trade volumes and better international prices, RCEP delivers additional benefits from greater product variety and from productivity improvements driven by firm entry and exit. Malaysia, Vietnam, and Cambodia benefit the most from RCEP, with welfare gains of 22.2%, 5.73%, and 2.37%, respectively, while China, Japan, and South Korea gain relatively less, at 0.37%, 0.50%, and 0.49%, respectively. The magnitude of tariff reductions primarily underlies these welfare changes. The shape parameter of productivity distribution and relative productivity heterogeneity between domestic and foreign firms also have non-negligible impact on welfare outcomes. Our results highlight that ignoring firm dynamics tends to understate the agreement's welfare effects.
+</div>
+
+<p class="paper-item" style="margin:0;">The Impact of Digitalization on Productivity: Evidence from Chinese Manufacturing Firms, with Hongxi Chen, Jingtao Yi and Jinqiu He, forthcoming @ <i>Management and Organizational Review</i>.
+<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="research/CCHY2026MOR-DTproductivity.pdf">PDF</a></button>
+</p>
+<div class="panel" style="background-color: white; color: black;  padding: 10px;">
+      This study examines why digital transformation (DT) may fail to generate immediate productivity gains, using evidence from Chinese manufacturing firms. Drawing on dynamic capability and institutional perspectives, we conceptualize DT as an organizational process whose performance effects depend on firms' ability to absorb, coordinate, and deploy new digital resources. Using a text-based measure of DT strategies and a staggered difference-in-differences design, we find that DT is associated with an average productivity decline of about 10% over six years. This finding challenges the view that DT automatically enhances productivity and contributes to research on the productivity paradox. We further show that the productivity effects of DT vary systematically with CEO tenure, firm size, firm age, and skill intensity, emphasizing the role of internal institutional conditions in shaping firms' adjustment and capability-building processes. Additionally, DT is associated with greater access to long-term bank loans, suggesting a financial signaling effect. This study advances management research on DT by highlighting its uneven operational and financial consequences in an emerging economies.
+</div>
+
+<p class="paper-item" style="margin:0;">Bank Competition, Defaulting Risks and Innovation, with <a href="https://mengbozhang.weebly.com/" target="_explorer.exe">Mengbo Zhang</a>, Aomeng Zhang, and Xinyang Li, forthcoming @ <i>Canadian Journal of Economics</i>.
+<button class="accordion"> Abstract </button> <button class="paper-btn"><a href="research/bankingcompetition2026CJE.pdf">PDF</a></button>
+</p>
+<div class="panel" style="background-color: white; color: black;  padding: 10px;">
+      This paper studies how bank competition affects innovation when firms differ in default risk and banks cannot observe project risk perfectly. We develop a model in which banks compete in capacities and then loan rates while allocating credit between low- and high-default-risk firms. Stronger bank competition lowers loan rates for low-default-risk firms and expands innovation participation on the extensive margin, but relaxes credit rationing for high-default-risk firms and raises innovation investment on the intensive margin. The model also predicts that aggregate loan risk may rise even when loan quality weakly improves within each borrower segment, because competition reallocates lending toward intrinsically riskier firms. Using the deregulation of city commercial banks in China as plausibly exogenous variation in bank competition, we find that increased competition raises R&D participation for state-owned firms and R&D intensity for private firms conditional on innovating. Counterfactual analysis shows that aggregate non-performing loans can be hump-shaped in competition and that removing loan guarantees for state-owned firms reallocates credit toward private firms, raising aggregate R&D output but reducing bank and state-owned-firm welfare.
+</div>
 
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0;" href = "https://doi.org/10.1016/j.chieco.2025.102400 " target = "_explorer.exe"> Trade Policy Uncertainty and Market Diversification by Risk-Averse Firms </a>, with Zhihao Wang, Ting Zhu, Kejian Gu, and Ying Tang, <i>China Economic Review</i>, 2025, Vol 91, 102400.
       <button class="accordion">
@@ -357,12 +422,6 @@ Abstract: We argue that importing stimulates firms' learning-based R&D activitie
       lead to worse economic outcomes, at least in the short run.
      </div>
 
-<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/InnovationCostsBenefits.pdf" target="_expler.exe">A Cost-Benefit Analysis of R&D and Patents: Firm-level Evidence from China</a>, with Jie Zhang and Yuan Zi, <i>European Economic Review</i>, Vol. 133, April 2021, 103633. 
-<button class="accordion">Abstract</button> <button class="paper-btn"><a href="https://doi.org/10.1016/j.euroecorev.2020.103633">PDF</a> </button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CZZ2021EER_wp.pdf">Appendix</a></button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/EER-D-19-00169_Files.rar">Code</a> </button>
-</p>
-<div class="panel" style="background-color: white; color: black; padding: 10px;">
-Abstract: We extend the empirical framework by Peters et al. (2017) to include both R&D and patents in the productivity evolution. We provide a decomposition of the benefits of R&D into the patent and non-patent components, and a novel measure of the patent value conditioning on the firm's R&D investment. Using a sample of Chinese high-tech manufacturing firms, we find that (1) 47.8% to 67% of the benefits of R&D investment comes from non-patent R&D activities; (2) On average an invention (a utility model) patent causes around 0.76 (0.66) percent increase in the firm value; (3) The start-up costs of R&D are around ten times as large as the maintenance R&D costs. The counterfactual analysis shows that the lump-sum subsidy is more effective than the proportional subsidy in increasing the expected firm value and innovation probability. R&D continuers respond more actively than the R&D starters to the R&D subsidy. 
-</div>
 
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://www.sciencedirect.com/science/article/pii/S0264999318301639" target="_expler.exe">Types of Patents and Driving Forces behind the Patent Growth in China</a>; with <a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">Jie Zhang</a>, <i>Economic Modelling</i>, ​2019 (80), 294-302. 
 <button class="accordion">Abstract</button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CZ2019EM.pdf">PDF</a></button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/PatentsSurge_EMacceptedManuscript.pdf">WP</a> </button>
@@ -370,25 +429,7 @@ Abstract: We extend the empirical framework by Peters et al. (2017) to include b
 <div class="panel" style="background-color: white; color: black; padding: 10px;">
 As a developing economy, China's unprecedented patenting surge is puzzling. We study China's patent surge and its driving forces using a novel and comprehensive merged dataset on patent applications filed by Chinese firms. We find that R&D investment, FDI, and patent subsidy have different effects on different types of patents. First, R&D investment has a positive and significant impact on patenting activities for all types of patents under different model specifications. Second, the stimulating effect of foreign direct investment on patent applications is only robust for utility model patents and design patents. Third, the patent subsidy only has a positive impact on design patents. The results imply that FDI and patent subsidy may disproportionately spur low-quality patents.
 </div>
-<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://www.sciencedirect.com/science/article/pii/S0014292117300338" target="_expler.exe">Import and Innovation: Evidence from Chinese Firms</a>; with <a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">Jie Zhang</a> and <a href="http://site.uibe.edu.cn/actionszdw/ViewTeacher.aspx?NewsID=449">Wenping Zheng</a>, <i>European Economic Review</i>, 2017(94), 205 -220.
-      <button class="accordion">
-        Abstract
-      </button>  <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CZZ2017EER.pdf">PDF</a></button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/czz2017_EER_onlinApp.pdf">Appendix</a> </button> <button class="paper-btn"><a href="https://web/research/CZZ_EER2016acceptedManuscript.pdf">WP</a> </button> 
- 
-    </p>
-    <div class="panel" style="background-color: white; color: black; padding: 10px;">
-      Abstract:This paper investigates the relationship between imports and innovation by importing
-      firms. We first construct a theoretical model in which imports stimulate innovation
-      through cost-reducing knowledge spillovers. We then employ a combined micro dataset
-      of Chinese manufacturing firms to estimate the effects of imported intermediates on the
-      firm’s R&D investment. The dataset allows us to construct firm-year level instruments for
-      importing and exporting that are uncorrelated with the innovation decision of the firm.
-      Our estimations find that: (1) importing intermediates tends to increase importing firms’
-      R&D intensity; and that (2) exporting also increases importing firms’ R&D intensity. Examining
-      the channels through which importing affects innovation, we find that importing
-      from high-income sources has a greater impact on innovation. High-tech firms tend to
-      experience greater increases in innovation intensity, as do private firms. Our results are
-      supported by a series of robustness checks.  </div>
+
 
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://www.sciencedirect.com/science/article/pii/S1059056015001604" target="_expler.exe">The Bank–Firm Relationship: Helping or Grabbing?</a> with <a href="http://econ.ruc.edu.cn/jszy/c7b024fed4554b9e932ffc0a88cf8f43.htm">Yong Li</a> and <a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm"> Jie Zhang, </a> <i>International Review of Economics & Finance</i>, 2016 (42), 385-403.      
 <button class="accordion">Abstract</button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CLZ2016IREF_BankFirmRelation.pdf">PDF</a></button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/CLZ2016IREFwp.pdf">WP</a></button>
@@ -407,19 +448,64 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
       <button class="accordion">
         摘要
       </button>
+      <button class="paper-btn"><a href="data-request.html?dataset=%E4%B8%AD%E5%9B%BD%E5%8F%91%E6%98%8E%E4%B8%93%E5%88%A9%E6%96%87%E6%9C%AC%E7%9B%B8%E4%BC%BC%E5%BA%A6%E4%B8%8E%E8%B4%A8%E9%87%8F%E6%8C%87%E6%A0%87%E6%95%B0%E6%8D%AE%E9%9B%86">数据获取</a></button>
       </p>
       <div class="panel" style="background-color: white; color: black; padding: 10px;">
             <b>摘要:</b> 如何构建有效测算中国专利质量的方法体系，既是该领域的前沿问题之一，也是事关中国如何全面落实创新驱动发展战略的基础性工作。本文利用1985—2021年期间中国发明专利文本信息，运用自然语言处理方法，在计算符合中国专利间文本相似度这一核心指标的基础上，探讨了适用于中国专利数据特征的专利质量测算方法。各项可靠性检验均验证了本文设计和测算的专利质量指标变量相较于传统专利质量指标的优势。基于这一专利质量指标，本文从专利申请人类型、地域分布和技术分类等角度梳理和归纳了中国1991—2016年期间中国专利质量水平的变化趋势，揭示了中国专利质量全面提升的重要特征事实。在此基础上，利用包含专利质量和数量变化的GDP增长分解框架，探究专利质量上升对中国经济增长的贡献度，发现样本期间内专利质量对经济增长的平均贡献度约为3%，且其对经济增长的作用相较专利数量呈逐步增强态势。本研究既可为有效评估各类微观主体的专利真实市场价值和自主创新能力提供基础性的识别工具，更可为中国一系列专利制度改革政策及各类科技创新激励政策的绩效评估提供参考依据。
       </div>
 
-<p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe"> 国有企业混合所有制改革的绩效评估与机制分析</a>，与谭学通，朱婷，刘元春合作，<i>产业经济评论</i>，2026(02).[首篇]
+    <p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/创新链和产业链融合下的产业政策-经济研究.pdf" target="_expler.exe">创新链与产业链融合下的产业政策</a>，与张杰，孙昊，任元明合作，<i>经济研究</i>，2024(09):154-172.[封面文章]
       <button class="accordion">
-        摘要
-      </button>
-      </p>
-      <div class="panel" style="background-color: white; color: black; padding: 10px;">
-            <b>摘要:</b> 国有企业混合所有制改革已成为新发展阶段下国企改革的关键推动力和重要方向。国企混改究竟如何影响企业经济责任和社会责任？本文基于2009-2019年国有控股上市公司微观数据，采用交错双重差分法研究了混改对国企的经济责任和社会责任的影响及其作用机制。研究发现：国企混改主要通过完善治理、强化激励和突出主业促进了国企经济责任和社会责任的提升，其中对员工主观能动性的调动是混改的核心着力点。国企混改的主要作用渠道随政策实施时间不同而变化，伴随有政府对“混资改制”措施的动态调整。国企混改对于企业规模、资产保值增值率和员工责任的影响存在对同城同行业未混改国企的正向溢出效应。在国企混改中，两个责任维度间的相互作用存在非对称性，经济责任对社会责任的调节作用呈现“此消彼长”的目标权衡逻辑，而社会责任通过“使能”机制有助于增强经济绩效表现。异质性分析表明，良好市场环境和集中控股结构是有效发挥国企混改成效的重要条件，国企所处行业竞争水平越高其混改成效将由社会责任更多转向经济责任，且央企相对于地方国企而言更能充分释放混改红利。本文不仅在理论上丰富了有关国企混改成效评估与路径选择的研究，揭示了国企在双重目标约束下的责任平衡机制，更有助于深入理解混改的作用途径，为下一步政府混改政策调整提供经验证据。
-      </div>
+      摘要
+    </button>
+    <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/创新链和产业链融合下的产业政策-工作论文.pdf">工作论文</a> </button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/创新链和产业链融合下的产业政策-附录.pdf">附录</a></button>  
+    <button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《创新政策与管理》全文转载 \n - 《世界经济年鉴国际发展经济学最佳中文论文TOP10')">评价/转载</button>
+    </p>
+    <div class="panel" style="background-color: white; color: black; padding: 10px;">
+      <ul>
+          <b>摘要:</b> 
+          本文尝试在创新链和产业链一体化的研究框架下，探索产业政策的实施效果和最优组合。基于创新链和产业链融合的研究思路，本文构建理论模型分析发展中国家在封闭经济和开放经济不同情形下的产业政策最优组合策略以及实施效果。研究发现：在封闭经济下，对生产关键核心技术中间产品的上游企业的生产和研发活动进行补贴或减税导向的产业政策是最优策略；在开放经济下，在完全依赖国外上游行业企业的关键核心技术中间产品、国外上游行业企业和国内上游行业企业竞争性供给关键核心技术产品、存在国外上游行业企业关键核心技术中间产品断供风险三种不同条件下，最优产业政策的实施具有全覆盖上下游企业的特征。使用遭遇“卡脖子”的中国装备制造业产业的相关上下游行业统计数据进行实证研究发现，针对上游行业或企业研发活动政府补贴支持力度的加大可以拉动下游行业或企业研发投入的增加和产出规模的扩张。本文基于独特的产业链和创新链融合视角论证了国家层面采取产业政策的合理性，也为发展中国家产业政策的最优组合策略和重点改革方向提供了参考。
+    </ul>
+  </div>
+
+<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/对外技术引进-经济研究2020.pdf" target="_expler.exe">对外技术引进与中国本土企业自主创新</a>，与张杰，吴书凤，孙文浩合作，<i>经济研究 </i>，2020(07)，92-105.
+<button class="accordion">摘要</button>
+<button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《创新政策与管理》2021年第01期全文转载 \n - 《世界经济年鉴国际发展经济学最佳中文论文TOP10')">评价/转载</button>
+</p>
+<div class="panel" style="background-color: white; color: black; padding: 10px;">
+<ul>
+<b>摘要:</b>
+利用独特微观企业创新调查数据库，本文从实证和理论两个层面，研究对外技术引进活动对中国本土企业自主创新能力的作用及内在机制。主要发现是:首先，本文在利用技术引进鼓励政策构造合理工具变量的基础上，验证了技术引进对中国本土企业的自主创新活动可以产生滞后的促进作用;其次，在借鉴ABBGH(2005)模型的基础上，构建了刻画产业内领先企业和落后企业之间创新竞争行为和博弈逻辑的局部均衡模型，揭示出在不同竞争结构类型的产业内，企业对外技术引进对创新活动的复杂影响。后续的实证研究进一步验证了理论模型，证明在LL型竞争结构特征为主的产业内，对外技术引进方对处于创新差距中等分布状态企业的自主创新活动有显著的促进效应，而对处于其他创新差距分布状态的企业未产生影响。因此，对外技术引进鼓励政策对本土企业自主创新的促进效应具有一定局限性。本文的发现可为中国各级政府实施的对外技术引进政策及今后的政策调整，提供有价值的参考依据。
+</ul>
+</div>
+
+<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/创新补贴绩效-经济研究.pdf" target="_expler.exe">中国企业创新补贴政策绩效评估：理论与证据</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="http://hhbs.hhu.edu.cn/2017/1013/c6737a155226/page.htm">新夫</a>，<a href="https://facultyold.ecnu.edu.cn/s/3708/main.jspy">杨连星</a>合作，<i>经济研究 </i>，2015(10)，4-17，33.[封面首篇文章]
+<button class="accordion">摘要</button> <button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《创新政策与管理》全文转载 \n - 《世界经济年鉴国际发展经济学最佳中文论文TOP10') ">评价/转载</button>
+</p>
+<div class="panel" style="background-color: white; color: black; padding: 10px;">
+         
+        <ul>
+            <b>摘要:</b>
+            对当前中国政府广泛实施的创新补贴绩效进行全面的科学检验与评价，是摆在学界和政策制定者面前的重大研究命题。本文构建一个简单的理论模型，分析中国情景下政府创新补贴政策对企业私人研发投入的影响效应以及其中的作用机理，并利用中国科技部的"科技型中小企业技术创新基金"和中国工业企业数据库的合并数据，对理论模型的研究命题加以检验。本文发现:中国情景下政府创新补贴对中小企业私人研发并未表现出显著的效应。知识产权保护制度的完善程度，会影响到中国情景下政府创新补贴政策对企业私人研发的作用效应。在那些知识产权保护制度完善程度越弱的地区，政府创新补贴政策越能促进企业私人研发的提升;贷款贴息类型的政府创新补贴政策对企业私人研发造成了显著挤入效应，
+            而无偿资助等类型的政府创新补贴政策却未产生如此的挤入效应。在金融发展越是滞后的地区，
+            贷款贴息类型的政府创新补贴政策对企业私人研发的挤入效应越强。
+        </ul>
+         </div>
+
+<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/出口附加值-经济研究.pdf" target="_expler.exe">中国出口国内附加值的测算与变化机制</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="http://econ.ruc.edu.cn/jszy/c5a41b89dc2942d1abc1b8fcdb151f04.htm">刘元春</a>合作; <i>经济研究</i>，2013(10)，124-137. [封面文章]
+<button class="accordion">摘要</button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/出口附加值-工作论文.pdf">工作论文</a></button> <button class="paper-btn" onclick="alert('【评价/转载】\n - 第七届张培刚发展经济学优秀论文奖 \n - 第七届“高等学校科学研究优秀成果奖(人文社会科学)”论文三等奖 \n - 第18届安子介国际贸易论文三等奖 \n - 哲学社会科学主文献收录 \n - 中国人民大学书报资料中心《国际贸易研究》全文转载')">评价/转载</button>
+</p>
+<div class="panel" style="background-color: white; color: black; padding: 10px;">
+<br>
+<ul>
+<b>摘要:</b>出口国内附加值(DVA)的测算是相关研究领域的前沿问题。本文从微观层面对中国企业出口国内附加值率(DVAR)进行测算.
+在综合考虑了不同进口贸易方式特征、间接进口与资本品进口问题之后，测算结果发现:中国出口的DVAR从2000年的0.49上升到2006年的0.57;
+加工贸易的DVAR显著低于一般贸易，外资企业DVAR显著低于本土企业;生产技术复杂程度高的行业具有较低的出口DVAR;
+推动中国出口DVAR上升的主要动力是民营企业与从事加工贸易的外资企业。进一步的机制分析发现，
+FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可能反映出中国并未获得真正的贸易利得;
+对发展中国家和新兴国家的出口有利于我国出口DVAR的提升。本文的经验结果有助于解决有关中国对外贸易的重要争论，
+并为中国对外贸易政策的调整提供参考依据。</li>
+ </div>
 
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/减税激励的有偏技术进步效应研究-统计研究2026.pdf" target="_expler.exe"> 减税激励的有偏技术进步效应研究——来自固定资产加速折旧政策的证据</a>，与尚云舟，崔军合作，<i>统计研究</i>，2026(01).
   <button class="accordion">
@@ -442,20 +528,6 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
             <b>摘要:</b> 
             知识溢出对一个国家或地区的创新能力具有关键影响，已演化成为科技创新能否支撑经济可持续增长的必要条件。本文在梳理中国知识溢出本地化特征的基础上，利用中国独特的大样本发明专利引用数据，通过专利文本匹配方法构造对照组，精确识别并有效测算了中国知识溢出本地化背后的行政边界效应。研究表明，中国知识溢出受到地区行政边界效应的限制，且知识溢出行政边界的强度呈现出“省际层面 >市际层面>县际层面”的层次特征。从整体看，省际层面的知识溢出水平比省内层面低20%。本文基于包含行政边界变量的专利引用非线性概率模型，提出通过反事实专利引用概率的变化来计算中国省际层面知识溢出的行政边界效应，并构建了省份—年份层面的知识溢出行政边界指数。有效性检验结果表明，本文测算的省际知识溢出行政边界效应指数与贸易壁垒、市场分割、要素市场扭曲等关键指标高度相关，从而验证了本文所测算的知识溢出行政边界效应指数具有合理性和可靠性。进一步分析发现，2002—2018年，中国省际知识溢出呈现出下降与增长的波动式交替变化态势，由此揭示出促进以知识和技术为主的全国统一大市场建设所面临的各种复杂机制体制性障碍。本文研究为推动中国通过体制改革消除地区间知识扩散的行政障碍、充分发挥全国统一大市场对自主创新的促进作用提供了参考。
       </div>
-
-    <p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/创新链和产业链融合下的产业政策-经济研究.pdf" target="_expler.exe">创新链与产业链融合下的产业政策</a>，与张杰，孙昊，任元明合作，<i>经济研究</i>，2024(09):154-172.[封面文章]
-      <button class="accordion">
-      摘要
-    </button>
-    <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/创新链和产业链融合下的产业政策-工作论文.pdf">工作论文</a> </button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/创新链和产业链融合下的产业政策-附录.pdf">附录</a></button>  
-    <button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《创新政策与管理》全文转载 \n - 《世界经济年鉴国际发展经济学最佳中文论文TOP10')">评价/转载</button>
-    </p>
-    <div class="panel" style="background-color: white; color: black; padding: 10px;">
-      <ul>
-          <b>摘要:</b> 
-          本文尝试在创新链和产业链一体化的研究框架下，探索产业政策的实施效果和最优组合。基于创新链和产业链融合的研究思路，本文构建理论模型分析发展中国家在封闭经济和开放经济不同情形下的产业政策最优组合策略以及实施效果。研究发现：在封闭经济下，对生产关键核心技术中间产品的上游企业的生产和研发活动进行补贴或减税导向的产业政策是最优策略；在开放经济下，在完全依赖国外上游行业企业的关键核心技术中间产品、国外上游行业企业和国内上游行业企业竞争性供给关键核心技术产品、存在国外上游行业企业关键核心技术中间产品断供风险三种不同条件下，最优产业政策的实施具有全覆盖上下游企业的特征。使用遭遇“卡脖子”的中国装备制造业产业的相关上下游行业统计数据进行实证研究发现，针对上游行业或企业研发活动政府补贴支持力度的加大可以拉动下游行业或企业研发投入的增加和产出规模的扩张。本文基于独特的产业链和创新链融合视角论证了国家层面采取产业政策的合理性，也为发展中国家产业政策的最优组合策略和重点改革方向提供了参考。
-    </ul>
-  </div>
 
     <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/高新技术企业认定政策与企业创新-中国经济学2024.pdf" target="_expler.exe">高新技术企业认定政策与企业创新</a>，与王文凯合作，<i>中国经济学</i>，2024(02)，92-118.
       <button class="accordion">
@@ -516,17 +588,6 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
     </ul>
   </div>
 
-<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/对外技术引进-经济研究2020.pdf" target="_expler.exe">对外技术引进与中国本土企业自主创新</a>，与张杰，吴书凤，孙文浩合作，<i>经济研究 </i>，2020(07)，92-105.
-<button class="accordion">摘要</button>
-<button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《创新政策与管理》2021年第01期全文转载 \n - 《世界经济年鉴国际发展经济学最佳中文论文TOP10')">评价/转载</button>
-</p>
-<div class="panel" style="background-color: white; color: black; padding: 10px;">
-<ul>
-<b>摘要:</b>
-利用独特微观企业创新调查数据库，本文从实证和理论两个层面，研究对外技术引进活动对中国本土企业自主创新能力的作用及内在机制。主要发现是:首先，本文在利用技术引进鼓励政策构造合理工具变量的基础上，验证了技术引进对中国本土企业的自主创新活动可以产生滞后的促进作用;其次，在借鉴ABBGH(2005)模型的基础上，构建了刻画产业内领先企业和落后企业之间创新竞争行为和博弈逻辑的局部均衡模型，揭示出在不同竞争结构类型的产业内，企业对外技术引进对创新活动的复杂影响。后续的实证研究进一步验证了理论模型，证明在LL型竞争结构特征为主的产业内，对外技术引进方对处于创新差距中等分布状态企业的自主创新活动有显著的促进效应，而对处于其他创新差距分布状态的企业未产生影响。因此，对外技术引进鼓励政策对本土企业自主创新的促进效应具有一定局限性。本文的发现可为中国各级政府实施的对外技术引进政策及今后的政策调整，提供有价值的参考依据。
-</ul>
-</div>
-
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/出口与生产率-世界经济.pdf" target="_expler.exe">出口与生产率关系的新检验:中国经验</a>，与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，张帆合作; <i>世界经济</i>，2016(6)，54-76.
 <button class="accordion">概要</button> <button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《国际贸易研究》2016年08期全文转载 \n - 《世界经济年鉴2017》国际贸易学2016年中文论文TOP10')">评价/转载</button>
 </p>
@@ -542,19 +603,6 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
         </ul>
      </div>
 
-<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/创新补贴绩效-经济研究.pdf" target="_expler.exe">中国企业创新补贴政策绩效评估：理论与证据</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="http://hhbs.hhu.edu.cn/2017/1013/c6737a155226/page.htm">新夫</a>，<a href="https://facultyold.ecnu.edu.cn/s/3708/main.jspy">杨连星</a>合作，<i>经济研究 </i>，2015(10)，4-17，33.[封面首篇文章]
-<button class="accordion">摘要</button> <button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《创新政策与管理》全文转载 \n - 《世界经济年鉴国际发展经济学最佳中文论文TOP10') ">评价/转载</button>
-</p>
-<div class="panel" style="background-color: white; color: black; padding: 10px;">
-         
-        <ul>
-            <b>摘要:</b>
-            对当前中国政府广泛实施的创新补贴绩效进行全面的科学检验与评价，是摆在学界和政策制定者面前的重大研究命题。本文构建一个简单的理论模型，分析中国情景下政府创新补贴政策对企业私人研发投入的影响效应以及其中的作用机理，并利用中国科技部的"科技型中小企业技术创新基金"和中国工业企业数据库的合并数据，对理论模型的研究命题加以检验。本文发现:中国情景下政府创新补贴对中小企业私人研发并未表现出显著的效应。知识产权保护制度的完善程度，会影响到中国情景下政府创新补贴政策对企业私人研发的作用效应。在那些知识产权保护制度完善程度越弱的地区，政府创新补贴政策越能促进企业私人研发的提升;贷款贴息类型的政府创新补贴政策对企业私人研发造成了显著挤入效应，
-            而无偿资助等类型的政府创新补贴政策却未产生如此的挤入效应。在金融发展越是滞后的地区，
-            贷款贴息类型的政府创新补贴政策对企业私人研发的挤入效应越强。
-        </ul>
-         </div>
-
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">进口是否引致了出口：中国出口奇迹的微观解读</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="http://site.uibe.edu.cn/actionszdw/ViewTeacher.aspx?NewsID=449">郑文平</a>，<a>王雨剑</a>合作，<i>世界经济</i>，2014(06).[封面首篇文章]
 <button class="accordion">摘要</button>  <button class="paper-btn" onclick="alert('【评价/转载】\n - 哲学社会科学主文献') ">评价/转载</button>
 </p>
@@ -564,21 +612,6 @@ Abstract: This paper asks whether banks help or grab the enterprise in the real 
               从进口角度来重新审视贸易开放对不同国家经济发展的作用，是该领域最新的关注点之一。 本文利用2000—2006年间中国工业企业和海关贸易统计库的合并数据，从中间品和资本品两个角度来研究进口对企业生产率所造成的作用效应。 多种检验结果发现:中间品进口规模和资本品进口规模与企业生产率之间均呈现显著正相关，说明中间品和资本品的进口皆对企业生产率产生促进效应。 由此证明进口是促进中国经济发展的重要渠道。从分样本的估计结果来看，中间品进口对无出口、有研发以及民营企业生产率的促进效应更为明显，而资本品进口对有出口、有研发以及民营企业生产率的促进效应更为明显。特别值得注意的是，在考虑了进口的情形下，出口对企业生产率表现出非常突出的负向效应。 这为全面理解国际贸易对中国企业生产率的作用效应，提供了与以往研究视角不同的经验证据。本文的研究成果可为中国当前的进出口政策调整提供参考依据。
           </ul>
            </div>
-
-<p class="paper-item representative" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="https://zhiyuanryanchen.github.io/research/出口附加值-经济研究.pdf" target="_expler.exe">中国出口国内附加值的测算与变化机制</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="http://econ.ruc.edu.cn/jszy/c5a41b89dc2942d1abc1b8fcdb151f04.htm">刘元春</a>合作; <i>经济研究</i>，2013(10)，124-137. [封面文章]
-<button class="accordion">摘要</button> <button class="paper-btn"><a href="https://zhiyuanryanchen.github.io/research/出口附加值-工作论文.pdf">工作论文</a></button> <button class="paper-btn" onclick="alert('【评价/转载】\n - 第七届张培刚发展经济学优秀论文奖 \n - 第七届“高等学校科学研究优秀成果奖(人文社会科学)”论文三等奖 \n - 第18届安子介国际贸易论文三等奖 \n - 哲学社会科学主文献收录 \n - 中国人民大学书报资料中心《国际贸易研究》全文转载')">评价/转载</button>
-</p>
-<div class="panel" style="background-color: white; color: black; padding: 10px;">
-<br>
-<ul>
-<b>摘要:</b>出口国内附加值(DVA)的测算是相关研究领域的前沿问题。本文从微观层面对中国企业出口国内附加值率(DVAR)进行测算.
-在综合考虑了不同进口贸易方式特征、间接进口与资本品进口问题之后，测算结果发现:中国出口的DVAR从2000年的0.49上升到2006年的0.57;
-加工贸易的DVAR显著低于一般贸易，外资企业DVAR显著低于本土企业;生产技术复杂程度高的行业具有较低的出口DVAR;
-推动中国出口DVAR上升的主要动力是民营企业与从事加工贸易的外资企业。进一步的机制分析发现，
-FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可能反映出中国并未获得真正的贸易利得;
-对发展中国家和新兴国家的出口有利于我国出口DVAR的提升。本文的经验结果有助于解决有关中国对外贸易的重要争论，
-并为中国对外贸易政策的调整提供参考依据。</li>
- </div>
 
 <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">融资约束、融资渠道与企业研发投入</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="">郑文平</a>，<a>卢哲</a>合作，<i>世界经济</i>，2012(10)，66-90.
 <button class="accordion">摘要</button> <button class="paper-btn" onclick="alert('【评价/转载】\n - 中国人民大学书报资料中心《金融与保险》2013年02期全文转载 \n - 知网高被引论文')">评价/转载</button>
@@ -593,6 +626,18 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
     <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">出口对劳动收入份额抑制效应研究--基于微观视角的经验证据</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="">周晓艳</a>合作，<i>数量经济技术经济研究</i>，2012(07).</p>
         
    <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe">中国制造业部门劳动报酬比重的下降及其动因分析</a>; 与<a href="http://econ.ruc.edu.cn/jszy/156250c9ffbb4b06a0ad4928c314efd3.htm">张杰</a>，<a href="">卜茂亮</a>合作，<i>中国工业经济</i>，2012(05).</p>
+
+      <h3 style="margin:1.5rem 0 0.5rem; border-top:2px solid #333; padding-top:1rem;">政策研究论文</h3>
+      <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe"> 国有企业混合所有制改革的绩效评估与机制分析</a>，与谭学通，朱婷，刘元春合作，<i>产业经济评论</i>，2026(02).[首篇]
+      <button class="accordion">
+        摘要
+      </button>
+      </p>
+      <div class="panel" style="background-color: white; color: black; padding: 10px;">
+            <b>摘要:</b> 国有企业混合所有制改革已成为新发展阶段下国企改革的关键推动力和重要方向。国企混改究竟如何影响企业经济责任和社会责任？本文基于2009-2019年国有控股上市公司微观数据，采用交错双重差分法研究了混改对国企的经济责任和社会责任的影响及其作用机制。研究发现：国企混改主要通过完善治理、强化激励和突出主业促进了国企经济责任和社会责任的提升，其中对员工主观能动性的调动是混改的核心着力点。国企混改的主要作用渠道随政策实施时间不同而变化，伴随有政府对“混资改制”措施的动态调整。国企混改对于企业规模、资产保值增值率和员工责任的影响存在对同城同行业未混改国企的正向溢出效应。在国企混改中，两个责任维度间的相互作用存在非对称性，经济责任对社会责任的调节作用呈现“此消彼长”的目标权衡逻辑，而社会责任通过“使能”机制有助于增强经济绩效表现。异质性分析表明，良好市场环境和集中控股结构是有效发挥混改成效的重要条件，国企所处行业竞争水平越高其混改成效将由社会责任更多转向经济责任，且央企相对于地方国企而言更能充分释放混改红利。本文不仅在理论上丰富了有关国企混改成效评估与路径选择的研究，揭示了国企在双重目标约束下的责任平衡机制，更有助于深入理解混改的作用途径，为下一步政府混改政策调整提供经验证据。
+      </div>
+
+      <p class="paper-item" style="margin:0;"><a class="paper-title" style="margin:0; font-size:100%" href="" target="_expler.exe"> 科技金融赋能科技成果转化：内在逻辑、现实困境与突破策略</a>，与汤岸千，李三希合作，<i>改革</i>，即将出版.</p>
       </div>
   </div>
 
@@ -647,30 +692,33 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
             </ul>
             
             <div id="anonymous-review">
-            <h3 style="margin-bottom: 0.5rem;"></h3>
-            <ul style="list-style-type: none; padding-left: 0; text-align: left;">
-              <li><i>Journal of Development Economics</i></li>
-              <li><i>Journal of Comparative Economics</i></li>
-              <li><i>International Journal of Industrial Organization</i></li>
-              <li><i>China Economic Review</i></li>
-              <li><i>Review of World Economy</i></li>
-              <li><i>The World Economy</i></li>
-              <li><i>China & World Economy</i></li>
-              <li><i>Economics Letters</i></li>
-              <li><i>Journal of International Management</i></li>
-              <li><i>Economic Modelling</i></li>
-              <li><i>International Review of Economics and Finance</i></li>
-              <li><i>经济研究</i></li>
-              <li><i>中国社会科学</i></li>
-              <li><i>金融研究</i></li>
-              <li><i>数量经济与技术经济研究</i></li>
-              <li><i>经济学(季刊)</i></li>
-              <li><i>经济理论与经济管理</i></li>
-              <li><i>经济学动态</i></li>
-              <li><i>经济科学</i></li>
-              <li><i>经济学报</i></li>
-              <li><i>中国经济问题</i></li>
-            </ul>
+            <h3 style="margin-bottom: 0.5rem;">国际期刊</h3>
+            <div class="journal-tags">
+              <span class="journal-tag"><i>Journal of Development Economics</i></span>
+              <span class="journal-tag"><i>Journal of Comparative Economics</i></span>
+              <span class="journal-tag"><i>International Journal of Industrial Organization</i></span>
+              <span class="journal-tag"><i>China Economic Review</i></span>
+              <span class="journal-tag"><i>Review of World Economy</i></span>
+              <span class="journal-tag"><i>The World Economy</i></span>
+              <span class="journal-tag"><i>China &amp; World Economy</i></span>
+              <span class="journal-tag"><i>Economics Letters</i></span>
+              <span class="journal-tag"><i>Journal of International Management</i></span>
+              <span class="journal-tag"><i>Economic Modelling</i></span>
+              <span class="journal-tag"><i>International Review of Economics and Finance</i></span>
+            </div>
+            <h3 style="margin-bottom: 0.5rem;">中文期刊</h3>
+            <div class="journal-tags">
+              <span class="journal-tag"><i>经济研究</i></span>
+              <span class="journal-tag"><i>中国社会科学</i></span>
+              <span class="journal-tag"><i>金融研究</i></span>
+              <span class="journal-tag"><i>数量经济与技术经济研究</i></span>
+              <span class="journal-tag"><i>经济学(季刊)</i></span>
+              <span class="journal-tag"><i>经济理论与经济管理</i></span>
+              <span class="journal-tag"><i>经济学动态</i></span>
+              <span class="journal-tag"><i>经济科学</i></span>
+              <span class="journal-tag"><i>经济学报</i></span>
+              <span class="journal-tag"><i>中国经济问题</i></span>
+            </div>
           </div>
           
           <div id="conference-review" style="display:none;">
@@ -678,7 +726,10 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
           </div>
           
             <div id="project-review" style="display:none;">
-            待补充
+            <ul>
+            <li>院内和校内项目初评</li>
+            <li>其他横向与纵向项目评审</li>
+            </ul>
             </div>
           </div>
       
@@ -695,6 +746,12 @@ FDI进入是导致加工贸易与外资企业DVAR上升的重要因素，这可�
               </tr>
             </thead>
             <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px;">2027-2030</td>
+                <td style="padding: 8px;">数字经济中的生产函数识别与技能偏向性进步测度: 微观估计与宏观加总</td>
+                <td style="padding: 8px;">国家自然科学基金面上项目</td>
+                <td style="padding: 8px;">负责人</td>
+              </tr>
               <tr style="border-bottom: 1px solid #ddd;">
                 <td style="padding: 8px;">2026-</td>
                 <td style="padding: 8px;">基础研究支撑经济发展数据系统构建与集成</td>
