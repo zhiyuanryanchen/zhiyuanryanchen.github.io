@@ -542,6 +542,14 @@ html.lang-en .pub-toggle .pub-btn.active .label-zh {
   color:#fff;
 }
 
+/* 当前页对应的一级导航按钮：持续高亮，与 :active 同款配色 */
+.nav-button.active {
+  background-color:#8f2f3a;
+  border-color:#7a2331;
+  color:#fff;
+  box-shadow:none;
+}
+
 button:hover,
 button:focus {
   background-color:#b23a48;

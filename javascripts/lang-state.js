@@ -37,12 +37,31 @@
     return document.documentElement.classList.contains('lang-en') ? 'en' : 'zh';
   }
 
+  /* 页面文件名归一：两个主页变体都视为「首页」 */
+  function pageOf(url) {
+    var path = new URL(url, window.location.href).pathname.split('/').pop();
+    if (path === '' || path === 'index.html' || path === 'index-zh.html') {
+      return 'index.html';
+    }
+    return path;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
-    /* 顶部导航按钮：跳转前记录当前页面语言，保证「从哪个语言站进入，
-       子页面就是哪种格式」（pub-btn 为页内锚点切换，无需记录） */
-    document.querySelectorAll('header a.nav-button').forEach(function (a) {
+    /* 顶部一级导航按钮：当前页对应按钮持续高亮（.active），
+       点击即时切换高亮，跨页后由新页面重新标记；
+       跳转前同时记录当前页面语言，保证「从哪个语言站进入，
+       子页面就是哪种格式」（pub-btn 为页内锚点切换，不参与） */
+    var navBtns = Array.prototype.filter.call(
+      document.querySelectorAll('header a.nav-button'),
+      function (a) { return !a.classList.contains('pub-btn'); }
+    );
+    var curPage = pageOf(window.location.href);
+    navBtns.forEach(function (a) {
+      a.classList.toggle('active', pageOf(a.getAttribute('href')) === curPage);
       a.addEventListener('click', function () {
-        if (!a.classList.contains('pub-btn')) save(currentLang());
+        navBtns.forEach(function (b) { b.classList.remove('active'); });
+        a.classList.add('active');
+        save(currentLang());
       });
     });
 
