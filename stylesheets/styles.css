@@ -2,9 +2,32 @@ html {
   scroll-behavior:smooth;
 }
 
+/* ===== 8pt 间距体系 + 黄金比例字体层级 ===== */
+:root {
+  /* 8pt 间距刻度 (px: 4, 8, 12, 16, 24, 32, 48, 64, 96) */
+  --space-1:  0.25rem;   /* 4px  */
+  --space-2:  0.5rem;    /* 8px  */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px 卡片内边距（最常用）*/
+  --space-6:  1.5rem;    /* 24px 列表项间距 */
+  --space-8:  2rem;      /* 32px 相关区块间距 */
+  --space-12: 3rem;      /* 48px 区块分隔 */
+  --space-16: 4rem;      /* 64px 大区块分隔 */
+  --space-24: 6rem;      /* 96px Hero 留白 */
+
+  /* 黄金比例字体层级 (base 16px × 1.618) */
+  --font-xs:   0.618rem; /* ~10px */
+  --font-sm:   0.786rem; /* ~13px */
+  --font-base: 1rem;     /* 16px 正文 */
+  --font-lg:   1.25rem;  /* 20px */
+  --font-xl:   1.618rem; /* ~26px H3 */
+  --font-2xl:  2.618rem; /* ~42px H2 */
+  --font-3xl:  4.236rem; /* ~68px H1 */
+}
+
 body {
   background-color: #fff;
-  padding:10px;
+  padding:0 10px 10px;
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#595959;
   font-weight:400;
@@ -304,14 +327,12 @@ button {
 
 /* Left panel nav buttons: full-width, uniform sizing */
 header .nav-button {
-  display:block;
-  width:100%;
-  box-sizing:border-box;
-  text-align:center;
-  padding:8px 8px;
-  margin:6px 0;
-  min-height:38px;
+  display:inline-block;
+  padding:6px 14px;
+  margin:0;
+  min-height:auto;
   font-size:13px;
+  white-space:nowrap;
 }
 
 .nav-button:hover,
@@ -442,8 +463,8 @@ img {
 .hero {
   display:flex;
   flex-wrap:wrap;
-  gap:24px;
-  align-items:center;
+  gap:var(--space-12);        /* 48px 照片与文字间距 */
+  align-items:flex-start;
 }
 
 .updates-pagination {
@@ -483,23 +504,77 @@ img {
 }
 
 .hero .profile-photo {
-  flex:0 0 320px;
-  max-width:360px;
+  flex:0 0 160px;
+  max-width:180px;
   width:100%;
   margin:0;
+  padding-left:2rem;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:top;
 }
 
 .hero-text {
   flex:1 1 300px;
   min-width:260px;
+  padding-left:var(--space-8);   /* 32px 文字左内边距 */
+  padding-top:var(--space-2);    /* 8px  顶部微移对齐 */
+}
+
+.bio-full {
+  margin-top:var(--space-8);     /* 32px 与上方区块间距 */
+  line-height:1.8;
+}
+
+.hero .name {
+  font-size:var(--font-xl);      /* ~26px 黄金比例 */
+  font-weight:600;
+  margin-bottom:var(--space-4);  /* 16px */
+}
+
+.hero .title {
+  font-size:var(--font-base);    /* 16px */
+  font-weight:400;
+  color:#555;
+  margin-bottom:var(--space-3);  /* 12px */
 }
 
 header {
-  width:170px;
-  float:left;
-  position:fixed;
-  margin-top:24px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  width:100%;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  padding:12px 20px;
+  box-sizing:border-box;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+header .nav-links {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  max-width:820px;
+  margin:0 auto;
+}
+
+header .nav-spacer {
+  flex:1 1 auto;
+}
+
+header .lang-toggle a {
+  text-decoration:none;
+  font-size:13px;
+}
+header .lang-toggle a.active {
+  color:#0366d6;
+  font-weight:bold;
+}
+header .lang-toggle a.inactive {
+  color:#999;
 }
 
 body.page-transition {
@@ -567,10 +642,12 @@ header ul a strong {
 }
 
 section {
-  width:calc(100% - 210px);
-  max-width:750px;
-  float:right;
-  padding-bottom:50px;
+  width:100%;
+  max-width:820px;
+  margin:0 auto;
+  float:none;
+  padding:24px 20px 50px;
+  box-sizing:border-box;
 }
 
 small {
@@ -585,10 +662,14 @@ hr {
 }
 
 footer {
-  width:170px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+  width:100%;
+  max-width:820px;
+  margin:0 auto;
+  float:none;
+  position:static;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -599,31 +680,12 @@ footer {
     margin:0;
   }
 
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-
-  header {
-    padding-right:320px;
-  }
-
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+    padding:20px 16px 40px;
   }
 
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
+  header .nav-links {
+    gap:6px;
   }
 }
 
@@ -633,11 +695,12 @@ footer {
   }
 
   header {
-    padding:0;
+    padding:10px 12px;
   }
 
-  header ul, header p.view {
-    position:static;
+  header .nav-button {
+    padding:5px 10px;
+    font-size:12px;
   }
 
   pre, code {

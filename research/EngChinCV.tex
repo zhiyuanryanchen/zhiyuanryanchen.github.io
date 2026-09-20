@@ -13,28 +13,22 @@
 \usepackage{CJKutf8}
 \usepackage{hyperref}
 \usepackage{geometry}
-\usepackage[super]{nth}
+\usepackage{enumitem}
+\usepackage{array}
 % Comment the following lines to use the default Computer Modern font
 % instead of the Palatino font provided by the mathpazo package.
-% Remove the 'osf' bit if you don't like the old style figures.
 %\usepackage[T1]{fontenc}
 %\usepackage[sc,osf]{mathpazo}
 
-\begin{CJK}{UTF8}{gbsn}
-% Set your name here
-\def\name{陈志远}
-
-% Replace this with a link to your CV if you like, or set it empty
-% (as in \def\footerlink{}) to remove the link in the footer:
-% \def\footerlink{http://jblevins.org/projects/cv-template/}
-
-% The following metadata will show up in the PDF properties
+% \hypersetup is kept outside any CJK block so keyval options parse correctly.
+% PDF properties use Romanized metadata so they build without an active CJK block.
 \hypersetup{
   colorlinks = true,
   urlcolor  = blue,
-  pdfauthor = {\name},
-  pdfkeywords = {economics, statistics, mathematics},
-  pdftitle = {\name: Curriculum Vitae},
+  pdfborder = {0 0 0},
+  pdfauthor = {Zhiyuan Chen},
+  pdfkeywords = {industrial organization, innovation, development, international trade},
+  pdftitle = {Zhiyuan Chen - Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
 }
@@ -43,12 +37,11 @@
   body={6.5in, 8.5in},
   left=1.25in,
   right=1.25in,
-  top=1.25in
+  top=1.2in
 }
 
 % Customize page headers
 \pagestyle{myheadings}
-\markright{\name}
 \thispagestyle{empty}
 
 % Custom section fonts
@@ -56,264 +49,342 @@
 \sectionfont{\rmfamily\mdseries\Large}
 \subsectionfont{\rmfamily\mdseries\itshape\large}
 
-% Other possible font commands include:
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
-
 % Don't indent paragraphs.
 \setlength\parindent{0em}
 
-% Make lists without bullets
-%\renewenvironment{itemize}{
- % \begin{list}{}{
- %   \setlength{\leftmargin}{1.5em}
- % }
-%}{
- % \end{list}
-%}
+% Numbered paper list: [1], [2], ...
+\newlist{papers}{enumerate}{1}
+\setlist[papers]{label={[\arabic*]}, leftmargin=2.6em, itemsep=0.55em, topsep=0.35em}
+
 \begin{document}
+\begin{CJK}{UTF8}{gbsn}
 
-% Place name at left
-%{\huge \name}
+% Redefine inside the document CJK block so tokens stay valid
+\def\name{陈志远}
+\markright{\name}
 
-% Alternatively, print name centered and bold:
+% Print name centered and bold:
 \centerline{\huge \bf \name}
 
 \vspace{1ex}
-\begin{center}
-    {\scriptsize 最近更新：3/10/2020}
-\end{center}
-\normalsize
-\vspace{0.25in}
 
-\begin{minipage}{0.5\linewidth}
-  {Pennsylvania State University} \\
-  Department of Economics \\
-  303 Kern Building \\
-  State College, PA 16803
+\begin{center}
+{\scriptsize 最近更新：2026年9月20日}
+\end{center}
+
+\vspace{0.2in}
+
+\normalsize
+
+\begin{minipage}{0.55\linewidth}
+  助理教授 \\
+  \textbf{中国人民大学}商学院 \\
+  北京市海淀区中关村大街59号 \\
+  北京 100872
 \end{minipage}
-\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
   \begin{tabular}{ll}
-    电话: & +1 (814) 883-0365 \\
-    国籍: &  中华人民共和国 \\
-    电子邮件: & \href{mailto:zhiyuanryanchen@outlook.com}{\tt zhiyuanryanchen@outlook.com} \\
-    个人网页: & \href{https://zhiyuanryanchen.github.io/}{\tt https://zhiyuanryanchen.github.io/} \\
+    国籍： & 中国 \\
+    电子邮箱： & \href{mailto:chenzhiyuan@rmbs.ruc.edu.cn}{\tt chenzhiyuan@rmbs.ruc.edu.cn} \\
+    个人网页： & \href{https://zhiyuanryanchen.github.io/}{\tt zhiyuanryanchen.github.io} \\
   \end{tabular}
 \end{minipage}
 
-
-%\section*{\textsc{Personal}}
-
-%\begin{itemize}
-%\item Born on February 8, 1991
-%\item Married.
-%\end{itemize}
-
+\section*{\textsc{工作经历}}
+\textbf{中国人民大学}商学院 \\
+企业经济学助理教授，2020年至今
 
 \section*{\textsc{教育背景}}
-
-\begin{minipage}{0.5\linewidth}
-  经济学博士，\textbf{宾州州立大学} \\
-  经济学硕士，\textbf{中国人民大学}  \\
-  经济学学士，\textbf{中国人民大学}
+\begin{minipage}{0.7\textwidth}
+ 经济学博士，\textbf{宾州州立大学}\\
+ 经济学硕士，\textbf{中国人民大学}  \\
+ 经济学学士（优等），\textbf{中国人民大学}
 \end{minipage}
-\begin{minipage}{0.5\linewidth}
-  2015-2020(预计)\\
-  2013-2017\\
-  2009-2013
+\begin{minipage}{0.3\textwidth}
+  \raggedleft
+  2015--2020 \\
+  2013--2017 \\
+  2009--2013
 \end{minipage}
 
+\section*{\textsc{学术研究}}
+\subsection*{\textit{研究方向}}
+ 产业组织；发展经济学；国际贸易 \\
+ 特别关注：技术进步、创新与产业政策。
 
+\subsection*{\textit{英文期刊发表}}
+\begin{papers}
+\item ``Identifying Treatment Effects on Productivity: Theory with an Application to Firms' Production Digitalization,'' with Moyu Liao and Karl Schurter, \textbf{\textit{RAND Journal of Economics}}, forthcoming（即将刊出）.
 
+\item ``CO$_{2}$ Emission Regulation and Generation Allocation with Heterogeneous Coal-fired Generators,'' with Rong Luo and Li Su, \textbf{\textit{Journal of Development Economics}}, 2026, Vol.\ 180, 103771.
 
-%\section*{Employment}
+\item ``A Cost--Benefit Analysis of R\&D and Patents: Firm-Level Evidence from China,'' with Jie Zhang and Yuan Zi, \textbf{\textit{European Economic Review}}, Vol.\ 133, April 2021, 103633.
 
-%\begin{itemize}
-%\item Stanford University 1927--1931.
-%\item Columbia University 1931--1946.
-%\item University of North Carolina, 1946--1973.
-%\end{itemize}
-% section*{\textsc{推荐导师}}
-%\begin{minipage}{0.5\linewidth}
-%    \begin{tabular}{l}
-%        \textbf{Jonathan Eaton (co-advisor)}  \\
-%         Distinguished Professor of Economics \\
-%         Phone: +1 (814) 867-3297 \\
-%         Email: \href{mailto:jxe22@psu.edu}{\tt jxe22@psu.edu}\\
-%           \\
-%         \textbf{Jingting Fan}\\
-%         Assistant Professor of Economics  \\
-%         Phone:+1 (814) 865-4592 \\
-%         Email: \href{mailto:jxf524@psu.edu}{\tt jxf524@psu.edu}
-%    \end{tabular}
-%\end{minipage}
-%\begin{minipage}{0.5\linewidth}
-%    \begin{tabular}{l}
-%   \textbf{Mark Roberts (co-advisor)} \\
-%     Liberal Arts Professor of Economics\\
- %Phone:+1 (814) 863-1535 \\
- %Email: \href{mailto:mroberts@psu.edu}{\tt mroberts@psu.edu}  \\
-%\\
-%   \textbf{James Tybout}  \\
-%Professor of Economics     \\
-%Phone: +1 (814) 865-4259  \\
-%Email: \href{mailto:jxt32@psu.edu}{\tt jxt32@psu.edu}
-%    \end{tabular}
-%\end{minipage}
+\item ``Import and Innovation: Evidence from Chinese Firms,'' with Jie Zhang and Wenping Zheng, \textbf{\textit{European Economic Review}}, 2017 (94), 205--220.
 
-\section*{学术研究}
+\item ``Micro-to-Macro Gains from Regional Trade Agreements: Evidence from RCEP,'' with Zhihao Wang and Fuxin Zhai, \textit{The World Economy}, forthcoming（即将刊出）.
 
-\subsection*{\bf{研究方向}}
-产业组织；宏观发展；国际贸易
+\item ``The Impact of Digitalization on Productivity: Evidence from Chinese Manufacturing Firms,'' with Hongxi Chen, Jingtao Yi, and Jinqiu He, \textit{Management and Organization Review}, forthcoming（即将刊出）.
 
+\item ``Bank Competition, Defaulting Risks, and Innovation,'' with Mengbo Zhang, Aomeng Zhang, and Xinyang Li, \textit{Canadian Journal of Economics}, forthcoming（即将刊出）.
 
+\item ``Trade Policy Uncertainty and Market Diversification by Risk-Averse Firms,'' with Zhihao Wang, Ting Zhu, Kejian Gu, and Ying Tang, \textit{China Economic Review}, 2025, Vol.\ 91, 102400.
 
-\subsection*{\bf期刊发表}
+\item ``How Does Banking Expansion Influence City Development and Synergy? A New Perspective from Government Debts,'' with Yuyuan Wen and Hao Yu, \textit{Cities}, 2025, 162, 105923.
 
-\subsubsection*{英文期刊}
-``Types of Patents and Driving Forces behind the Patent Growth in China," with Jie Zhang, {\textit{Economic Modelling}, 2019(80), 294-302.
+\item ``Made and Created in China: The Role of Processing Trade,'' with Aksel Erbahar and Yuan Zi, \textit{Scandinavian Journal of Economics}, 2025, 127, 390--426.
 
-\vspace{0.5em}
-``Import and Innovation: Evidence from Chinese Firms," with Jie Zhang and Wenping Zheng, {\textbf{\textit{European Economic Review}}}, 2017(94), 205-220.
+\item ``Detecting Learning from Importing: The Effect of Importing Behavior on R\&D Expenditures of Chinese Firms,'' with Jingtao Yi and Jinchao Huang, \textit{The World Economy}, 2024, 47(7), 3244--3278.
 
-\vspace{0.5em}
-``The Bank–firm Relationship: Helping or Grabbing?" with Yong Li and Jie Zhang, {\textit{International Review of Economics \& Finance}}, 2016(42), 385-403.
+\item ``Is Cracking Down on Corruption Really Good for the Economy? Firm-Level Evidence from China,'' with Xin Jin and Xu Xu, \textit{Journal of Law, Economics, and Organization}, 2021, 37(2), 314--357.
 
-\vspace{0.5em}
-``Do the Types of Subsidies and Firms’ Heterogeneity Affect the Effectiveness of Public R\&D Subsidies? Evidence from China’s Innofund Programme," with Fu Xin, Jie Zhang, and Xiaorong Du, \textit{Asian Journal of Technology Innovation}, 2016(24), 317-337.
+\item ``Types of Patents and Driving Forces behind the Patent Growth in China,'' with Jie Zhang, \textit{Economic Modelling}, 2019 (80), 294--302.
 
-\subsubsection*{中文期刊（部分）}
-“对外技术引进与自主创新--中国的事实与证据，” 通讯作者，{\bf经济研究}，二审.
+\item ``The Bank--Firm Relationship: Helping or Grabbing?'' with Yong Li and Jie Zhang, \textit{International Review of Economics \& Finance}, 2016 (42), 385--403.
+\end{papers}
 
-“出口与生产率关系的新检验：中国经验,” 与张杰，张帆合作，通讯作者，{\bf世界经济}，2016(06), 54-76.
+\subsection*{\textit{工作论文}}
+\begin{papers}
+\item ``Externalities and Vertical Bargaining in Two-Sided Retail Platforms,'' with Rong Luo and Mark Roberts.
 
-\vspace{0.5em}
-“中国企业创新补贴政策绩效评估：理论与证据,” 与张杰，新夫，杨连星合作，通讯作者，{\bf 经济研究}, 2015(10),1-25.
+\item ``International Cooperation of Trade and Industrial Policy,'' with Zhihao Wang and Wei Xiang.
 
-\vspace{0.5em}
-“进口与企业生产率：来自中国的经验证据，” 与张杰，郑文平合作，通讯作者，{\bf 经济学（季刊)}，2015(4),1029-1052.
+\item ``The Uneven Reach of Skill-Biased Technology,'' with Xiangyu Feng and Zexuan Liu.
 
-\vspace{0.5em}
-“中国出口国内附加值的测算与变化机制，” 与张杰，刘元春合作， {\bf经济研究}，2013(10), 124-138.
+\item ``Do Local Industrial Policies Drive Battery Energy Storage Innovation?'' with Xiangyang Zhao, Fuxin Zhai, Lun Li, and Shengyu Tao.
 
-\subsection*{\bf{工作论文}}
-“Finance, R\&D Investment, and TFP Dynamics,” \textbf{\textit{博士论文}}
- \vspace{0.05in}
- \begin{center}
- \begin{minipage}{0.9\linewidth}
-   \textbf{摘要:} This paper investigates the role of R\&D investment in shaping the relationship between financial constraints and aggregate total factor productivity (TFP). I study a dynamic model in which R\&D investment, which affects productivity evolution endogenously, is subject to financial constraints. I parameterize the model with production, innovation, and balance sheet data. The estimated model implies sizeable \textit{static} TFP losses caused by capital misallocation and \textit{dynamic} TFP losses from distorting R\&D investment. The accumulation of internal funds reduces the static TFP loss gradually. In contrast, because R\&D has a persistent effect on productivity, the dynamic TFP loss rises initially and declines later. Compared to a model with exogenous productivity, innovation investment makes firms less able to use self-financing to reduce TFP losses, and prolongs the transition. Endogenous productivity growth amplifies the gains in TFP and output from financial reform, and leads to a longer-lasting consequence from a credit crunch. Improving the pledgeability of intangible assets in China to be the US level reduces the static TFP loss only 0.4\%, but the dynamic TFP loss by 7.1\%.
- \end{minipage}
- \end{center}
- \vspace{0.05in}
+\item ``Detecting the Causal Impact of Strategic Decisions on Firm Performance,'' with Han Jiang, Moyu Liao, and Hao Sun.
 
-“A Cost-benefit Analysis of R\&D and Patents: Firm-Level Evidence from China,” \textit{R\&R} at \textbf{\textit {European Economic Review}}
- \vspace{0.05in}
- \begin{center}
- \begin{minipage}{0.9\linewidth}
-   \textbf{摘要:} Building on a standard dynamic model of endogenous productivity change, I develop a flexible empirical framework to analyze the components of the returns to R\&D and quantify the patent value. Applying it to a sample of Chinese high-tech manufacturing firms, I quantify the short-run
-and long-run benefits of R\&D investment. I find that around 70\% of the benefits of R\&D investment comes from non-patenting innovation. On average an invention (a utility model) patent causes 0.76 (0.67) percent increase in the firm value. The start-up costs of R\&D is estimated to be around ten times as large as the maintenance costs. The counterfactual analysis shows that financing start-up innovation is more effective than financing the maintenance costs in stimulating the R\&D investment.
- \end{minipage}
- \end{center}
- \vspace{0.05in}
- “Is Cracking Down on Corruption Really Good for the Economy? Firm-Level Evidence from a Natural Experiment in China,” 与金鑫，徐旭合作, \textit{R\&R} at \textbf{\textit{Journal of Law, Economics, \& Organization}}
-  \vspace{0.05in}
- \begin{center}
- \begin{minipage}{0.9\linewidth}
-   \textbf{摘要:} This paper investigates the negative consequences of anti-corruption measures on economic outcomes. By exploiting an unexpected corruption crackdown in Northeast China in 2004, we find that the crackdown significantly lowers firm productivity and reduces firm entry. The negative impacts are mainly borne by private and foreign firms while the state-owned firms are intact. We further find that private firms with personal connections fare worse than the state-owned firms, while unconnected private firms do not behave differently after the crackdown. Our findings suggest that cracking down on corruption may weaken some connected private firms' political ties and remove the "grease of the wheels" that supports firm development in weak market institutions.
- \end{minipage}
- \end{center}
- \vspace{0.05in}
- “Made and Created in China: Super Processors and Two-way Heterogeneity,” 与Aksel Erbahar，资源合作
-   \vspace{0.05in}
- \begin{center}
- \begin{minipage}{0.9\linewidth}
-   \textbf{摘要:} In this paper, we show that there exists a special breed of firms that are active in both ordinary and processing exports. Contrary to the existing literature that describes processing firms as inferior, these mixed firms are superior to other firms in multiple dimensions, and hence we call them “super processors.” We build on Antras et al. (2017) and Bernard et al. (2019) to develop a model in which firms are heterogeneous in multiple stages of production. Firms endogenously choose to become suppliers or final good producers, with those that excel in both manufacturing ability and blueprint quality engage in both activities. We test the theory by exploiting the adoption of the pilot “paperless” processing trade supervision programme by regional customs authorities in China that lowered the cost of processing trade but left ordinary trade costs unchanged. We find that facilitating processing exports induces productive domestic downstream firms to establish their own trademarks. Our results highlight that processing trade not only leads goods to be “Made in China,” but also “Created in China.”
- \end{minipage}
- \end{center}
+\item ``Financing Innovation with Innovation,'' with Minjie Deng, Min Fang, and Yunzhou Shang, forthcoming（即将刊出）.
 
+\item ``Path-Length-Independent No-Regret Learning for Distributed Online Generalized Nash Games over Unbalanced Networks,'' with Zhenhua Deng and Yulan Qian.
 
- \vspace{0.05in}
- “Production Function Estimation for Multi-Product Firms,” 与廖漠雨合作
-     \vspace{0.05in}
- \begin{center}
- \begin{minipage}{0.9\linewidth}
-   \textbf{摘要:} We study a stylized model of multi-product firm with firm-product level heterogeneity in Hicks-neutral production technology. We characterize the empirical content of the model and show that the scale and location of the production function are non-parametrically non-identified without observing the allocation of inputs and exogenous input price variations. We develop the model's empirical content to be an estimation strategy for any parametric family of production functions. This procedure, however, suffers from unclear identification and the problem of computing optimal input allocations. In the case of Cobb-Douglas production function, we show the identification of the production function by obtaining a closed-form solution for unobserved input allocations as a function of product-level output quantities or revenues. Monte Carlo evidence shows that our identification strategy performs well. We then apply our methodology to the sector of agricultural goods manufacturing and find multi-product firms' production technology of multi-product differs from single-product firms even for the same product. We also find that multi-product firms produce its core (peripheral) products at higher (lower) technical efficiency than single-product firms. Lastly, we document a negative productivity spillover across different products within the multi-product firm.
- \end{minipage}
- \end{center}
-  \vspace{0.05in}
+\item ``User Rating and App Updates,'' with Jingtao Yi, Sihan Meng, Sali Li, and Noman Shaheer.
 
+\item ``Learning and Scaling,'' with Zexuan Liu and Liang Chen, \textbf{\textit{Strategic Management Journal}} 返修.
 
+\item ``Intellectual Property Financing, Innovation, and Aggregate TFP,'' with Guanliang Hu, \textbf{\textit{Journal of Financial Economics}} 重投.
 
-\subsection*{\bf{已开展论文}}
- Bank Competition, Heterogeneous Defaulting Risks, and Margins of Innovation, 与张蒙博，张杰，新夫合作
+\item ``Data-Driven Vertical Integration,'' with Zexuan Liu, Fuxin Zhai, and Yao-yu Chih, \textbf{\textit{Management Science}} 返修.
 
+\item ``Identification of Multiproduct Production Functions: Non-Parametric Limits and a CES Solution,'' with Moyu Liao and Jie Zhang, \textit{Econometric Reviews} 重投.
 
-\vspace{0.5em}
-Technological Imports and In-house R\&D,与张杰,郑文平合作
+\item ``How Heterogeneous Are Productivity Gains from Exporting?'' with Moyu Liao, Hao Yu, and Jinqiu He, \textit{Journal of Productivity Analysis} 返修.
+\end{papers}
+
+\subsection*{\textit{中文期刊论文（部分）}}
+\begin{papers}
+\item “中国专利质量的测度，变化机制与经济增长效应”，\textbf{《经济研究》}，2026年第3期。
+
+\item “创新链与产业链融合下的产业政策”，\textbf{《经济研究》}，2024年第9期，154--172页。［封面文章］
+
+\item “对外技术引进与中国本土企业自主创新”，\textbf{《经济研究》}，2020年第7期，92--105页。
+
+\item “中国企业创新补贴政策绩效评估：理论与证据”，\textbf{《经济研究》}，2015年第10期，4--17页。［首篇文章］
+
+\item “中国出口国内附加值的测算与变化机制”，\textbf{《经济研究》}，2013年第10期，124--137页。［封面文章］
+
+\item “中国知识溢出本地化的行政边界效应研究”，\textbf{《中国工业经济》}，2025年第1期，81--99页。
+
+\item “减税激励的有偏技术进步效应研究——来自固定资产加速折旧政策的证据”，\textbf{《统计研究》}，2026年第1期。
+
+\item “高新技术企业认定政策与企业创新”，\textbf{《中国经济学》}，2024年第2期，92--118页。
+
+\item “专利对企业报酬生产率的作用效应估计与分解”，\textbf{《计量经济学报》}，2023年，第3卷第1期，166--194页。
+
+\item “制造业集聚、污染与绿色发展实践路径：基于空间溢出模型的研究”，\textbf{《统计研究》}，2022年第9期，46--61页。
+
+\item “贸易政策不确定性与企业出口产品范围”，\textbf{《国际贸易问题》}，2022年第6期，90--105页。
+
+\item “出口与生产率关系的新检验：中国经验”，\textbf{《世界经济》}，2016年第6期，54--76页。
+
+\item “进口是否引致了出口：中国出口奇迹的微观解读”，\textbf{《世界经济》}，2014年第6期。［首篇文章］
+
+\item “融资约束、融资渠道与企业研发投入”，\textbf{《世界经济》}，2012年第10期，66--90页。
+\end{papers}
+
+\subsection*{\textit{专著}}
+\textbf{《生产函数的结构估计与应用》}，经济管理出版社，2026年6月，ISBN 978-7-5243-1075-4。
+
+\section*{\textsc{科研项目}}
+
+\begin{tabular}{@{}p{0.80\textwidth}>{\raggedleft\arraybackslash}p{0.20\textwidth}@{}}
+  国家自然科学基金面上项目：“数字经济下生产函数识别与技能偏向型技术进步测度”，主持人。 & 2027--2030 \\[0.9em]
+  国家自然科学基金专项项目：“基础研究支撑经济发展的数据体系”，子课题负责人。 & 2026-- \\[0.9em]
+  国家自然科学基金青年科学基金项目：“基于专利文本大数据的中国专利质量测度及其演化机制研究”，主持人。 & 2022--2024 \\[0.9em]
+  腾讯研究院课题：“平台专利价值、创新与技术领导力”，主持人。 & 2023--2026 \\[0.9em]
+  中国人民大学科学研究基金：“专利融资的量化评估与政策实践”，主持人。 & 2023--2025 \\[0.9em]
+  中国人民大学哲学社会科学数据项目：“中国专利质量与价值数据库”，主持人。 & 2023 \\[0.9em]
+  国家社会科学基金重大项目：“加快现代化经济体系建设”，子课题负责人。 & 2022 \\[0.9em]
+  国家自然科学基金重点项目：“政府与市场功能协同的中国创新激励机制”，子课题负责人。 & 2021
+\end{tabular}
 
 \section*{\textsc{学术活动}}
-
-\subsection*{\bf 教学与科研经历}
-\begin{minipage}{0.8\linewidth}
-  \textbf{讲师}, 宏观经济学原理, 宾州州立大学 \\
-  \textbf{讲师}, 中级计量经济学, 宾州州立大学 \\
-  \textbf{助教}, 中级微观经济学, 宾州州立大学 \\
-  \textbf{暑期研究员}，墨西哥中央银行
+\subsection*{中国人民大学教学}
+\begin{minipage}{0.64\textwidth}
+  经济与商业实证方法（硕博） \\
+  机器学习与因果推断（本科） \\
+  创新经济学（本科） \\
+  产业政策专题（研究生） \\
+  管理经济学，iMBA（英文授课） \\
+  管理经济学，MBA（中文授课） \\
+  全球网络周（GNAM）项目 \\
+  市场分析与研究（本科）
+\end{minipage}\hspace{0.02\textwidth}
+\begin{minipage}{0.34\textwidth}
+  \raggedleft
+  2020年秋；2022--2026年春 \\
+  2026年春 \\
+  2023、2024年秋；2025、2026年春 \\
+  2022--2024年春 \\
+  2022--2024年秋；2025年春 \\
+  2023、2024年秋；2025年春 \\
+  2024--2026年春 \\
+  2021年春
 \end{minipage}
-\begin{minipage}{0.2\linewidth}
-    Summer 2019 \\
-    Summer 2018 \\
-   2017-2019  \\
-  2017/07- 2017/09
+
+\subsection*{宾州州立大学教学}
+\begin{minipage}{0.8\textwidth}
+  \textbf{讲师}，宏观经济学原理（Econ 104） \\
+  \textbf{讲师}，计量经济学导论（Econ 306） \\
+  \textbf{助教}，中级微观经济学 \\
+  \textbf{暑期研究实习生}，墨西哥中央银行
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+  \raggedleft
+  2019年夏 \\
+  2018年夏 \\
+  2017--2019 \\
+  2017/07--2017/09
 \end{minipage}
 
-\subsection*{{\bf期刊匿名审稿人}}
-      \textit{Abacus, Applied Economics Letters, Asian Journal of Technology Innovation, China Economic Review, Economic Modelling, Emerging Markets Finance and Trade, International Economics and Economic Policy, Journal of International Management, Journal of Management Science and Engineering, The World Economy}
+\subsection*{其他教学材料}
+教学案例，发表于中国人民大学商学院案例中心，2023年、2025年。 \\
+在编教材：\textit{AI辅助因果推断与机器学习}；\textit{创新经济学：理论与政策}，与张杰合著。
 
-\subsection*{{\bf会议与讲座}}
-{\footnotesize * 合作者参加}
-\vspace{1em}
+\subsection*{期刊审稿}
+{\it Abacus, Applied Economics Letters, Asian Journal of Technology Innovation, China Economic Review, China \& World Economy, Economic Modelling, Economics Letters, Emerging Markets Finance and Trade, International Economics and Economic Policy, International Journal of Industrial Organization, International Review of Economics and Finance, Journal of Comparative Economics, Journal of Development Economics, Journal of International Management, Journal of Management Science and Engineering, Review of World Economy, The World Economy.}
 
-\textbf{2019:} The \nth{14} Annual Economics Graduate Student Conference (WUSTL), *Midwest International Economic Development Conference
+中文期刊审稿：《经济研究》《中国社会科学》《金融研究》等；国际商务学会（AIB）年会会议审稿人，2024年。
 
-\vspace{0.5em}
-\textbf{2018:} *The first CICE Annual Conference (Tsinghua University), AEA Annual Meeting (poster session, Philadelphia), *Workshop in Applied and Theoretical Economics (WATE), *Special Issue Conference on “The Challenges of Managing and Modelling Innovation and Growth in China” (Renmin University)
+\subsection*{会议、工作坊与邀请讲座}
+{\footnotesize * 合作者报告。内部读书会从略。}
 
-\vspace{0.5em}
-\textbf{2017:} China Meeting of the Econometric Society (Wuhan), *Annual Meeting of the International Consortium for China Studies (Mannheim)
+\vspace{0.6em}
+\textbf{2026年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item “AI赋能一站式科研”邀请讲座系列：中国人民大学经济学院（6/4）；中央财经大学国际经济与贸易学院（6/9，7/7--8）；南京大学经济学院（6/15）；对外经济贸易大学WTO研究院（6/17）；首都经济贸易大学金融学院（6/24）与国际经济管理学院（6/24）；北京师范大学经济与工商管理学院（7/9）；深圳大学中国经济特区研究中心（7/14）。
+  \item YES暑期学术讲座，西北大学，7/17。
+  \item 第十届CCER暑期学院，北京大学国家发展研究院（崇礼），7/3--5。
+  \item 中国数字经济发展与治理论坛年会，清华大学，7/4。
+  \item 中国金融研究论坛（CFRC），清华大学五道口金融学院，7/2。
+  \item 中国经济研究讲座与研讨会（第一期），特邀演讲，中国人民大学经济学院，1/20。
+\end{itemize}
 
-\vspace{0.5em}
-\textbf{2014:} Annual Geneva-China workshop (Geneva)
+\textbf{2025年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 第四届开放经济与宏观金融论坛，上海财经大学金融学院，12/27。
+  \item 第二届香樟学堂学术讲座，主旨演讲，湖南科技大学商学院，12/19。
+  \item 邀请报告，湖南师范大学商学院，12/18。
+  \item 第五届香樟产业经济学论坛，主旨演讲，安徽工业大学，11/15。
+  \item 海峡两岸微观经济学工作坊：理论与应用，厦门大学，9/27--28。
+  \item 邀请报告，澳门大学社会科学学院，9/3。
+  \item Eaton论坛，国际经济与金融学会（IEFS）中国分会，对外经济贸易大学，8/14。
+  \item 青年学者学术沙龙暨第二届青年发展经济学论坛，山东大学，7/7--8。
+  \item 第三届全球校友学术年会，中国人民大学财政金融学院，7/4。
+  \item ISEM会议：中国实证研究前沿，首都经济贸易大学，5/19。
+\end{itemize}
 
+\textbf{2024年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 工商管理学科建设中国自主知识体系联盟论坛，“新质生产力与数字经济”分论坛；发布《平台企业数字技术发明专利研究报告》，中国人民大学商学院，4/21。
+\end{itemize}
+
+\textbf{2023年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 宾州州立大学校友实证产业组织工作坊，中国人民大学经济学院，7/6。
+  \item 中国金融研究论坛，清华大学五道口金融学院，7/2。
+  \item 邀请报告，南京大学商学院，4/7。
+\end{itemize}
+
+\textbf{2022年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 邀请报告，中国人民大学国家发展与战略研究院，12/14。
+  \item 邀请报告，对外经济贸易大学全球价值链研究院，10/27。
+  \item 邀请报告，复旦大学中国社会主义市场经济研究中心，10/11。
+  \item 第九届新结构经济学国际研讨会，评论人，北京大学新结构经济学研究院，8/2。
+  \item 第六届CCER暑期学院，北京大学国家发展研究院，7/2。
+  \item 2022年世界计量经济学会亚洲年会（AMES），香港中文大学（深圳），6/22。
+\end{itemize}
+
+\textbf{2021年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 邀请报告，北京大学经济学院，11/19。
+  \item 第七届国际青年金融学者会议，北京大学汇丰商学院，7/12。
+\end{itemize}
+
+\textbf{2020年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 邀请报告，中国人民大学商学院，9/28。
+\end{itemize}
+
+\textbf{2019年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 邀请报告：对外经济贸易大学国际经济贸易学院（12/12）、湘潭大学商学院（12/10）、湖南大学经济与贸易学院（12/4）、香港中文大学（深圳）、北京大学新结构经济学研究院、中国人民大学经济学院。
+  \item 第14届经济学研究生年会，圣路易斯华盛顿大学。
+  \item *中西部国际经济发展会议。
+\end{itemize}
+
+\textbf{2018年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item *首届CICE年会，清华大学。
+  \item 美国经济学会年会（海报展示），费城。
+  \item *应用与理论经济学工作坊（WATE）。
+  \item *“中国创新与增长的管理与建模挑战”特刊会议，中国人民大学。
+\end{itemize}
+
+\textbf{2017年：}
+\begin{itemize}[leftmargin=1.6em, itemsep=0.25em, topsep=0.2em]
+  \item 世界计量经济学会中国年会，武汉。
+  \item *中国研究国际联盟年会，曼海姆。
+\end{itemize}
+
+\textbf{2014年：} 日内瓦——中国年度工作坊，日内瓦。
+
+\vspace{0.3em}
+\textbf{2013年：} 复旦大学博士生论坛。
 
 \section*{\textsc{荣誉奖励}}
-张培刚发展经济学优秀论文奖，2018
+
+\textit{国家青年人才计划}，2025年
 
 \vspace{0.5em}
-国际贸易学2016年十佳中文论文, 《世界经济年鉴2017》, 2017
+\textit{中国知网经济学高被引学者（前1\%）}，2025年、2024年
 
 \vspace{0.5em}
-18届安子介国际贸易论文三等奖, 2014
+\textit{第七届张培刚发展经济学优秀论文奖}，张培刚发展经济学研究基金会，2018年
 
 \vspace{0.5em}
-国家奖学金, 中国人民大学, 2014
+\textit{第七届高等学校科学研究优秀成果奖（人文社会科学）三等奖}，教育部
 
 \vspace{0.5em}
-国家奖学金, 中国人民大学, 2013
+\textit{2016年国际贸易学十佳中文论文}，中国社会科学院世界经济与政治研究所，2017年
 
 \vspace{0.5em}
-国家奖学金, 中国人民大学, 2012
-
-\section*{\textsc{技能}}
-\textbf{软件编程}: Matlab, Stata, Julia, Python
+\textit{第18届安子介国际贸易研究奖三等奖}，对外经济贸易大学，2014年
 
 \vspace{0.5em}
-\textbf{语言}: 中文 （母语）, 英文 （流利）
+\textit{国家奖学金（前1\%）}，中国人民大学，2012年、2013年、2014年
 
+\section*{\textsc{专利、软件与技能}}
+\textbf{专利：}“基于专利文本相似度的专利质量测算方法及系统”（实质审查中）。
 
+\vspace{0.5em}
+\textbf{软件：}Stata模块\texttt{pte}（生产率处理效应估计）作者之一（与蔡晓慧、廖漠雨、徐伟合作），2026年。熟练使用MATLAB、Stata、Julia、Python。
 
+\vspace{0.5em}
+\textbf{语言：}中文（母语），英文（流利）
 
+\clearpage
+\end{CJK}
 \end{document}
