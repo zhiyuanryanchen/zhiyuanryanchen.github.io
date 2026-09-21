@@ -84,10 +84,18 @@
       <section>
 
     <div class="pub-toggle" aria-label="Events categories">
-      <a class="nav-button pub-btn active" href="#workshop" data-target="workshop-section"><span class="label-zh">工作坊</span><span class="label-en">Workshop</span></a>
-      <a class="nav-button pub-btn" href="#seminar" data-target="seminar-section"><span class="label-zh">研讨会</span><span class="label-en">Seminar</span></a>
-      <a class="nav-button pub-btn" href="#conference" data-target="conference-section"><span class="label-zh">会议</span><span class="label-en">Conference</span></a>
-      <a class="nav-button pub-btn" href="#honors" data-target="honors-section"><span class="label-zh">荣誉奖励</span><span class="label-en">Honors & Awards</span></a>
+      <div class="pub-mainrow">
+        <a class="nav-button pub-btn active" href="#workshop" data-target="workshop-section"><span class="label-zh">工作坊</span><span class="label-en">Workshop</span></a>
+        <a class="nav-button pub-btn" href="#seminar" data-target="seminar-section"><span class="label-zh">研讨会</span><span class="label-en">Seminar</span></a>
+        <a class="nav-button pub-btn" href="#conference" data-target="conference-section"><span class="label-zh">会议</span><span class="label-en">Conference</span></a>
+        <a class="nav-button pub-btn" href="#honors" data-target="honors-section"><span class="label-zh">荣誉奖励</span><span class="label-en">Honors & Awards</span></a>
+      </div>
+      <span class="pub-subbar open" id="workshop-subbar">
+        <button type="button" class="pub-subbtn active" data-target="classics-workshop"><span class="sub-zh">传世之作</span><span class="sub-en">传世之作</span></button>
+        <button type="button" class="pub-subbtn" data-target="eio-workshop"><span class="sub-zh">Empirical IO</span><span class="sub-en">Empirical IO</span></button>
+        <button type="button" class="pub-subbtn" data-target="trade-dev-workshop"><span class="sub-zh">Trade&amp;Development</span><span class="sub-en">Trade&amp;Development</span></button>
+        <button type="button" class="pub-subbtn" data-target="cetw-workshop"><span class="sub-zh">CETW</span><span class="sub-en">CETW</span></button>
+      </span>
     </div>
     <div id="seminar-section">
       <h2><a id="seminar" class="anchor" href="#seminar" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
@@ -147,14 +155,7 @@
 
     <div id="workshop-section" style="display:none;">
       <h2><a id="workshop" class="anchor" href="#workshop" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
-      
-      <ul class="sub-links" aria-label="Workshop subsections">
-        <a class="sub-link active" href="#classics-workshop" data-target="classics-workshop"><i class="fa fa-book" aria-hidden="true"></i> 传世之作</a>
-        <a class="sub-link" href="#eio-workshop" data-target="eio-workshop"><i class="fa fa-line-chart" aria-hidden="true"></i> Empirical IO</a>
-        <a class="sub-link" href="#trade-dev-workshop" data-target="trade-dev-workshop"><i class="fa fa-globe" aria-hidden="true"></i> Trade&Development</a>
-        <a class="sub-link" href="#cetw-workshop" data-target="cetw-workshop"><i class="fa fa-users" aria-hidden="true"></i> CETW</a>
-      </ul>
-      
+
       <div id="classics-workshop">
         <div class="event-table event-table--classics">
           <div class="event-list-head">
@@ -428,6 +429,7 @@
           .map((id) => document.getElementById(id))
           .filter(Boolean);
         if (!buttons.length || !sections.length) return;
+        const workshopSubbar = document.getElementById('workshop-subbar');
 
         const showSection = (targetId) => {
           sections.forEach((section) => {
@@ -439,6 +441,8 @@
             btn.classList.toggle('active', isActive);
             btn.setAttribute('aria-current', isActive ? 'page' : 'false');
           });
+
+          if (workshopSubbar) workshopSubbar.classList.toggle('open', targetId === 'workshop-section');
         };
 
         buttons.forEach((btn) => {
@@ -456,7 +460,7 @@
 
       // Handle workshop subsection navigation
       (function() {
-        const workshopButtons = document.querySelectorAll('#workshop-section .sub-link');
+        const workshopButtons = document.querySelectorAll('#workshop-subbar .pub-subbtn');
         const workshopSections = ['classics-workshop', 'eio-workshop', 'trade-dev-workshop', 'cetw-workshop']
           .map((id) => document.getElementById(id))
           .filter(Boolean);

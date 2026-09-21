@@ -26,8 +26,8 @@ html {
 
   /* 顶部固定导航栏高度（双语双行按钮） */
   --header-h: 56px;
-  /* 二级按钮条实际高度（含 1px 底边），供三级 sticky 定位；JS 可校准 */
-  --toggle-h: 53.4px;
+  /* 二级按钮条实际高度，供三级 sticky 定位；JS 可校准 */
+  --toggle-h: 51.4px;
 }
 
 body {
@@ -213,7 +213,8 @@ section a.paper-title:active {
   text-decoration:none;
 }
 
-/* Second-level toggle buttons: centered sticky underline-tab bar */
+/* Second-level toggle buttons: centered sticky underline-tab bar.
+   全站不设底边：与 research 页一致，二三级按钮之间及三级按钮下方均无横线 */
 .pub-toggle {
   position:sticky;
   top:var(--header-h);
@@ -223,7 +224,6 @@ section a.paper-title:active {
   flex-wrap:wrap;
   justify-content:center;
   background:#fff;
-  border-bottom:1px solid #e5e5e5;
   /* Cancel section's 20px side padding so the bar aligns to the 820px frame */
   margin:0 -20px;
   padding:4px 20px 0;
@@ -353,22 +353,20 @@ html.lang-en .pub-subbtn .sub-zh { display:none; }
   box-shadow:none;
 }
 
-/* 三级按钮容器：与 research 页 .pub-subbar 视觉一致（居中胶囊条）；
-   sticky 固定于二级条下方，白底遮掉二级底边，自身在下方显示横线，
-   即 L2/L3 之间无横线、横线位于 L3 之下（research 同款） */
+/* 三级按钮容器：间距参数与 research 页 .pub-subbar 完全一致
+   （gap 8px、padding 2px 0 8px、无横线、无背景）；
+   因位于二级条外部，以 sticky 独立吸顶，视觉与 research 整组吸顶等效 */
 .sub-links {
   list-style:none;
-  margin:-1px -20px 0;
-  padding:2px 20px 8px;
+  margin:0;
+  padding:2px 0 8px;
   display:flex;
   justify-content:center;
   gap:8px;
   flex-wrap:wrap;
   position:sticky;
-  top:calc(var(--header-h) + var(--toggle-h) - 1px);
+  top:calc(var(--header-h) + var(--toggle-h));
   z-index:95;
-  background:#fff;
-  border-bottom:1px solid #e5e5e5;
 }
 
 .program-sublist {
@@ -1007,6 +1005,19 @@ footer {
   .pub-subbar {
     flex:0 0 100%;
     flex-wrap:wrap;
+  }
+
+  /* teaching/events/resources：二级按钮直接置于条内（无 mainrow 包裹），
+     窄屏与 research 一致——单行横滚、不折行、滚动条隐藏 */
+  .pub-toggle:not(:has(.pub-mainrow)) {
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .pub-toggle:not(:has(.pub-mainrow))::-webkit-scrollbar {
+    display:none;
   }
 
   pre, code {
