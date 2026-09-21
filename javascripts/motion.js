@@ -79,7 +79,8 @@
 
   /* ---------- 场景 D：滚动入场 ---------- */
   var REVEAL_SELECTOR = '.paper-item, .handout-card, .scheduled-updates, ' +
-    '.updates-list li, .lecture-card, .resource-list li, .event-list li';
+    '.updates-list li, .lecture-card, .resource-list li, .event-list li, ' +
+    '.course-item, #ug > li, #grad > li';
 
   function setupReveal() {
     if (reduceMotion || !('IntersectionObserver' in window)) return;
