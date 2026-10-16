@@ -12,96 +12,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <style>
-      .form-card {
+      .require-box {
+        margin: 14px 0 12px;
+        padding: 12px 14px;
+        border: 1px solid #e0c5cb;
+        border-left: 4px solid #b23a48;
+        background: #fbf6f7;
+        border-radius: 8px;
+        color: #7a2331;
+      }
+      .require-box .require-title {
+        margin: 0 0 6px;
+        font-weight: 700;
+        font-size: 16.5px;
+      }
+      .require-box p {
+        margin: 0;
+        font-size: 15.3px;
+        line-height: 1.55;
+      }
+      .flow-card {
         border: 1px solid #eee;
         border-radius: 8px;
-        padding: 14px 14px 10px;
+        padding: 14px 14px 12px;
         background: #fff;
+        margin: 0 0 14px;
       }
-      .form-help {
-        margin: 6px 0 12px;
-        font-size:15.3px;
-        color: #666;
-      }
-      .form-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-      .field label {
-        display: block;
-        font-weight: 600;
+      .flow-card .flow-title {
+        margin: 0 0 8px;
+        font-weight: 700;
         color: #333;
-        margin: 0 0 4px;
       }
-      .field input,
-      .field select,
-      .field textarea {
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        padding: 10px 10px;
-        font-size:16.5px;
-        line-height: 1.4;
-        background: #fff;
-        color: #222;
+      .flow-list {
+        margin: 0;
+        padding-left: 22px;
+        font-size: 15.3px;
+        line-height: 1.6;
+        color: #444;
       }
-      .field textarea {
-        min-height: 120px;
-        resize: vertical;
+      .flow-list li {
+        margin: 0 0 5px;
       }
-      .checkbox-row {
+      .flow-list .em {
+        color: #b23a48;
+        font-weight: 700;
+      }
+      .download-row {
         display: flex;
-        gap: 10px;
-        align-items: flex-start;
-      }
-      .checkbox-row input {
-        margin-top: 3px;
-      }
-      .actions {
-        display: flex;
-        gap: 10px;
         flex-wrap: wrap;
-        margin-top: 10px;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
       }
-      .primary-btn {
+      .download-btn {
+        display: inline-block;
         background-color: #b23a48;
         color: #fff;
         border: 1px solid #8f2f3a;
         border-radius: 6px;
         padding: 10px 14px;
-        cursor: pointer;
         font-weight: 700;
-      }
-      .primary-btn:hover,
-      .primary-btn:focus {
-        background-color: #8f2f3a;
-      }
-      .secondary-link {
-        display: inline-block;
-        padding: 10px 0;
-        color: #b23a48;
         text-decoration: none;
-        font-weight: 700;
+        white-space: nowrap;
       }
-      .notice {
-        margin-top: 10px;
-        padding: 10px 12px;
-        border: 1px solid #ffe0e6;
-        background: #fff8f8;
-        border-radius: 6px;
-        color: #7a2331;
-        font-size:15.3px;
-        display: none;
+      .download-btn:hover,
+      .download-btn:focus {
+        background-color: #8f2f3a;
+        color: #fff;
       }
-      @media (min-width: 900px) {
-        .form-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .field.full {
-          grid-column: 1 / -1;
-        }
+      .download-meta {
+        font-size: 15.3px;
+        color: #777;
       }
     </style>
   </head>
@@ -125,145 +106,27 @@
 
       <section>
     
-        <h2>数据使用申请表</h2>
-        <p class="form-help">
-          说明：GitHub Pages 是纯静态网站，无法“直接发送邮件”。本表单支持两种提交方式：
-          <br>1) 推荐：配置表单转邮件服务（如 Formspree），提交后自动发送到 <strong>chenzhiyuan@rmbs.ruc.edu.cn</strong>。
-          <br>2) 未配置服务时：将自动打开你的邮件客户端并生成申请邮件草稿（可直接发送）。
-        </p>
+        <h2>数据获取流程</h2>
 
-        <!--
-          IMPORTANT:
-          - Replace YOUR_FORMSPREE_ID with your actual Formspree form ID.
-          - In Formspree dashboard, set the recipient email to chenzhiyuan@rmbs.ruc.edu.cn.
-        -->
-        <form id="data-request-form" class="form-card" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
-          <input type="hidden" name="_subject" value="Data Request - zhiyuanryanchen.github.io">
-          <input type="hidden" name="dataset" id="dataset-hidden" value="">
+        <div class="require-box" role="note">
+          <p class="require-title">前置要求：须先签署《专利质量数据使用承诺书》</p>
+          <p>申请表信息已并入《专利质量数据使用承诺书》，其中含“数据使用方（姓名/单位）”“使用目的/研究问题”“使用周期”“预期成果形式”与手写签字栏。请下载填写、手写签字后，将扫描件发送至下方邮箱；审核通过后方可获取数据。</p>
+        </div>
 
-          <div class="form-grid">
-            <div class="field">
-              <label for="dataset">数据名称</label>
-              <input id="dataset" name="dataset_display" type="text" required placeholder="例如：中国发明专利文本相似度与质量指标数据集">
-            </div>
-
-            <div class="field">
-              <label for="affiliation">单位/机构</label>
-              <input id="affiliation" name="affiliation" type="text" required placeholder="学校/机构/公司">
-            </div>
-
-            <div class="field">
-              <label for="name">姓名</label>
-              <input id="name" name="name" type="text" required placeholder="申请人姓名">
-            </div>
-
-            <div class="field">
-              <label for="email">邮箱</label>
-              <input id="email" name="email" type="email" required placeholder="name@example.com">
-            </div>
-
-            <div class="field full">
-              <label for="purpose">使用目的/研究问题（简述）</label>
-              <textarea id="purpose" name="purpose" required placeholder="请简要说明研究主题、拟使用的变量/样本范围等"></textarea>
-            </div>
-
-            <div class="field">
-              <label for="timeline">使用周期</label>
-              <input id="timeline" name="timeline" type="text" placeholder="例如：2026-02 至 2026-08">
-            </div>
-
-            <div class="field">
-              <label for="output">预期成果形式</label>
-              <select id="output" name="output">
-                <option value="">请选择</option>
-                <option value="paper">学术论文</option>
-                <option value="thesis">学位论文</option>
-                <option value="report">研究报告</option>
-                <option value="other">其他</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label>合规声明</label>
-              <div class="checkbox-row">
-                <input id="agree" name="agree" type="checkbox" required>
-                <label for="agree" style="font-weight:400; margin:0;">
-                  我承诺仅用于科研/教学目的；不进行再分发；如涉及发表将按要求引用数据来源；并遵守数据使用协议与隐私合规要求。
-                </label>
-              </div>
-            </div>
+        <div class="flow-card">
+          <p class="flow-title">使用流程</p>
+          <ol class="flow-list">
+            <li>下载并<span class="em">打印</span>《专利质量数据使用承诺书》。</li>
+            <li>在文档中填写姓名、单位、使用目的、使用周期与预期成果形式等信息。</li>
+            <li>在文档末尾的签字栏<span class="em">手写签字</span>。</li>
+            <li>将签字后的扫描件（或清晰照片）发送至 <a href="mailto:chenzhiyuan@rmbs.ruc.edu.cn">chenzhiyuan@rmbs.ruc.edu.cn</a>，邮件主题建议为“数据使用承诺书 + 姓名 + 数据集名称”。</li>
+            <li>经<span class="em">审核通过</span>后，由数据管理方将对应数据发送至文档中填写的电子邮箱。</li>
+          </ol>
+          <div class="download-row">
+            <a class="download-btn" href="downloads/%E4%B8%93%E5%88%A9%E8%B4%A8%E9%87%8F%E6%95%B0%E6%8D%AE%E4%BD%BF%E7%94%A8%E6%89%BF%E8%AF%BA%E4%B9%A6.docx" download><i class="fa fa-fw fa-download" aria-hidden="true"></i>下载《专利质量数据使用承诺书》</a>
+            <span class="download-meta">格式：.docx（Word），含申请信息与签字栏</span>
           </div>
-
-          <div class="actions">
-            <button class="primary-btn" type="submit">提交申请</button>
-            <a class="secondary-link" href="resources.html#data">返回 Databases</a>
-          </div>
-
-          <div id="fallback-notice" class="notice" role="status" aria-live="polite"></div>
-        </form>
-
-        <script>
-          (function () {
-            const form = document.getElementById('data-request-form');
-            const datasetInput = document.getElementById('dataset');
-            const datasetHidden = document.getElementById('dataset-hidden');
-            const notice = document.getElementById('fallback-notice');
-
-            const params = new URLSearchParams(window.location.search || '');
-            const datasetFromQuery = params.get('dataset');
-            if (datasetFromQuery) {
-              datasetInput.value = datasetFromQuery;
-              datasetHidden.value = datasetFromQuery;
-            }
-
-            function buildMailto() {
-              const name = document.getElementById('name').value || '';
-              const affiliation = document.getElementById('affiliation').value || '';
-              const email = document.getElementById('email').value || '';
-              const dataset = datasetInput.value || '';
-              const purpose = document.getElementById('purpose').value || '';
-              const timeline = document.getElementById('timeline').value || '';
-              const output = document.getElementById('output').value || '';
-
-              const subject = `Data Request: ${dataset}`;
-              const body = [
-                `姓名: ${name}`,
-                `单位/机构: ${affiliation}`,
-                `邮箱: ${email}`,
-                `数据名称: ${dataset}`,
-                `使用周期: ${timeline}`,
-                `预期成果形式: ${output}`,
-                '',
-                '使用目的/研究问题:',
-                purpose,
-                '',
-                '合规声明: 仅用于科研/教学，不再分发，按要求引用并遵守合规。'
-              ].join('\n');
-
-              return `mailto:chenzhiyuan@rmbs.ruc.edu.cn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            }
-
-            function isFormspreeConfigured() {
-              const action = (form.getAttribute('action') || '').trim();
-              return action.startsWith('https://formspree.io/f/') && !action.endsWith('/YOUR_FORMSPREE_ID') && !action.includes('YOUR_FORMSPREE_ID');
-            }
-
-            form.addEventListener('submit', function (e) {
-              datasetHidden.value = datasetInput.value || '';
-
-              if (isFormspreeConfigured()) {
-                return; // normal submit
-              }
-
-              // Fallback: mailto draft
-              e.preventDefault();
-              const url = buildMailto();
-              notice.style.display = 'block';
-              notice.textContent = '未配置自动邮件服务（Formspree）。已为你生成邮件草稿，请在弹出的邮件客户端中确认并发送。';
-              window.location.href = url;
-            });
-          })();
-        </script>
+        </div>
       </section>
     </div>
   </body>

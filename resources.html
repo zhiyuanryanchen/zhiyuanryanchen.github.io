@@ -71,7 +71,6 @@
       <a class="nav-button pub-btn active" href="#models" data-target="models-section"><span class="label-zh">模型</span><span class="label-en">Models</span></a>
       <a class="nav-button pub-btn" href="#econometrics" data-target="econometrics-section"><span class="label-zh">计量经济学</span><span class="label-en">Econometrics</span></a>
       <a class="nav-button pub-btn" href="#machine-learning" data-target="ml-section"><span class="label-zh">人工智能</span><span class="label-en">Artificial Intelligence</span></a>
-      <a class="nav-button pub-btn" href="#data" data-target="data-section"><span class="label-zh">数据库</span><span class="label-en">Databases</span></a>
     </div>
 
     <div id="models-section">
@@ -139,11 +138,6 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
       </div>
     </div>
 
-    <div id="data-section" style="display:none;">
-      <h4>Databases</h4>
-      <p style="margin:0; color:#777; font-size:15.3px;">数据库相关内容已迁移至 <a href="research.html#data">Research → 数据库</a>。</p>
-    </div>
-
     </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
@@ -152,7 +146,7 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
     <script>
       (function() {
         const buttons = document.querySelectorAll('.pub-btn');
-        const sections = ['models-section', 'econometrics-section', 'ml-section', 'data-section']
+        const sections = ['models-section', 'econometrics-section', 'ml-section']
           .map((id) => document.getElementById(id))
           .filter(Boolean);
         if (!buttons.length || !sections.length) return;
@@ -306,7 +300,6 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
               showSection('ml-section');
               showAiSection('nlp');
             },
-            data: () => showSection('data-section'),
           };
 
           const activate = targetMap[hash] || targetMap.macro;
