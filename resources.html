@@ -28,6 +28,33 @@
         gap: 0.5rem;
         margin-top: 0.55rem;
       }
+      .ai-list-head {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        margin: 0 0 6px;
+      }
+      .ai-updated {
+        font-size: 13px;
+        color: #8a8a8a;
+        white-space: nowrap;
+      }
+      .ai-updated .en {
+        display: none;
+      }
+      html.lang-en .ai-updated .zh {
+        display: none;
+      }
+      html.lang-en .ai-updated .en {
+        display: inline;
+      }
+      .ai-resource-list li {
+        border-top: 1px solid #ececec;
+        padding: 9px 2px;
+      }
+      .ai-resource-list li:last-child {
+        border-bottom: 1px solid #ececec;
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -68,12 +95,12 @@
       <section>
 
     <div class="pub-toggle" aria-label="Resources categories">
-      <a class="nav-button pub-btn active" href="#models" data-target="models-section"><span class="label-zh">模型</span><span class="label-en">Models</span></a>
+      <a class="nav-button pub-btn active" href="#machine-learning" data-target="ml-section"><span class="label-zh">人工智能</span><span class="label-en">Artificial Intelligence</span></a>
+      <a class="nav-button pub-btn" href="#models" data-target="models-section"><span class="label-zh">模型</span><span class="label-en">Models</span></a>
       <a class="nav-button pub-btn" href="#econometrics" data-target="econometrics-section"><span class="label-zh">计量经济学</span><span class="label-en">Econometrics</span></a>
-      <a class="nav-button pub-btn" href="#machine-learning" data-target="ml-section"><span class="label-zh">人工智能</span><span class="label-en">Artificial Intelligence</span></a>
     </div>
 
-    <div id="models-section">
+    <div id="models-section" style="display:none;">
       <ul class="sub-links" aria-label="Models subsections">
         <a class="sub-link active" href="#macro-section"><i class="fa fa-globe" aria-hidden="true"></i> Macro &amp; Trade</a>
         <a class="sub-link" href="#io-section"><i class="fa fa-industry" aria-hidden="true"></i> Industrial Organization</a>
@@ -108,34 +135,23 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
       </div>
     </div>
 
-    <div id="ml-section" style="display:none;">
-      <ul class="sub-links" aria-label="Artificial intelligence subsections">
-        <a class="sub-link" href="#llm-agents"><i class="fa fa-android" aria-hidden="true"></i> LLM Agents</a>
-        <a class="sub-link active" href="#machine-learning-list"><i class="fa fa-bar-chart" aria-hidden="true"></i> Machine Learning</a>
-        <a class="sub-link" href="#nlp"><i class="fa fa-comment" aria-hidden="true"></i> NLP</a>
-        
+    <div id="ml-section">
+      <div class="ai-list-head">
+        <span class="ai-updated"><span class="zh">更新于 2026 年 10 月 28 日</span><span class="en">Updated Oct 28, 2026</span></span>
+      </div>
+      <ul class="resource-list ai-resource-list">
+        <li class="handout-resource"><i class="fa fa-book" aria-hidden="true"></i> <strong>一站式科研：VS Code 与大模型实操应用</strong>
+          <p>受邀讲座配套讲义，面向希望用 VS Code、大模型与自动化工具组织科研流程的老师和同学。</p>
+          <div class="resource-actions">
+            <a href="notebooks/handout.html" target="_blank" rel="noopener">Handout</a>
+            <a href="notebooks/handout.html" download>Download HTML</a>
+          </div>
+        </li>
+        <li><strong>Jesse Lastunen</strong>&emsp; <a href="https://policy.fi/ai-econ/" target="_blank" rel="noopener">AI for Economists</a>: Curated collection of AI and LLM resources for economists — research papers, coding guides, tools and courses</li>
+        <li><i class="fa fa-code" aria-hidden="true"></i> Building Claude Code Workflow for Economics Scholars &emsp; <a href="https://zhiyuanryanchen.github.io/claude-code-workflow.html" target="_explorer.exe">Guide</a></li>
+        <li><strong>Colin Cameron</strong>&emsp; <a href="http://cameron.econ.ucdavis.edu/e240f/machinelearning.html" target="_explorer.exe">Machine Learning/Statistical Learning</a>: A gallery of useful materials on machine learning</li>
+        <li><strong>Pedro Domingos</strong>&emsp; <a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf" target="_explorer.exe">Practical tips for machine learning practitioners</a> | <a href="https://www.youtube.com/watch?v=B8J4uefCQMc" target="_explorer.exe">The Master Algorithm</a></li>
       </ul>
-      <div id="machine-learning-list">
-        <ul class="resource-list">
-          <li><strong>Colin Cameron</strong>&emsp; <a href="http://cameron.econ.ucdavis.edu/e240f/machinelearning.html" target="_explorer.exe">Machine Learning/Statistical Learning</a>: A gallery of useful materials on machine learning</li>
-          <li><strong>Pedro Domingos</strong>&emsp; <a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf" target="_explorer.exe">Practical tips for machine learning practitioners</a> | <a href="https://www.youtube.com/watch?v=B8J4uefCQMc" target="_explorer.exe">The Master Algorithm</a></li>
-        </ul>
-      </div>
-      <div id="llm-agents" style="display:none;">
-        <ul class="resource-list">
-          <li class="handout-resource"><i class="fa fa-book" aria-hidden="true"></i> <strong>一站式科研：VS Code 与大模型实操应用</strong>
-            <p>受邀讲座配套讲义，面向希望用 VS Code、大模型与自动化工具组织科研流程的老师和同学。</p>
-            <div class="resource-actions">
-              <a href="notebooks/handout.html" target="_blank" rel="noopener">Handout</a>
-              <a href="notebooks/handout.html" download>Download HTML</a>
-            </div>
-          </li>
-          <li><i class="fa fa-code" aria-hidden="true"></i> Building Claude Code Workflow for Economics Scholars &emsp; <a href="https://zhiyuanryanchen.github.io/claude-code-workflow.html" target="_explorer.exe">Guide</a></li>
-        </ul>
-      </div>
-      <div id="nlp" style="display:none;">
-        <p>Coming soon.</p>
-      </div>
     </div>
 
     </section>
@@ -229,34 +245,6 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
           });
         });
 
-        const aiLinks = document.querySelectorAll('#ml-section .sub-link');
-        const aiSections = ['llm-agents', 'machine-learning-list', 'nlp']
-          .map((id) => document.getElementById(id))
-          .filter(Boolean);
-
-        const showAiSection = (targetId) => {
-          aiSections.forEach((section) => {
-            section.style.display = section.id === targetId ? 'block' : 'none';
-          });
-
-          aiLinks.forEach((link) => {
-            const isActive = link.getAttribute('href') === `#${targetId}`;
-            link.classList.toggle('active', isActive);
-            link.setAttribute('aria-current', isActive ? 'page' : 'false');
-          });
-        };
-
-        aiLinks.forEach((link) => {
-          link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (!href || !href.startsWith('#')) return;
-            const targetId = href.slice(1);
-            showAiSection(targetId);
-            e.preventDefault();
-            history.replaceState(null, '', href);
-          });
-        });
-
         const activateHash = () => {
           const hash = window.location.hash.slice(1);
           const targetMap = {
@@ -284,31 +272,18 @@ Christine Cai, <a href="https://christinecai.github.io/PublicGoods/applied_micro
               showSection('econometrics-section');
               showEconSection('structural-estimation');
             },
-            'machine-learning': () => {
-              showSection('ml-section');
-              showAiSection('machine-learning-list');
-            },
-            'machine-learning-list': () => {
-              showSection('ml-section');
-              showAiSection('machine-learning-list');
-            },
-            'llm-agents': () => {
-              showSection('ml-section');
-              showAiSection('llm-agents');
-            },
-            nlp: () => {
-              showSection('ml-section');
-              showAiSection('nlp');
-            },
+            'machine-learning': () => showSection('ml-section'),
+            'machine-learning-list': () => showSection('ml-section'),
+            'llm-agents': () => showSection('ml-section'),
+            nlp: () => showSection('ml-section'),
           };
 
-          const activate = targetMap[hash] || targetMap.macro;
+          const activate = targetMap[hash] || targetMap['machine-learning'];
           activate();
         };
 
         showModelSection('macro-section');
         showEconSection('applied-micro');
-        showAiSection('llm-agents');
         activateHash();
       })();
     </script>
